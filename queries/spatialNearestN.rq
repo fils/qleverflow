@@ -1,0 +1,21 @@
+PREFIX spatialSearch: <https://qlever.cs.uni-freiburg.de/spatialSearch/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+
+SELECT * WHERE {
+  # Arbitrary operations that select ?left_geometry
+   <http://portal.medin.org.uk/portal/json-ld/039b8bff-9a49-49b8-85b7-12cb23f0fc64.jsonld> geo:hasCentroid/geo:asWKT ?left_geometry .
+
+  SERVICE spatialSearch: {
+    _:config  spatialSearch:algorithm spatialSearch:s2 ;
+              spatialSearch:left ?left_geometry ;
+              spatialSearch:right ?right_geometry ;
+              spatialSearch:numNearestNeighbors 10 ;
+              spatialSearch:maxDistance 5000 ;
+              spatialSearch:bindDistance ?dist_left_right ;
+    {
+      # Any subquery, that selects ?right_geometry, ?payloadA and ?payloadB
+      ?some_other_entity geo:hasCentroid/geo:asWKT ?right_geometry .
+    }
+  }
+}
+

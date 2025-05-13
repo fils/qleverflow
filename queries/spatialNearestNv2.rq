@@ -1,0 +1,19 @@
+PREFIX spatialSearch: <https://qlever.cs.uni-freiburg.de/spatialSearch/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+SELECT * WHERE {
+  <http://marineregions.org/mrgid/4554>  dcat:centroid ?left_geometry .
+
+  SERVICE spatialSearch: {
+    _:config  spatialSearch:algorithm spatialSearch:s2 ;
+              spatialSearch:left ?left_geometry ;
+              spatialSearch:right ?right_geometry ;
+              spatialSearch:numNearestNeighbors 10 ;
+              spatialSearch:maxDistance  12756000 ;
+              spatialSearch:bindDistance ?dist_left_right ;
+    {
+      ?some_other_entity geo:hasCentroid/geo:asWKT ?right_geometry .
+    }
+  }
+}

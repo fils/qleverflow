@@ -1,0 +1,6 @@
+SELECT ?entity (COUNT(?predicate) AS ?count) WHERE {
+  ?entity ql:has-predicate ?predicate
+}
+GROUP BY ?entity 
+ORDER BY DESC(?count)
+

@@ -1,0 +1,6 @@
+SELECT ?s ?p ?ce  WHERE {
+  ?s ?p ?ce  .
+  ?text ql:contains-entity ?ce .
+  ?text ql:contains-word "Bayelsa* Delta Lagos Ogun" .
+}
+

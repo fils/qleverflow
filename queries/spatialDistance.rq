@@ -1,0 +1,9 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+SELECT ?b ?left_geometry ?has_geometry  WHERE {
+  <http://marineregions.org/mrgid/4554>  dcat:centroid ?left_geometry .
+    ?left_geometry <max-distance-in-meters:2000000> ?has_geometry .
+	  ?b geo:hasCentroid/geo:asWKT ?has_geometry .
+}
+

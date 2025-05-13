@@ -1,0 +1,20 @@
+# Environment variables need to be set in a .env file:
+# USER_ID=$(id -u)
+# GROUP_ID=$(id -g)
+
+services:
+  qlever.server.blank:
+    image: docker.io/adfreiburg/qlever:latest
+    container_name: qlever.server.blank
+    init: true
+    user: "${USER_ID}:${GROUP_ID}"  # Will be set via .env file
+    working_dir: /index
+    ports:
+      - "7019:7019"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./host-index:/index
+    entrypoint: bash
+    command: >
+          -c 'ServerMain -i new_blank -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s -a new_7643543846_6dMISzlPrD7i  2>&1'
+    restart: unless-stopped
