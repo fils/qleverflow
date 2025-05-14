@@ -1,0 +1,33 @@
+# Qleverfile for Olympics, use with https://github.com/ad-freiburg/qlever-control
+#
+# qlever get-data  # downloads .zip file of size 13 MB, uncompressed to 323 MB
+# qlever index     # takes ~10 seconds and ~1 GB RAM (on an AMD Ryzen 9 5900X)
+# qlever start     # starts the server (instant)
+# removed from ui section: UI_CONFIG = eco
+
+[data]
+NAME              = geocodesexamples
+BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/test/graphs/latest
+GET_DATA_CMD      = curl -sLo geocodes_examples_release.nq -C - ${BASE_URL}/geocodes_examples_release.nq
+DESCRIPTION       = eco test ${BASE_URL}
+TEXT_DESCRIPTION  = eco release graph description
+FORMAT            = nq
+
+[index]
+INPUT_FILES     = geocodes_examples_release.nq
+CAT_INPUT_FILES = cat ${INPUT_FILES}
+SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
+
+[server]
+PORT               = 7019
+ACCESS_TOKEN       = ${data:NAME}_7643543846_6dMISzlPrD7i
+MEMORY_FOR_QUERIES = 25G
+CACHE_MAX_SIZE     = 20G
+TIMEOUT            = 240s
+
+[runtime]
+SYSTEM = native
+IMAGE  = docker.io/adfreiburg/qlever:latest
+
+[ui]
+UI_CONFIG = default
