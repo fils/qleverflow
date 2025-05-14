@@ -1,3 +1,6 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+
 SELECT ?entity (COUNT(?predicate) AS ?count) WHERE {
   ?entity ql:has-predicate ?predicate
 }

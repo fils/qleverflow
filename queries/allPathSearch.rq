@@ -1,4 +1,7 @@
 PREFIX pathSearch: <https://qlever.cs.uni-freiburg.de/pathSearch/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+
 
 SELECT ?start ?pred ?end ?source ?path ?edge ?target WHERE {
 

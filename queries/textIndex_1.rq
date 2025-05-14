@@ -1,3 +1,5 @@
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+
 SELECT ?s ?p ?ce  WHERE {
   ?s ?p ?ce  .
   ?text ql:contains-entity ?ce .
