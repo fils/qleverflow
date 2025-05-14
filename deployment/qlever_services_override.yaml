@@ -6,30 +6,26 @@ version: '3.9'
 networks:
   qlever_network:
       name: qlever_network_${QLEVER_NET:-base}
-      external: true
   traefik_proxy:
       name: traefik_proxy
-      external: true
 #export USER_ID=$(id -u)
 #export GROUP_ID=$(id -g)
 volumes:
   qleverflow_data:
     name: qleverflow_data_${PROJECT:-geocodesexamples}
     #name: qlever
-
 configs:
   qlever_config:
-    name: qlever-config-${PROJECT:-geocodesexamples}
-    #file: /Users/valentin/development/dev_earthcube/qleverflow/catalogues/data-geocodesexamples/Qleverfile.geocodesexamples
-    external: true
+    name: glever-config-${PROJECT:-geocodesexamples}
+    file: /Users/valentin/development/dev_earthcube/qleverflow/catalogues/data-geocodesexamples/Qleverfile.geocodesexamples
+    #external: true
 services:
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
  qlever-server-base:
     image: docker.io/adfreiburg/qlever:latest
     hostname: qlever-server
-    user: "root:root"  # Will be set via .env file
-    #user: "1011:1011"
-    working_dir: /data
+    user: "1000:1000"  # Will be set via .env file
+    #working_dir: /data
 #    ports:
 #      - "7019:7019"
     environment:
@@ -43,21 +39,16 @@ services:
       - QLEVER_IS_RUNNING_IN_CONTAINER="1"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-     # - /home/fils/scratch/qleverflow/configs/marineregions:/data
-      # - type: volume
-      #   source: qleverflow_data
-      #   target: /data
-      #   o: uid=1000,gid=1000
-      #- qleverflow_data:/data
 
+      - type: volume
+        source: catalogues/data-geocodesexamples/Qleverfile.geocodesexamples
+        target: /data
     configs:
       - source: qlever_config
-        target: /data/Qleverfile
-    entrypoint: /qlever/docker-entrypoint.sh
+        target: /datz/Qleverfile.${PROJECT:-geocodesexamples}
+   # entrypoint: /qlever/docker-entrypoint.sh
     command: >
-         ' ls -l && qlever get-data  --log-level DEBUG && qlever index &&  qlever start'
-    # 'qlever setup-config ${PROJECT:-geocodesexamples} && qlever get-data && qlever index &&  qlever start'
-    # -c 'ServerMain -i ${PROJECT:-geocodesexamples} -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
+      -c 'ServerMain -i ${PROJECT:-geocodesexamples} -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
     #restart: unless-stopped
     networks: &network
       - qlever_network
@@ -137,4 +128,3 @@ services:
       - "traefik.http.routers.qlever-petrimaps-${PROJECT:-geocodesexamples}-secure.service=qlever-petrimaps-${PROJECT:-geocodesexamples}"
       - "traefik.http.services.qlever-petrimaps-${PROJECT:-geocodesexamples}.loadbalancer.server.port=9090"
       - "traefik.docker.network=traefik_proxy"
-

@@ -6,7 +6,7 @@
 # removed from ui section: UI_CONFIG = eco
 
 [data]
-NAME              = eco
+NAME              = geocodesexamples
 BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/test/graphs/latest
 GET_DATA_CMD      = curl -sLo geocodes_examples_release.nq -C - ${BASE_URL}/geocodes_examples_release.nq
 DESCRIPTION       = eco test ${BASE_URL}

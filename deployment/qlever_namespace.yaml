@@ -11,18 +11,17 @@ networks:
 configs:
   qlever-config:
     name: glever-config-${PROJECT:-geocodes_examples}
-
+    external: true
 services:
 
- qlever.server.project:
+ qlever-server-project:
     image: docker.io/adfreiburg/qlever:latest
-    container_name: qlever.server.${PROJECT:-deepoceans}
-    hostname:
+    hostname: qlever.server.${PROJECT:-deepoceans}
     init: true
     user: "1000:1000"  # Will be set via .env file
     working_dir: /data
-    ports:
-      - "7019:7019"
+#    ports:
+#      - "7019:7019"
     environment:
       - PATH="/qlever:/qlever/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       - LANG="C.UTF-8"
@@ -34,7 +33,9 @@ services:
       - QLEVER_IS_RUNNING_IN_CONTAINER="1"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /home/fils/scratch/qleverflow/configs/marineregions:/data
+    configs:
+      - source: qlever_config
+        target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
       -c 'ServerMain -i marineregions -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
@@ -44,16 +45,16 @@ services:
       - treafik_proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}.entrypoints=http"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}.rule=Host(`qlever-${PROJECT:-geocodesexamples}.${HOST}`)"
-      - "traefik.http.middlewares.qlever-project-${PROJECT:-geocodesexamples}-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}.middlewares=qlever-project-${PROJECT:-geocodesexamples}-https-redirect"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}-secure.entrypoints=https"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}-secure.rule=Host(`qlever-${PROJECT:-geocodesexamples}.${HOST}`)"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}-secure.tls=true"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}-secure.tls.certresolver=httpresolver"
-      - "traefik.http.routers.qlever-project-${PROJECT:-geocodesexamples}-secure.service=qlever-project-${PROJECT:-geocodesexamples}"
-      - "traefik.http.services.qlever-project-${PROJECT:-geocodesexamples}.loadbalancer.server.port=7019"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.entrypoints=http"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.rule=Host(`qlever-${PROJECT:-deepoceans}.${HOST}`)"
+      - "traefik.http.middlewares.qlever-project-${PROJECT:-deepoceans}-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.middlewares=qlever-project-${PROJECT:-deepoceans}-https-redirect"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.entrypoints=https"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever-${PROJECT:-deepoceans}.${HOST}`)"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls=true"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls.certresolver=httpresolver"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.service=qlever-project-${PROJECT:-deepoceans}"
+      - "traefik.http.services.qlever-project-${PROJECT:-deepoceans}.loadbalancer.server.port=7019"
       - "traefik.docker.network=traefik_proxy"
 
 
