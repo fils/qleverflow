@@ -1,4 +1,3 @@
-
 ### basic services and a single container for qlver
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
 # Environment variables need to be set in a .env file:
@@ -19,7 +18,7 @@ volumes:
 
 configs:
   qlever_config:
-    name: qlever-config-${PROJECT:-geocodesexamples}
+    name: qlever-config-${QLEVER_CONFIG:-geocodesexamples}
     #file: /Users/valentin/development/dev_earthcube/qleverflow/catalogues/data-geocodesexamples/Qleverfile.geocodesexamples
     external: true
 services:
@@ -55,7 +54,8 @@ services:
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-         ' ls -l && qlever get-data  --log-level DEBUG && qlever index &&  qlever start'
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index && qlever start --run-in-foreground '
+    # run in forground, otherwise docker thinks run is complete.
     # 'qlever setup-config ${PROJECT:-geocodesexamples} && qlever get-data && qlever index &&  qlever start'
     # -c 'ServerMain -i ${PROJECT:-geocodesexamples} -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
     #restart: unless-stopped
@@ -91,6 +91,9 @@ services:
     environment:
       # this will hopefully be a hostname from the above service
       QLEVER_HOST: "http://qlever-server-${PROJECT:-geocodesexamples}:7007"
+      QLEVERUI_ALLOWED_HOSTS: "*"
+      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
+      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
 #      QLEVER_HOST: "http://0.0.0.0:7007"
    #    entrypoint: bash
     command:
@@ -137,4 +140,3 @@ services:
       - "traefik.http.routers.qlever-petrimaps-${PROJECT:-geocodesexamples}-secure.service=qlever-petrimaps-${PROJECT:-geocodesexamples}"
       - "traefik.http.services.qlever-petrimaps-${PROJECT:-geocodesexamples}.loadbalancer.server.port=9090"
       - "traefik.docker.network=traefik_proxy"
-

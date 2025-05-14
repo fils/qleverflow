@@ -10,7 +10,7 @@ networks:
 #export GROUP_ID=$(id -g)
 configs:
   qlever-config:
-    name: glever-config-${PROJECT:-geocodes_examples}
+    name: glever-config-${QLEVER_CONFIG:-deepoceans}
     external: true
 services:
 
@@ -38,7 +38,8 @@ services:
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-      -c 'ServerMain -i marineregions -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index && qlever start --run-in-foreground '
+
     restart: unless-stopped
     networks: &network
       - qlever_network
