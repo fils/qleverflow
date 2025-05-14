@@ -1,0 +1,64 @@
+---
+networks:
+  qlever_network:
+      name: qlever-network-${QLEVER_NET:-base}
+      external: true
+  treafik_proxy:
+      name: treafik_proxy
+      external: true
+#export USER_ID=$(id -u)
+#export GROUP_ID=$(id -g)
+configs:
+  qlever-config:
+    name: glever-config-${QLEVER_CONFIG:-deepoceans}
+    external: true
+services:
+
+ qlever-server-project:
+    image: docker.io/adfreiburg/qlever:latest
+    hostname: qlever.server.${PROJECT:-deepoceans}
+    init: true
+    user: "1000:1000"  # Will be set via .env file
+    working_dir: /data
+#    ports:
+#      - "7019:7019"
+    environment:
+      - PATH="/qlever:/qlever/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - LANG="C.UTF-8"
+      - LC_ALL="C.UTF-8"
+      - LC_CTYPE="C.UTF-8"
+      - DEBIAN_FRONTEND="noninteractive"
+      - QLEVER_PROFILE="/etc/profile.d/qlever.sh"
+      - QLEVER_ARGCOMPLETE_ENABLED="1"
+      - QLEVER_IS_RUNNING_IN_CONTAINER="1"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    configs:
+      - source: qlever_config
+        target: /data/Qleverfile
+    entrypoint: /qlever/docker-entrypoint.sh
+    command: >
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index && qlever start --run-in-foreground '
+
+    restart: unless-stopped
+    networks: &network
+      - qlever_network
+      - treafik_proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.entrypoints=http"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.rule=Host(`qlever-${PROJECT:-deepoceans}.${HOST}`)"
+      - "traefik.http.middlewares.qlever-project-${PROJECT:-deepoceans}-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.middlewares=qlever-project-${PROJECT:-deepoceans}-https-redirect"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.entrypoints=https"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever-${PROJECT:-deepoceans}.${HOST}`)"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls=true"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls.certresolver=httpresolver"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.service=qlever-project-${PROJECT:-deepoceans}"
+      - "traefik.http.services.qlever-project-${PROJECT:-deepoceans}.loadbalancer.server.port=7019"
+      - "traefik.docker.network=traefik_proxy"
+
+
+
+
+
