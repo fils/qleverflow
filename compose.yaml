@@ -31,14 +31,15 @@ services:
     command: >
       -c 'ServerMain -i marineregions -j 8 -p 7007 -m 25G -c 20G -e 1G -k 200 -s 240s'
     restart: unless-stopped
-    networks:
-      - qlever_network
+#    networks:
+#      - qlever_network
 
 
  qlever.ui.mr:
     image: docker.io/adfreiburg/qlever-ui:latest
     container_name: qlever.ui.marineregions
     init: true
+    user: "1000:1000"  # Will be set via .env file
     volumes:
       - /home/fils/scratch/qleverflow/configs/marineregions:/app/db
     ports:
@@ -46,9 +47,10 @@ services:
     environment:
       # this will hopefully be a hostname from the above service
 #      QLEVER_HOST: "http://qlever-server-${PROJECT:-geocodesexamples}:7007"
-      QLEVERUI_ALLOWED_HOSTS: "*"
+#      QLEVERUI_ALLOWED_HOSTS: "*"
 #      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
 #      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
+      QLEVERUI_DATABASE_URL: "sqlite:////app/db/marineregions.ui-db.sqlite3"
       QLEVER_HOST: "http://workstation.lan:7007" # Updated to use service name
    #    entrypoint: bash
     command:
@@ -61,8 +63,8 @@ services:
       - "10000"
       - "qlever.wsgi:application"
     restart: unless-stopped
-    networks:
-      - qlever_network
+#    networks:
+#      - qlever_network
 
  qlever.petrimaps:
     image: docker.io/adfreiburg/qlever-petrimaps:latest
@@ -70,5 +72,5 @@ services:
     hostname: qlever-petrimaps
     ports:
       - "9090:9090"
-    networks:
-      - qlever_network
+#    networks:
+#      - qlever_network
