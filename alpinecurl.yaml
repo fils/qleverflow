@@ -1,0 +1,25 @@
+volumes:
+  ql_dvol:
+
+services:
+  downloader:
+    image: alpine/curl
+    volumes:
+      - ql_dvol:/data # Corrected: added a leading slash
+    command: >
+      sh -c "curl -fLo /data/Qleverfile.odis http://ossapi.oceaninfohub.org/public/Qleverfile-odis &&
+             echo 'File Qleverfile.odis downloaded successfully to /data/'"
+  myapp:
+    image: adfreiburg/qlever:latest
+    depends_on:
+      downloader:
+        condition: service_completed_successfully
+    environment:
+      - UID=1111
+      - GID=1111
+    volumes:
+      - ql_dvol:/data
+    working_dir: /data
+    command: ["-c", "qlever -q Qleverfile.odis get-data && qlever -q Qleverfile.odis index"]
+    stdin_open: true
+    tty: true
