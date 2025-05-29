@@ -36,7 +36,6 @@ The following two extensions to QLever are of interest.
 May also want to try qlever format: Accept: application/qlever-results+json
 
 
-
 ```bash
 curl -s "http://workstation.lan:7001" -H "Accept: text/tab-separated-values" -H "Content-type: application/sparql-query" --data "SELECT * WHERE { ?s ?p ?o } LIMIT 10" ;
 

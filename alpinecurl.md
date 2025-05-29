@@ -5,6 +5,18 @@ to, in the context of docker, set up a data volume we can populate with
 a Qleverfile.  The Qleverfile is a configuration file that provides
 data source, citations, indexing and UI settings.
 
+This needs to become a script, since qlever will doker and we can not call docker within docker.
+
+Part of what we need to resolve from the index step.   
+```bash
+myapp-1         | Command: index
+myapp-1         | 
+myapp-1         | echo '{ "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }' > odis.settings.json
+myapp-1         | docker run --rm -u $(id -u):$(id -g) -v /etc/localtime:/etc/localtime:ro -v $(pwd):/index -w /index --init --entrypoint bash --name qlever.index.odis docker.io/adfreiburg/qlever:latest -c 'cat odis.nq | IndexBuilderMain -i odis -s odis.settings.json -F nq -f - | tee odis.index-log.txt'                                                                                              
+myapp-1         | 
+myapp-1         | Building the index failed: /usr/bin/bash: line 1: docker: command not found
+```
+
 First, make a dvol from the command line.
 
 ```bash

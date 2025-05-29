@@ -2,24 +2,37 @@ volumes:
   ql_dvol:
 
 services:
+  volume-setup:
+    image: alpine:latest
+    volumes:
+      - ql_dvol:/data
+    command: chown -R 1000:1000 /data
+    user: root
+
   downloader:
     image: alpine/curl
+    depends_on:
+      volume-setup:
+        condition: service_completed_successfully
+    user: "1000:1000"  # Add this line to run as the same user
     volumes:
-      - ql_dvol:/data # Corrected: added a leading slash
+      - ql_dvol:/data
     command: >
       sh -c "curl -fLo /data/Qleverfile.odis http://ossapi.oceaninfohub.org/public/Qleverfile-odis &&
-             echo 'File Qleverfile.odis downloaded successfully to /data/'"
+             ls /data && echo 'File Qleverfile.odis downloaded successfully to /data/'"
+
   myapp:
     image: adfreiburg/qlever:latest
     depends_on:
       downloader:
         condition: service_completed_successfully
-    environment:
-      - UID=1111
-      - GID=1111
+    user: "1000:1000"
     volumes:
       - ql_dvol:/data
     working_dir: /data
-    command: ["-c", "qlever -q Qleverfile.odis get-data && qlever -q Qleverfile.odis index"]
+    # this will NEVER work as it is a docker within docker call
+#    command: [ "ls -lrn && date" ]
+#    command: ["qlever -q Qleverfile.odis get-data && qlever -q Qleverfile.odis index"]
+    command: ["qlever -q Qleverfile.odis index"]
     stdin_open: true
     tty: true
