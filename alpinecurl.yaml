@@ -21,7 +21,7 @@ services:
       sh -c "curl -fLo /data/Qleverfile.odis http://ossapi.oceaninfohub.org/public/Qleverfile-odis &&
              ls /data && echo 'File Qleverfile.odis downloaded successfully to /data/'"
 
-  myapp:
+  getdata:
     image: adfreiburg/qlever:latest
     depends_on:
       downloader:
@@ -30,9 +30,30 @@ services:
     volumes:
       - ql_dvol:/data
     working_dir: /data
-    # this will NEVER work as it is a docker within docker call
-#    command: [ "ls -lrn && date" ]
-#    command: ["qlever -q Qleverfile.odis get-data && qlever -q Qleverfile.odis index"]
-    command: ["qlever -q Qleverfile.odis index"]
+    command: ["qlever -q Qleverfile.odis get-data"]
+    stdin_open: true
+    tty: true
+
+  jsonsetup:
+    image: alpine:latest
+    depends_on:
+      getdata:
+        condition: service_completed_successfully
+    volumes:
+      - ql_dvol:/data
+    working_dir: /data
+    command: "echo '{ \"ascii-prefixes-only\": false, \"num-triples-per-batch\": 100000 }' > /odis.settings.json"
+    user: root
+
+  indexer:
+    image: adfreiburg/qlever:latest
+    depends_on:
+      jsonsetup:
+        condition: service_completed_successfully
+    user: "1000:1000"
+    volumes:
+      - ql_dvol:/data
+    working_dir: /data
+    command: [ "cat /data/odis.nq | IndexBuilderMain -i odis -s /data/odis.settings.json -F nq -f - | tee odis.index-log.txt" ]
     stdin_open: true
     tty: true

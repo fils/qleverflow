@@ -28,16 +28,31 @@ the index in the data volume.  Let's first download the Qleverfile.
 
 ```bash
 docker run --rm \
-  -v my_downloaded_data:/data_in_volume \
+  -v ql_dvol:/data_in_volume \
   alpine/curl \
-  sh -c "curl -fLo /data_in_volume/Qleverfile.odis https://example.com/path/to/your/Qleverfile.odis && echo 'File Qleverfile.odis downloaded successfully to /data_in_volume/'"
+  sh -c "curl -fLo /data_in_volume/Qleverfile.odis http://ossapi.oceaninfohub.org/public/Qleverfile-odis && echo 'File Qleverfile.odis downloaded successfully to /data_in_volume/'"
   ```
 
 We can then build our index.
 
 ```bash
-docker run -it --rm -e UID=1111 -e GID=1111 -v my_downloaded_data:/data -w /data  adfreiburg/qlever:latest -c "qlever -q Qleverfile.odis get-data && qlever -q Qleverfile.odis  index"
+docker run -it --rm --user 1000:1000 \
+ -v ql_dvol:/data -w /data  adfreiburg/qlever:latest -c "qlever -q Qleverfile.odis get-data && qlever -q Qleverfile.odis  index"
 ```
+
+```bash
+docker run \
+  --user 1000:1000 \
+  --volume ql_dvol:/data \
+  --workdir /data \
+  -i \
+  -t \
+  adfreiburg/qlever:latest "qlever -q Qleverfile.odis index"
+  ```
+
+echo '{ "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }' > odis.settings.json
+docker run --rm -u $(id -u):$(id -g) -v /etc/localtime:/etc/localtime:ro -v $(pwd):/index -w /index --init --entrypoint bash --name qlever.index.odis docker.io/adfreiburg/qlever:latest -c 'cat odis.nq | IndexBuilderMain -i odis -s odis.settings.json -F nq -f - | tee odis.index-log.txt'
+
 
 The following is a simple help parameter example you can use to validate running the 
 image.
