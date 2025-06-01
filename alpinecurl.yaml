@@ -1,8 +1,18 @@
+# Define default settings that will be applied to all services
+x-service-defaults: &service-defaults
+  restart: "no"
+  deploy:
+    restart_policy:
+      condition: "none"
+  labels:
+    - "com.docker.compose.rm=true"
+
 volumes:
   ql_dvol:
 
 services:
   volume-setup:
+    <<: *service-defaults
     image: alpine:latest
     volumes:
       - ql_dvol:/data
@@ -10,6 +20,7 @@ services:
     user: root
 
   downloader:
+    <<: *service-defaults
     image: alpine/curl
     depends_on:
       volume-setup:
@@ -22,6 +33,7 @@ services:
              ls /data && echo 'File Qleverfile.odis downloaded successfully to /data/'"
 
   getdata:
+    <<: *service-defaults
     image: adfreiburg/qlever:latest
     depends_on:
       downloader:
@@ -35,6 +47,7 @@ services:
     tty: true
 
   jsonsetup:
+    <<: *service-defaults
     image: alpine:latest
     depends_on:
       getdata:
@@ -46,6 +59,7 @@ services:
     user: root
 
   indexer:
+    <<: *service-defaults
     image: adfreiburg/qlever:latest
     depends_on:
       jsonsetup:
