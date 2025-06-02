@@ -1,0 +1,12 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gn: <https://www.geonames.org/ontology#>
+PREFIX text: <http://jena.apache.org/text#>
+PREFIX vrank: <http://purl.org/voc/vrank#>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+PREFIX gn: <https://www.geonames.org/ontology#>
+
+SELECT ?item (COUNT(?text) AS ?count) (SAMPLE(?text) AS ?example_text) WHERE {
+    ?text ql:contains-entity ?item .
+    ?text ql:contains-word "ocean" .
+}
+GROUP BY ?item

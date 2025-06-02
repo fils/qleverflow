@@ -1,12 +1,17 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX schema: <https://schema.org/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gn: <https://www.geonames.org/ontology#>
+PREFIX text: <http://jena.apache.org/text#>
+PREFIX vrank: <http://purl.org/voc/vrank#>
 PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+PREFIX gn: <https://www.geonames.org/ontology#>
 
-SELECT ?a TEXT(?t) SCORE(?t) WHERE {
-    ?a <is-a> <Dataset> .
-    ?t ql:contains-entity ?a .
-    ?t ql:contains-word "depth"
+SELECT ?uri (COUNT(?text) AS ?count) (SAMPLE(?text) AS ?example_text) ?item  WHERE {
+  ?uri rdf:type <https://schema.org/Person> .
+    ?uri <https://schema.org/name> ?item .
+    ?text ql:contains-entity ?item .
+    ?text ql:contains-word "Arno" .
+	  FILTER (!CONTAINS(STR(?uri), "gleaner.io"))
+  FILTER (!isBLANK(?uri))
 }
-ORDER BY DESC(SCORE(?t))
-
+GROUP BY ?uri ?item
