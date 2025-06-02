@@ -1,11 +1,11 @@
 # Notes on building indexes via docker
 
-As Qlever is run based on an initially pre-computed index, We need 
+As Qlever is run based on an initially pre-computed index, We need it 
 to, in the context of docker, set up a data volume we can populate with
 a Qleverfile.  The Qleverfile is a configuration file that provides
 data source, citations, indexing and UI settings.
 
-This needs to become a script, since qlever will doker and we can not call docker within docker.
+This needs to become a script, since qlever will invoke docker, and we cannot call docker within docker (easily enough to want to do it here).
 
 Part of what we need to resolve from the index step.   
 ```bash

@@ -10,8 +10,11 @@ x-service-defaults: &service-defaults
 volumes:
   ql_dvol:
 
+    ## TODO
+    ## Add profiles:   getAndIndex and serveIndex  and combine (or not) the two compose files
+
 services:
-  volume-setup:
+  volume-setup:   ##  TODO, this is likely not need, change to the "list content" service
     <<: *service-defaults
     image: alpine:latest
     volumes:
