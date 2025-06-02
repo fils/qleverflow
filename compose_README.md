@@ -1,9 +1,21 @@
 # Notes on building indexes via docker
 
+## Intro
+
 As Qlever is run based on an initially pre-computed index, We need it 
 to, in the context of docker, set up a data volume we can populate with
 a Qleverfile.  The Qleverfile is a configuration file that provides
 data source, citations, indexing and UI settings.
+
+### Prerequisists
+
+- ql_dvol data volume
+- Qlever file at an accessible network location
+- RDF data at an accessible network location
+- X.settings.json at an accessible network location
+- Qlever UI file at an accessible network location
+
+## Notes
 
 This needs to become a script, since qlever will invoke docker, and we cannot call docker within docker (easily enough to want to do it here).
 

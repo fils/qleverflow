@@ -6,6 +6,9 @@ networks:
 #export USER_ID=$(id -u)
 #export GROUP_ID=$(id -g)
 
+volumes:
+  ql_dvol:
+
 services:
  qlever.server.mr:
     image: docker.io/adfreiburg/qlever:latest
@@ -26,7 +29,7 @@ services:
       - QLEVER_IS_RUNNING_IN_CONTAINER="1"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /home/fils/scratch/qleverflow/configs/marineregions:/data
+      - ql_dvol:/data
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
       -c 'ServerMain -i marineregions -j 8 -p 7007 -m 25G -c 20G -e 1G -k 200 -s 240s'
@@ -41,7 +44,7 @@ services:
     init: true
     user: "1000:1000"  # Will be set via .env file
     volumes:
-      - /home/fils/scratch/qleverflow/configs/marineregions:/app/db
+      - ql_dvol:/app/db
     ports:
       - "8176:7000"
     environment:
@@ -50,7 +53,7 @@ services:
 #      QLEVERUI_ALLOWED_HOSTS: "*"
 #      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
 #      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
-      QLEVERUI_DATABASE_URL: "sqlite:////app/db/marineregions.ui-db.sqlite3"
+#      QLEVERUI_DATABASE_URL: "sqlite:////app/db/marineregions.ui-db.sqlite3"
       QLEVER_HOST: "http://workstation.lan:7007" # Updated to use service name
    #    entrypoint: bash
     command:
