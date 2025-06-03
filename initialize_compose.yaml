@@ -58,7 +58,8 @@ services:
     volumes:
       - ql_dvol:/data
     working_dir: /data
-    command: "echo '{ \"ascii-prefixes-only\": false, \"num-triples-per-batch\": 100000 }' > /odis.settings.json"
+    command: >
+      sh -c "echo '{ \"ascii-prefixes-only\": false, \"num-triples-per-batch\": 10000 }' > odis.settings.json"
     user: root
 
   indexer:
