@@ -9,11 +9,12 @@ data source, citations, indexing and UI settings.
 
 ### Prerequisists
 
-- ql_dvol data volume
-- Qlever file at an accessible network location
-- RDF data at an accessible network location
-- X.settings.json at an accessible network location
-- Qlever UI file at an accessible network location
+- [X] ql_dvol data volume
+- [X] Qlever file at an accessible network location
+- [X] RDF data at an accessible network location
+- [ ] X.settings.json at an accessible network location
+- [ ] Qlever UI file at an accessible network location
+  - Important, this is needed for the front end to work (sqlite error)
 
 ## Notes
 

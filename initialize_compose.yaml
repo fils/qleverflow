@@ -14,7 +14,7 @@ volumes:
     ## Add profiles:   getAndIndex and serveIndex  and combine (or not) the two compose files
 
 services:
-  volume-setup:   ##  TODO, this is likely not need, change to the "list content" service
+  volume-setup: ##  TODO, this is likely not need, change to the "list content" service
     <<: *service-defaults
     image: alpine:latest
     volumes:
@@ -28,11 +28,14 @@ services:
     depends_on:
       volume-setup:
         condition: service_completed_successfully
-    user: "1000:1000"  # Add this line to run as the same user
+    user: "1000:1000" # Add this line to run as the same user
     volumes:
       - ql_dvol:/data
     command: >
       sh -c "curl -fLo /data/Qleverfile.odis http://ossapi.oceaninfohub.org/public/Qleverfile-odis &&
+      curl -fLo /data/Qleverfile-ui.yml http://ossapi.oceaninfohub.org/public/Qleverfile-ui.yml &&
+      curl -fLo /data/odis.ui-db.sqlite3 http://ossapi.oceaninfohub.org/public/odis.ui-db.sqlite3  &&
+      curl -fLo /data/odis.settings.json http://ossapi.oceaninfohub.org/public/odis.settings.json &&
              ls /data && echo 'File Qleverfile.odis downloaded successfully to /data/'"
 
   getdata:
@@ -72,6 +75,9 @@ services:
     volumes:
       - ql_dvol:/data
     working_dir: /data
-    command: [ "cat /data/odis.nq | IndexBuilderMain -i odis -s /data/odis.settings.json -F nq -f - | tee odis.index-log.txt" ]
+    command:
+      [
+        "cat /data/odis.nq | IndexBuilderMain -i odis -s /data/odis.settings.json -F nq -f - | tee odis.index-log.txt",
+      ]
     stdin_open: true
     tty: true
