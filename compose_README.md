@@ -7,6 +7,43 @@ to, in the context of docker, set up a data volume we can populate with
 a Qleverfile.  The Qleverfile is a configuration file that provides
 data source, citations, indexing and UI settings.
 
+
+### Address locations:
+
+There are a few locations where the address is set.
+
+- [ ] compose files, can set these with environment variables
+- [ ] Qleverfile-ui.yml
+  - baseUrl 
+  - mapViewBaseURL
+
+### Building text index
+
+The command to build the index and overwrite
+```bash
+ qlever -q  Qleverfile-odis index --overwrite-existing --text-index from_literals
+ ```
+
+which is materialized as
+
+```bash
+
+echo '{ "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }' > odis.settings.json
+docker run --rm -u $(id -u):$(id -g) -v /etc/localtime:/etc/localtime:ro -v $(pwd):/index -w /index --name qlever.index.odis --init --entrypoint bash docker.io/adfreiburg/qlever:latest -c 'cat odis.nq | IndexBuilderMain -i odis -s odis.settings.json -F nq -f - --text-words-from-literals | tee odis.index-log.txt'     
+```
+
+where the key part is 
+
+```bash
+ IndexBuilderMain -i odis -s odis.settings.json -F nq -f - --text-words-from-literals 
+ ```
+
+Then for the server, when running, the -t I think must be the text index.
+
+```bash
+ServerMain -i odis -j 8 -p 7007 -m 25G -c 20G -e 1G -k 200 -s 240s -a odis_7643543846_6dMISzlPrD7i -t
+```
+
 ### Prerequisists
 
 - [X] ql_dvol data volume
@@ -19,6 +56,7 @@ data source, citations, indexing and UI settings.
 ## Notes
 
 This needs to become a script, since qlever will invoke docker, and we cannot call docker within docker (easily enough to want to do it here).
+
 
 Part of what we need to resolve from the index step.   
 ```bash

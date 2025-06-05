@@ -62,7 +62,7 @@ services:
       - ql_dvol:/data
     working_dir: /data
     command: >
-      sh -c "echo '{ \"ascii-prefixes-only\": false, \"num-triples-per-batch\": 10000 }' > odis.settings.json"
+      sh -c "echo '{ \"add-text-index\": true, \"ascii-prefixes-only\": false, \"num-triples-per-batch\": 10000 }' > odis.settings.json"
     user: root
 
   indexer:
@@ -77,7 +77,7 @@ services:
     working_dir: /data
     command:
       [
-        "cat /data/odis.nq | IndexBuilderMain -i odis -s /data/odis.settings.json -F nq -f - | tee odis.index-log.txt",
+        "cat /data/odis.nq | IndexBuilderMain -i odis -s /data/odis.settings.json -F nq -f -  --text-words-from-literals | tee odis.index-log.txt",
       ]
     stdin_open: true
     tty: true
