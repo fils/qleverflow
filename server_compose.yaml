@@ -6,8 +6,8 @@ networks:
 #export USER_ID=$(id -u)
 #export GROUP_ID=$(id -g)
 
-# volumes:
-# ql_dvol:
+volumes:
+  ql_dvol:
 
 services:
   qlever.server:
@@ -45,7 +45,7 @@ services:
     init: true
     user: "1000:1000" # Will be set via .env file
     volumes:
-      # - ql_dvol:/app/db
+#       - ql_dvol:/app/db
       - /home/fils/scratch/qleverflow/configs/ODIS-OIH:/app/db
     ports:
       - "8176:7000"
@@ -55,8 +55,9 @@ services:
       #      QLEVERUI_ALLOWED_HOSTS: "*"
       #      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
       #      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
+      QLEVER_HOST: "http://workstation.lan:7007" # Updated to use service name
       QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis.ui-db.sqlite3"
-      QLEVER_HOST: "http://192.168.202.191:7007" # Updated to use service name
+#      QLEVER_HOST: "http://192.168.202.191:7007" # Updated to use service name
     #    entrypoint: bash
     command:
       - gunicorn

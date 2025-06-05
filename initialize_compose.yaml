@@ -22,6 +22,7 @@ services:
     command: chown -R 1000:1000 /data
     user: root
 
+#       curl -fLo /data/odis.ui-db.sqlite3 http://ossapi.oceaninfohub.org/public/odis.ui-db.sqlite3  &&
   downloader:
     <<: *service-defaults
     image: alpine/curl
@@ -34,9 +35,8 @@ services:
     command: >
       sh -c "curl -fLo /data/Qleverfile.odis http://ossapi.oceaninfohub.org/public/Qleverfile-odis &&
       curl -fLo /data/Qleverfile-ui.yml http://ossapi.oceaninfohub.org/public/Qleverfile-ui.yml &&
-      curl -fLo /data/odis.ui-db.sqlite3 http://ossapi.oceaninfohub.org/public/odis.ui-db.sqlite3  &&
       curl -fLo /data/odis.settings.json http://ossapi.oceaninfohub.org/public/odis.settings.json &&
-             ls /data && echo 'File Qleverfile.odis downloaded successfully to /data/'"
+      ls /data && echo 'File Qleverfile.odis downloaded successfully to /data/'"
 
   getdata:
     <<: *service-defaults
