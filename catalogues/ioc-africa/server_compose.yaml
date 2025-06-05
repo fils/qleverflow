@@ -30,7 +30,6 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ql_dvol:/data
-      # - /home/fils/scratch/qleverflow/configs/ODIS-OIH:/data
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
       -c 'ServerMain -i odis -j 8 -p 7007 -m 25G -c 20G -e 1G -k 200 -s 240s -t'
@@ -46,7 +45,6 @@ services:
     user: "1000:1000" # Will be set via .env file
     volumes:
       - ql_dvol:/app/db
-      # - /home/fils/scratch/qleverflow/configs/ODIS-OIH:/app/db
     ports:
       - "8176:7000"
     environment:
@@ -55,9 +53,9 @@ services:
       #      QLEVERUI_ALLOWED_HOSTS: "*"
       #      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
       #      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
-      QLEVER_HOST: "http://workstation.lan:7007" # Updated to use service name
+      QLEVER_HOST: "http://oih.ioc-africa.org:7007" # Updated to use service name
       QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis.ui-db.sqlite3"
-    #      QLEVER_HOST: "http://192.168.202.191:7007" # Updated to use service name
+#      QLEVER_HOST: "http://192.168.202.191:7007" # Updated to use service name
     #    entrypoint: bash
     command:
       - gunicorn
