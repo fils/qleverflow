@@ -1,9 +1,9 @@
 # Define default settings that will be applied to all services
 x-service-defaults: &service-defaults
-  restart: "no"
-  deploy:
-    restart_policy:
-      condition: "none"
+#  restart: "no"
+#  deploy:
+#    restart_policy:
+#      condition: "none"
   labels:
     - "com.docker.compose.rm=true"
 
