@@ -6,6 +6,12 @@ Some notes for running locally to a machine named workstation.lan
 
 ## quickstart
 
+There are really 3 steps to testing this locally.
+
+1) update the name for your server IP or FQDN
+2) update the location the files are downloaded from
+3) upload the files in this directory to that location
+
 ### where to change to the local client address
 
 ```bash

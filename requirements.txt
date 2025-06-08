@@ -8,3 +8,4 @@ scipy
 igraph
 holoviews
 plotly
+gradio[mcp]

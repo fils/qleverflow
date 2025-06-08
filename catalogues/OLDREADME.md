@@ -1,8 +1,9 @@
 # README.md
 
-> deprecated and needs to be reviewed for inclusion with newer material
+NAMES MUST BE DNS COMPLIANT. These are used as PROJECT variables, MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
 
 ## About
+
 
 When trying to deploy a Qlever instance with data into Docker[swarm] there is no need to build the index and then try and sync
 that into the swarm or a data volume.
