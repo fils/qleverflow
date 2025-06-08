@@ -31,12 +31,12 @@ services:
     user: "1000:1000" # Add this line to run as the same user
     volumes:
       - ql_dvol:/data
-      - ${PWD}:/localdata:ro
+      # - ${PWD}:/localdata:ro
     command: >
-      sh -c "cp /localdata/Qleverfile.odis /data &&
-      cp /localdata/Qleverfile-ui.yml  /data  &&
-      cp /localdata/odis.ui-db.sqlite3  /data &&
-      cp /localdata/odis.settings.json  /data  &&
+      sh -c "curl -fLo /data/Qleverfile.odis http://ossapi.oceaninfohub.org/public/ioc-local/Qleverfile-odis &&
+      curl -fLo /data/Qleverfile-ui.yml http://ossapi.oceaninfohub.org/public/ioc-local/Qleverfile-ui.yml &&
+      curl -fLo /data/odis.ui-db.sqlite3 http://ossapi.oceaninfohub.org/public/ioc-local/odis.ui-db.sqlite3 &&
+      curl -fLo /data/odis.settings.json http://ossapi.oceaninfohub.org/public/ioc-local/odis.settings.json &&
       ls /data && echo 'Files downloaded  to /data/'"
 
   getdata:

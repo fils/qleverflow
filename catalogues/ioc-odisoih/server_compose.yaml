@@ -52,7 +52,7 @@ services:
       #      QLEVERUI_ALLOWED_HOSTS: "*"
       #      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
       #      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
-      QLEVER_HOST: "http://ghost.lan:7007"
+      QLEVER_HOST: "http://workstation.lan:7007"
       QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis.ui-db.sqlite3"
     command:
       - gunicorn

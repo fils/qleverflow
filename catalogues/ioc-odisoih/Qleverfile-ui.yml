@@ -3,7 +3,7 @@ config:
     name: Default
     slug: default
     sortKey: 1
-    baseUrl: https://ghost.lan:7007
+    baseUrl: https://workstation.lan:7007
     apiToken: ""
     isDefault: true
     isNoSlugMode: "False"
@@ -249,5 +249,5 @@ config:
       } GROUP BY ?qleverui_entity ORDER BY DESC(?qleverui_count)
 
       # ENDIF #
-    mapViewBaseURL: "https://ghost.lan:9090"
+    mapViewBaseURL: "https://workstation.lan:9090"
   examples: []
