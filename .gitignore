@@ -3,3 +3,4 @@ configs
 .fleet
 .venv
 secret
+CLAUDE.md
