@@ -1,0 +1,11 @@
+CONSTRUCT {
+  ?s ?p ?o
+}
+WHERE {
+  GRAPH <urn:gleaner.io:oih:rda:data:dd8e207482f9378367949c83279ea7e2a17eeb00> {
+    {
+      ?s ?p ?o
+    }
+  }
+}
+

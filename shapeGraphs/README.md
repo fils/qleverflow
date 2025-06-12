@@ -32,7 +32,7 @@ WHERE {
 
 
 ```bash
-curl -s "http://ghost.lan:7019"  -H "Accept: text/tab-separated-values" -H "Content-type: application/sparql-query" --data @./construct.rq > results.nt
+curl -s "http://ghost.lan:7007"  -H "Accept: text/tab-separated-values" -H "Content-type: application/sparql-query" --data @./construct.rq > results.nt
 ```
 
 ```bash
