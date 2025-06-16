@@ -30,3 +30,4 @@ SYSTEM = docker
 IMAGE  = docker.io/adfreiburg/qlever:latest
 
 [ui]
+UI_CONFIG = default

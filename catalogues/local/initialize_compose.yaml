@@ -33,7 +33,9 @@ services:
     #    working_dir: /data
     command: >
       sh -c "cp /app/db/qleverui.sqlite3 /data/odis-qleverui.sqlite3 &&
-          ls /data && echo 'Files in /data/'"
+          chown 1000 /data/odis-qleverui.sqlite3 &&
+          chmod 666 /data/odis-qleverui.sqlite3 &&
+          ls -l /data && echo 'Files in /data/'"
     stdin_open: true
     tty: true
 
@@ -49,8 +51,8 @@ services:
       - ${PWD}:/tmp/localdata:ro
     command: >
       sh -c "cp /tmp/localdata/Qleverfile.odis /data &&
+      cp /tmp/localdata/Qleverfile.odis  /data/Qleverfile  &&
       cp /tmp/localdata/Qleverfile-ui.yml  /data  &&
-      cp /tmp/localdata/Qleverfile-ui.yml  /data/Qleverfile  &&
       cp /tmp/localdata/odis.settings.json  /data  &&
       ls /data && echo 'Files copied to /data/'"
 
