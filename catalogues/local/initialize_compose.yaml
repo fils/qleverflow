@@ -1,9 +1,8 @@
 # Define default settings that will be applied to all services
 x-service-defaults: &service-defaults
-  #  restart: "no"
-  #  deploy:
-  #    restart_policy:
-  #      condition: "none"
+  deploy:
+      restart_policy:
+        condition: "none"
   labels:
     - "com.docker.compose.rm=true"
 
@@ -22,11 +21,27 @@ services:
     command: chown -R 1000:1000 /data
     user: root
 
+  getsql:
+    <<: *service-defaults
+    image: adfreiburg/qlever-ui:latest
+    depends_on:
+      volume-setup:
+        condition: service_completed_successfully
+    user: "1000:1000"
+    volumes:
+      - ql_dvol:/data
+    #    working_dir: /data
+    command: >
+      sh -c "cp /app/db/qleverui.sqlite3 /data/odis-qleverui.sqlite3 &&
+          ls /data && echo 'Files in /data/'"
+    stdin_open: true
+    tty: true
+
   downloader:
     <<: *service-defaults
     image: alpine/curl
     depends_on:
-      volume-setup:
+      getsql:
         condition: service_completed_successfully
     user: "1000:1000" # Add this line to run as the same user
     volumes:
@@ -35,9 +50,9 @@ services:
     command: >
       sh -c "cp /tmp/localdata/Qleverfile.odis /data &&
       cp /tmp/localdata/Qleverfile-ui.yml  /data  &&
-      cp /tmp/localdata/odis.ui-db.sqlite3  /data &&
+      cp /tmp/localdata/Qleverfile-ui.yml  /data/Qleverfile  &&
       cp /tmp/localdata/odis.settings.json  /data  &&
-      ls /data && echo 'Files downloaded  to /data/'"
+      ls /data && echo 'Files copied to /data/'"
 
   getdata:
     <<: *service-defaults

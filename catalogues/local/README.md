@@ -64,3 +64,55 @@ Simple SPARQL check via curl on the Qlever port for good feelings (jq is optiona
 curl -s "http://workstation.lan:7007" -H "Accept: application/qlever-results+json" -H "Content-type: application/sparql-query" --data "SELECT * WHERE { ?s ?p ?o } LIMIT 10"  | jq
 ```
 
+
+## Scratch pad
+
+qlever script ui commands
+
+```bash
+
+Command: ui
+
+docker pull -q docker.io/adfreiburg/qlever-ui
+
+docker create --name qlever.ui.odis docker.io/adfreiburg/qlever-ui && docker cp qlever.ui.odis:/app/db/qleverui.sqlite3 odis.ui-db.sqlite3 && docker rm -f qlever.ui.odis
+
+docker run -d --volume $(pwd):/app/db --env QLEVERUI_DATABASE_URL=sqlite:////app/db/odis.ui-db.sqlite3 --publish 8176:7000 --name qlever.ui.odis docker.io/adfreiburg/qlever-ui
+
+docker exec -i qlever.ui.odis bash -c "python manage.py config default /app/db/Qleverfile-ui.yml --hide-all-other-backends"
+```
+
+
+docker fragment
+
+```dockerfile
+    command:
+      - gunicorn
+      - "--bind"
+      - ":7000"
+      - "--workers"
+      - "3"
+      - "--limit-request-line"
+      - "10000"
+      - "qlever.wsgi:application"
+```
+
+```dockerfile
+   sh -c "cp /app/db/qleverui.sqlite3 /data/odis-qleverui.sqlite3 &&
+      ls /data && echo 'Files in /data/'"
+```
+
+```dockerfile
+      # this will hopefully be a hostname from the above service
+      #      QLEVER_HOST: "http://qlever-server-${PROJECT:-geocodesexamples}:7007"
+      #      QLEVERUI_ALLOWED_HOSTS: "*"
+      #      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
+      #      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
+```
+
+```dockerfile
+    command: >
+      "gunicorn --bind :7000 --workers 3 --limit-request-line 10000 qlever.wsgi:application &&
+      python manage.py config default /app/db/Qleverfile-ui.yml --hide-all-other-backends"
+
+```

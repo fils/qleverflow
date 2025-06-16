@@ -39,23 +39,30 @@ services:
 
   qlever.ui:
     image: docker.io/adfreiburg/qlever-ui:latest
+    depends_on:
+      qlever.server:
+        condition: service_started
     container_name: qlever.ui
     init: true
     user: "1000:1000" # Will be set via .env file
     volumes:
       - ql_dvol:/app/db
+#    working_dir: /data
     ports:
       - "8176:7000"
     environment:
-      # this will hopefully be a hostname from the above service
-      #      QLEVER_HOST: "http://qlever-server-${PROJECT:-geocodesexamples}:7007"
-      #      QLEVERUI_ALLOWED_HOSTS: "*"
-      #      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
-      #      QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
+#      - PATH="/qlever:/qlever/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+#      - LANG="C.UTF-8"
+#      - LC_ALL="C.UTF-8"
+#      - LC_CTYPE="C.UTF-8"
+#      - DEBIAN_FRONTEND="noninteractive"
+#      - QLEVER_PROFILE="/etc/profile.d/qlever.sh"
+#      - QLEVER_ARGCOMPLETE_ENABLED="1"
+#      - QLEVER_IS_RUNNING_IN_CONTAINER="1"
       QLEVER_HOST: "http://workstation.lan:7007"
-      QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis.ui-db.sqlite3"
+      QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis-qleverui.sqlite3"
     command:
-      - gunicorn
+      - "gunicorn"
       - "--bind"
       - ":7000"
       - "--workers"
@@ -69,6 +76,9 @@ services:
 
   qlever.petrimaps:
     image: docker.io/adfreiburg/qlever-petrimaps:latest
+    depends_on:
+      qlever.ui:
+        condition: service_started
     container_name: qlever.ui.petrimaps
     hostname: qlever-petrimaps
     ports:

@@ -2,10 +2,20 @@
 
 ## About
 
-This repo is for testing approaches to deploying Qlever and the UI and Mapping via 
-Docker compose files. 
+First, if you are interested in Qlever and running it locally, DO NOT USE THIS REPO.  At least, it's very likely
+not what you want.
 
-If you are interested in these components, you should check out them directly at;
+You should go to the [qlever-control](https://github.com/ad-freiburg/qlever-control) repo instead.  That 
+is the official repo for a nice server and UI onboarding experience with Qlever.   Also visit the main 
+[qlever](https://github.com/ad-freiburg/qlever) repo or the [Qlever Wiki](https://github.com/ad-freiburg/qlever/wiki).
+
+So why does this repo exist?   I wanted to play with ways to leverage deploying Qlever via 
+docker compose files for some of the workflows and automated approaches I have.   In that case, qlever-control
+was not quite what I needed.  So I basically decomposed its approach into docker compose files.
+
+This repo is for testing those approaches and ideas. 
+
+If you are interested in these components, you should check them out directly at;
 
 * [Qlever](https://github.com/ad-freiburg/qlever)
 * [Qlever-ui](https://github.com/ad-freiburg/qlever-ui)
@@ -13,9 +23,6 @@ If you are interested in these components, you should check out them directly at
 
 Also, if you just want to run Qlever local with data for testing, you should use
 [Qlever-control](https://github.com/ad-freiburg/qlever-control)
-
-This repo is really focused on leveraging the above in custom Docker compose workflows and 
-eventually in tools like Dagster.
 
 Also see the [README.md](catalogues/README.md) in catalogues for how to download and index data
 from your own Qleverfile.
