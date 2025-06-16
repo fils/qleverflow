@@ -34,3 +34,9 @@ Deploy with cut and paste for now.
  ![admin_add.png](admin_add.png)
 
 ## Untested. Run an additional container using qlever_namespace.yaml
+```
+QLEVER_NET=base
+PROJECT=deepoceans
+HOST=geocodes-aws-dev.earthcube.org
+QLEVER_CONFIG=deepoceans
+```
