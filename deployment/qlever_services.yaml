@@ -90,10 +90,11 @@ services:
     #   - "8176:7000"
     environment:
       # this will hopefully be a hostname from the above service
-      QLEVER_HOST: "http://qlever-server-${PROJECT:-geocodesexamples}:7007"
+      QLEVER_HOST: "http://qlever-server-${PROJECT:-geocodesexamples}:7019"
       QLEVERUI_ALLOWED_HOSTS: "*"
       QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
       QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
+      QLEVERUI_DATABASE_URL: "sqlite:////app/db/qleverui.sqlite3"
 #      QLEVER_HOST: "http://0.0.0.0:7007"
    #    entrypoint: bash
     command:
