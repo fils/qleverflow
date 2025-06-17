@@ -1,6 +1,8 @@
 ### basic services and a single container for qlver
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
 # Environment variables need to be set in a .env file:
+
+# the server will be located at namespace/PROJECT
 version: '3.9'
 networks:
   qlever_network:
@@ -65,11 +67,11 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.entrypoints=http"
-      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.rule=Host(`qlever-base.${HOST}`)"
+      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.rule=Host(`qlever.${HOST}`) && PathPrefix(`/graphspace/${PROJECT}`)"
       - "traefik.http.middlewares.qlever-base-${PROJECT:-geocodesexamples}-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.middlewares=qlever-base-${PROJECT:-geocodesexamples}-https-redirect"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.entrypoints=https"
-      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.rule=Host(`qlever-base.${HOST}`)"
+      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.rule=Host(`qlever.${HOST}`) && PathPrefix(`/graphspace/${PROJECT}`)"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.tls=true"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.tls.certresolver=httpresolver"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.service=qlever-base-${PROJECT:-geocodesexamples}"
