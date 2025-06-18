@@ -56,7 +56,7 @@ services:
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-         ' ls -l && qlever get-data  --log-level DEBUG && qlever index && qlever start --run-in-foreground '
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
     # run in forground, otherwise docker thinks run is complete.
     # 'qlever setup-config ${PROJECT:-geocodesexamples} && qlever get-data && qlever index &&  qlever start'
     # -c 'ServerMain -i ${PROJECT:-geocodesexamples} -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
