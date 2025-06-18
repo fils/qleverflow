@@ -1,16 +1,17 @@
----
+version: '3.9'
+
 networks:
   qlever_network:
       name: qlever-network-${QLEVER_NET:-base}
       external: true
-  treafik_proxy:
-      name: treafik_proxy
+  traefik_proxy:
+      name: traefik_proxy
       external: true
 #export USER_ID=$(id -u)
 #export GROUP_ID=$(id -g)
 configs:
   qlever-config:
-    name: glever-config-${QLEVER_CONFIG:-deepoceans}
+    name: qlever-config-${QLEVER_CONFIG:-deepoceans}
     external: true
 services:
 
@@ -18,7 +19,8 @@ services:
     image: docker.io/adfreiburg/qlever:latest
     hostname: qlever.server.${PROJECT:-deepoceans}
     init: true
-    user: "1000:1000"  # Will be set via .env file
+    user: "root:root"  # Will be set via .env file
+    #user: "1000:1000"  # Will be set via .env file
     working_dir: /data
 #    ports:
 #      - "7019:7019"
@@ -34,24 +36,24 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
     configs:
-      - source: qlever_config
+      - source: qlever-config
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-         ' ls -l && qlever get-data  --log-level DEBUG && qlever index && qlever start --run-in-foreground '
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
 
     restart: unless-stopped
     networks: &network
       - qlever_network
-      - treafik_proxy
+      - traefik_proxy
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.entrypoints=http"
-      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.rule=Host(`qlever-${PROJECT:-deepoceans}.${HOST}`)"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.rule=Host(`qlever.${HOST}`) && PathPrefix(`/graphspace/${PROJECT}`)"
       - "traefik.http.middlewares.qlever-project-${PROJECT:-deepoceans}-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.middlewares=qlever-project-${PROJECT:-deepoceans}-https-redirect"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.entrypoints=https"
-      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever-${PROJECT:-deepoceans}.${HOST}`)"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever.${HOST}&& PathPrefix(`/graphspace/${PROJECT}`)`)"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls=true"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls.certresolver=httpresolver"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.service=qlever-project-${PROJECT:-deepoceans}"
