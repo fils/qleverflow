@@ -10,13 +10,11 @@ TODO:
  - [ ] load the results into pyoxigraph and then download the graph there to a file
  - [ ] alternatively, load directly to QLever or to a directory of graphs to load to Qlever
  - Defs needed
-   - function to take a SPARQL query and return a dataframe with the results - this is the graph with filter ?g returned
+   - function to take a SPARQL query and return a dataframe with the results—this is the graph with filter ?g returned
    - function to take an argument (named graph) and do a construct call, return a nq/nt graph
    - SHACL function that takes a datagraph and shapegraph and returns a graph
 
-
-
-
+   
 ```SPARQL
 CONSTRUCT {
   ?s ?p ?o

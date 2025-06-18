@@ -3,6 +3,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 import re
+import argparse
 
 # Download necessary NLTK data (run once)
 nltk.download('punkt')
@@ -21,7 +22,11 @@ def preprocess_search_string(text):
 
     # 4. Remove stop words
     stop_words = set(stopwords.words('english'))
-    filtered_tokens = [word for word in tokens if word not in stop_words]
+    filtered_tokens0 = [word for word in tokens if word not in stop_words]
+
+    # 4.5 Remove words too common to allow like data or resource or others
+    common = ['ocean', 'data', 'resource']
+    filtered_tokens = [word for word in filtered_tokens0 if word not in common]
 
     # 5. Stemming (or Lemmatization - see note below)
     stemmer = PorterStemmer()
@@ -37,13 +42,11 @@ def preprocess_search_string(text):
 
     return processed_string
 
-# Example usage:
-search_query = "What are the best python libraries for natural language processing?"
+parser = argparse.ArgumentParser()
+parser.add_argument("-q", "--query", required=True, help="search query")
+args = parser.parse_args()
+
+search_query = args.query
 processed_query = preprocess_search_string(search_query)
 print(f"Original query: {search_query}")
 print(f"Processed query: {processed_query}")
-
-search_query_2 = "Data related to the acidification of the ocean near coral reefs"
-processed_query_2 = preprocess_search_string(search_query_2)
-print(f"Original query: {search_query_2}")
-print(f"Processed query: {processed_query_2}")

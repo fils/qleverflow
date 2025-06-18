@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "rdf-query-server": {
-      "url": "http://localhost:8898/sse",
-      "env": {}
-    }
-  }
-}
