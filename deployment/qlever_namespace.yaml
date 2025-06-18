@@ -40,7 +40,7 @@ services:
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-         ' ls -l && qlever get-data  --log-level DEBUG && qlever index && qlever start --run-in-foreground '
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
 
     restart: unless-stopped
     networks: &network
