@@ -4,3 +4,4 @@ configs
 .venv
 secret
 CLAUDE.md
+/deployment/rundata/

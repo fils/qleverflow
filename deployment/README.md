@@ -1,5 +1,6 @@
 # Deployment for Portainer.
 
+**Local, see below**
 
 # Three containers run:
 * qlever-base.{HOST}
@@ -40,3 +41,16 @@ PROJECT=deepoceans
 HOST=geocodes-aws-dev.earthcube.org
 QLEVER_CONFIG=deepoceans
 ```
+
+## LOCAL
+run with qlever_services_override.yaml
+REQUIRES NETWORKS:
+* `qlever_network_base`  aka in compose with a variableqlever_network_${QLEVER_NET:-base}
+* `traefik_proxy`
+
+`/usr/local/bin/docker compose -f /Users/valentin/development/dev_earthcube/qleverflow/deployment/qlever_services.yaml -p deployment up -d qlever-server-base
+`
+
+Quirks:
+* catalogues/local/Qleverfile-ui-deploy.yml uses port 7019, because that is what is used in the geocodes demo and deepoceans ports
+* you can't have the network treafik_proxy and qlever-network-base defined externally
