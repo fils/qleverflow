@@ -30,8 +30,9 @@ services:
         volumes:
             - /etc/localtime:/etc/localtime:ro
             - ql_dvol:/data
-#        entrypoint: /qlever/docker-entrypoint.sh
-        command: ["qlever -q Qleverfile  start  --system native --use-text-index yes --run-in-foreground " ]
+        entrypoint: /qlever/docker-entrypoint.sh
+        command: >
+            -c 'ServerMain -i odis -j 8 -p 7007 -m 25G -c 20G -e 1G -k 200 -s 240s -t'
         restart: unless-stopped
     #    networks:
     #      - qlever_network
@@ -46,6 +47,7 @@ services:
         user: "1000:1000" # Will be set via .env file
         volumes:
             - ql_dvol:/app/db
+        #    working_dir: /data
         ports:
             - "8176:7000"
         environment:
@@ -60,6 +62,15 @@ services:
             QLEVER_HOST: "http://workstation.lan:7007"
             QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis-qleverui.sqlite3"
         command: bash -c "python manage.py config default /app/db/Qleverfile-ui.yml --hide-all-other-backends && gunicorn --bind :7000 --workers 3 --limit-request-line 10000 qlever.wsgi:application"
+        # command:
+        #   - "gunicorn"
+        #   - "--bind"
+        #   - ":7000"
+        #   - "--workers"
+        #   - "3"
+        #   - "--limit-request-line"
+        #   - "10000"
+        #   - "qlever.wsgi:application"
         restart: unless-stopped
     #    networks:
     #      - qlever_network
