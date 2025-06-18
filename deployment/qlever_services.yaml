@@ -1,6 +1,8 @@
 ### basic services and a single container for qlver
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
 # Environment variables need to be set in a .env file:
+
+# the server will be located at namespace/PROJECT
 version: '3.9'
 networks:
   qlever_network:
@@ -25,7 +27,7 @@ services:
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
  qlever-server-base:
     image: docker.io/adfreiburg/qlever:latest
-    hostname: qlever-server
+    hostname: qlever-server-${PROJECT:-geocodesexamples}
     user: "root:root"  # Will be set via .env file
     #user: "1011:1011"
     working_dir: /data
@@ -54,7 +56,7 @@ services:
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-         ' ls -l && qlever get-data  --log-level DEBUG && qlever index && qlever start --run-in-foreground '
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
     # run in forground, otherwise docker thinks run is complete.
     # 'qlever setup-config ${PROJECT:-geocodesexamples} && qlever get-data && qlever index &&  qlever start'
     # -c 'ServerMain -i ${PROJECT:-geocodesexamples} -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
@@ -65,11 +67,11 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.entrypoints=http"
-      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.rule=Host(`qlever-base.${HOST}`)"
+      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.rule=Host(`qlever.${HOST}`) && PathPrefix(`/graphspace/${PROJECT}`)"
       - "traefik.http.middlewares.qlever-base-${PROJECT:-geocodesexamples}-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}.middlewares=qlever-base-${PROJECT:-geocodesexamples}-https-redirect"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.entrypoints=https"
-      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.rule=Host(`qlever-base.${HOST}`)"
+      - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.rule=Host(`qlever.${HOST}`) && PathPrefix(`/graphspace/${PROJECT}`)"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.tls=true"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.tls.certresolver=httpresolver"
       - "traefik.http.routers.qlever-base-${PROJECT:-geocodesexamples}-secure.service=qlever-base-${PROJECT:-geocodesexamples}"
@@ -92,8 +94,9 @@ services:
       # this will hopefully be a hostname from the above service
       QLEVER_HOST: "http://qlever-server-${PROJECT:-geocodesexamples}:7007"
       QLEVERUI_ALLOWED_HOSTS: "*"
-      QLEVERUI_CSRF_TRUSTED_ORIGINS: "https://*.geocodes-aws-dev.earthcube.org"
+      QLEVERUI_CSRF_TRUSTED_ORIGINS: ${QLEVERUI_CSRF_TRUSTED_ORIGINS:-https://*.geocodes-aws-dev.earthcube.org}
       QLEVERUI_SECRET_KEY: ${QLEVERUI_SECRET_KEY:-!!super_secret!!}
+      QLEVERUI_DATABASE_URL: "sqlite:////app/db/qleverui.sqlite3"
 #      QLEVER_HOST: "http://0.0.0.0:7007"
    #    entrypoint: bash
     command:
@@ -140,3 +143,4 @@ services:
       - "traefik.http.routers.qlever-petrimaps-${PROJECT:-geocodesexamples}-secure.service=qlever-petrimaps-${PROJECT:-geocodesexamples}"
       - "traefik.http.services.qlever-petrimaps-${PROJECT:-geocodesexamples}.loadbalancer.server.port=9090"
       - "traefik.docker.network=traefik_proxy"
+
