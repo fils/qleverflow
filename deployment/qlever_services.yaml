@@ -127,6 +127,9 @@ services:
  qlever-petrimaps-base:
     image: docker.io/adfreiburg/qlever-petrimaps:latest
     hostname: qlever-petrimaps
+    depends_on:
+      qlever-ui-base:
+        condition: service_started
     # ports:
     #   - "9090:9090"
     networks: *network
