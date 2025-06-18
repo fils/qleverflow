@@ -21,7 +21,7 @@ def query_sparql_endpoint(url):
         "Content-type": "application/sparql-query"
     }
 
-    sparql_query = "SELECT * WHERE { graph ?g { ?s a <https://schema.org/Dataset> } } LIMIT 1000"
+    sparql_query = "SELECT * WHERE { graph ?g { ?s a <https://schema.org/Dataset> } }"
 
     try:
         sparql.setQuery(sparql_query)

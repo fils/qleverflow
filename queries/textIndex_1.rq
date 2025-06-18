@@ -1,8 +1,20 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gn: <https://www.geonames.org/ontology#>
+PREFIX text: <http://jena.apache.org/text#>
+PREFIX vrank: <http://purl.org/voc/vrank#>
 PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+PREFIX gn: <https://www.geonames.org/ontology#>
 
-SELECT ?s ?p ?ce  WHERE {
-  ?s ?p ?ce  .
-  ?text ql:contains-entity ?ce .
-  ?text ql:contains-word "Bayelsa* Delta Lagos Ogun" .
+SELECT ?uri  (COUNT(?text) AS ?count) (SAMPLE(?item) AS ?example_text)  WHERE {
+  ?uri rdf:type <https://schema.org/Dataset> .
+    ?uri <https://schema.org/description> ?item .
+    ?text ql:contains-entity ?item .
+    ?text ql:contains-word "south*" .
+    ?text ql:contains-word "pacific*" .
+     ?text ql:contains-word "reef*" .
+     ?text ql:contains-word "coral*" .
+
 }
-
+GROUP BY ?uri ?item ?text
+ORDER BY DESC(?count)
