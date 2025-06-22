@@ -30,7 +30,7 @@ def validate_with_shacl(rdf_graph_text, shacl_shape_text):
             rdf_graph_text,
             data_graph_format="ttl",
             shacl_graph_format="ttl",
-            shacl_graph=shacl_shape_text, inference='rdfs',  serialize_report_graph = True
+            shacl_graph=shacl_shape_text, inference='rdfs',  serialize_report_graph = False
         )
 
         # print("--------------------------------------------")
@@ -41,13 +41,17 @@ def validate_with_shacl(rdf_graph_text, shacl_shape_text):
         # print(validation_text)
 
         # return is_valid, validation_graph, validation_text
-        return validation_graph
+
+        skolemver = validation_graph.skolemize(authority="http://gleaner.io")
+        # return skolemver.serialize(format="nt")
+
+        return skolemver.serialize(format="nt")
 
     except Exception as e:
         raise Exception(f"SHACL validation error: {e}")
 
 
-def validate_with_shacl_simple(rdf_graph_text, shacl_shape_text, output_format):
+def validate_with_shacl_simple(rdf_graph_text, shacl_shape_text):
     """
     Simplified version that returns only the validation text result.
 
@@ -59,11 +63,25 @@ def validate_with_shacl_simple(rdf_graph_text, shacl_shape_text, output_format):
     Returns:
         str: The validation report in the requested format
     """
-    is_valid, validation_graph, validation_text = validate_with_shacl(
-        rdf_graph_text, shacl_shape_text, output_format
-    )
 
-    if is_valid:
-        return f"Validation PASSED\n\n{validation_text}"
-    else:
-        return f"Validation FAILED\n\n{validation_text}"
+    try:
+        # Perform SHACL validation
+        is_valid, validation_graph, validation_text = validate(
+            rdf_graph_text,
+            data_graph_format="ttl",
+            shacl_graph_format="ttl",
+            shacl_graph=shacl_shape_text, inference='rdfs',  serialize_report_graph = True
+        )
+
+        # print("--------------------------------------------")
+        # print(is_valid)
+        # print("--------------------------------------------")
+        # print(validation_graph)
+        # print("--------------------------------------------")
+        # print(validation_text)
+
+        # return is_valid, validation_graph, validation_text
+        return validation_text
+
+    except Exception as e:
+        raise Exception(f"SHACL validation error: {e}")

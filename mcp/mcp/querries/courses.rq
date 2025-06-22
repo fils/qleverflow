@@ -1,0 +1,16 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT * WHERE {
+  ?s rdf:type <https://schema.org/Course> .
+  ?s <https://schema.org/name> ?name .
+  ?s <https://schema.org/description> ?description .
+  ?s <https://schema.org/hasCourseInstance> ?courseinstance .
+  ?courseinstance <https://schema.org/startDate> ?startdate .
+  ?courseinstance <https://schema.org/endDate> ?enddate .
+  ?courseinstance <https://schema.org/location> ?location .
+  OPTIONAL {
+      ?location <https://schema.org/address> ?address .
+  }
+    OPTIONAL {
+   ?location <https://schema.org/name> ?location_name .
+  }
+}

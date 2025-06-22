@@ -9,3 +9,6 @@ igraph
 holoviews
 plotly
 gradio[mcp]
+lancedb
+datasets
+sentence-transformers
