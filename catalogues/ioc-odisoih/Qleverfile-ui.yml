@@ -250,4 +250,10 @@ config:
 
       # ENDIF #
     mapViewBaseURL: "https://workstation.lan:9090"
-  examples: []
+  examples:
+    - name: test
+      sort_key: "~"
+      query:  |- 
+        select * where {?s ?p ?o}
+        limit 1000
+

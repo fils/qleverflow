@@ -250,4 +250,9 @@ config:
 
       # ENDIF #
     mapViewBaseURL: "http://localhost:9090"
-  examples: []
+  examples:
+    - name: test
+      sort_key: "~"
+      query:  |- 
+        select * where {?s ?p ?o}
+        limit 1000
