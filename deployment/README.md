@@ -66,6 +66,13 @@ export PREFIX=dev
 
 [UI on 8176](http://localhost:8176/)
 
+### local data
+#### QLEVER Server
+you can look at the local index files in deployment/rundata
+When containers are stopped, you  can clean up all files but the .gitkeep, 
+#### QLEVER UI
+The data is on the docker volume: qleverflow_data_PROJECT
+
 Quirks:
 * catalogues/local/Qleverfile-ui-deploy.yml uses port 7019, because that is what is used in the geeocodes demo and deepoceans ports
 * when running with the `-f ./qlever_services_override.yaml` you can't have the network treafik_proxy and qlever-network-base defined externally
