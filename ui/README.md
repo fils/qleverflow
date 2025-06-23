@@ -2,6 +2,11 @@
 
 ## About
 
+Just some code for a simple Gradio based UI for testing.  The query_prep.py is some thoughts on
+shaping free text query strings into something more aligned with the Qlever text index approach.
+
+![gradio.png](docs/gradio.png)
+
 ## Notes
 
 References:

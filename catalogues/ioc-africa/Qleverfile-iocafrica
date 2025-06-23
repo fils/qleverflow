@@ -1,0 +1,27 @@
+# Qleverfile for IOC Africa Graph
+
+[data]
+NAME              = odis
+BASE_URL          = http://ossapi.oceaninfohub.org/public
+GET_DATA_CMD      = curl -sLo odis.nq.zip -C - ${BASE_URL}/odis.nq.zip && unzip -q -o odis.nq.zip && rm odis.nq.zip
+DESCRIPTION       = ODIS Ocean metadata ${BASE_URL}
+TEXT_DESCRIPTION  = ODIS release graph description
+FORMAT            = nq
+
+[index]
+INPUT_FILES     = odis.nq
+CAT_INPUT_FILES = cat ${INPUT_FILES}
+SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
+
+[server]
+PORT               = 7007
+ACCESS_TOKEN       = ${data:NAME}_7643543846_6dMISzlPrD7i
+MEMORY_FOR_QUERIES = 25G
+CACHE_MAX_SIZE     = 20G
+TIMEOUT            = 240s
+
+[runtime]
+SYSTEM = docker
+IMAGE  = docker.io/adfreiburg/qlever:latest
+
+[ui]

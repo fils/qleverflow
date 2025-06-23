@@ -1,0 +1,14 @@
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?uri (COUNT(?text) AS ?count) (SAMPLE(?text) AS ?example_text) ?item  WHERE {
+  ?uri rdf:type <https://schema.org/Dataset> .
+    ?uri <https://schema.org/description> ?item .
+    ?text ql:contains-entity ?item .
+    ?text ql:contains-word "Arno" .
+          FILTER (!CONTAINS(STR(?uri), "gleaner.io"))
+  FILTER (!isBLANK(?uri))
+}
+GROUP BY ?uri ?item
+ORDER BY DESC(?count)
+LIMIT 50

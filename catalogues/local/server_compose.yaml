@@ -1,87 +1,77 @@
 networks:
-  qlever_network:
-    name: qlever_net
+    qlever_network:
+        name: qlever_net
 #      external: true
 
 #export USER_ID=$(id -u)
 #export GROUP_ID=$(id -g)
 
 volumes:
-  ql_dvol:
+    ql_dvol:
 
 services:
-  qlever.server:
-    image: docker.io/adfreiburg/qlever:latest
-    container_name: qlever.server
-    init: true
-    user: "1000:1000" # Will be set via .env file
-    working_dir: /data
-    ports:
-      - "7007:7007"
-    environment:
-      - PATH="/qlever:/qlever/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      - LANG="C.UTF-8"
-      - LC_ALL="C.UTF-8"
-      - LC_CTYPE="C.UTF-8"
-      - DEBIAN_FRONTEND="noninteractive"
-      - QLEVER_PROFILE="/etc/profile.d/qlever.sh"
-      - QLEVER_ARGCOMPLETE_ENABLED="1"
-      - QLEVER_IS_RUNNING_IN_CONTAINER="1"
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ql_dvol:/data
-    entrypoint: /qlever/docker-entrypoint.sh
-    command: >
-      -c 'ServerMain -i odis -j 8 -p 7007 -m 25G -c 20G -e 1G -k 200 -s 240s -t'
-    restart: unless-stopped
-  #    networks:
-  #      - qlever_network
+    qlever.server:
+        image: docker.io/adfreiburg/qlever:latest
+        container_name: qlever.server
+        init: true
+        user: "1000:1000" # Will be set via .env file
+        working_dir: /data
+        ports:
+            - "7007:7007"
+        environment:
+            - PATH="/qlever:/qlever/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            - LANG="C.UTF-8"
+            - LC_ALL="C.UTF-8"
+            - LC_CTYPE="C.UTF-8"
+            - DEBIAN_FRONTEND="noninteractive"
+            - QLEVER_PROFILE="/etc/profile.d/qlever.sh"
+            - QLEVER_ARGCOMPLETE_ENABLED="1"
+            - QLEVER_IS_RUNNING_IN_CONTAINER="1"
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - ql_dvol:/data
+#        entrypoint: /qlever/docker-entrypoint.sh
+        command: ["qlever -q Qleverfile  start  --system native --use-text-index yes --run-in-foreground " ]
+        restart: unless-stopped
+    #    networks:
+    #      - qlever_network
 
-  qlever.ui:
-    image: docker.io/adfreiburg/qlever-ui:latest
-    depends_on:
-      qlever.server:
-        condition: service_started
-    container_name: qlever.ui
-    init: true
-    user: "1000:1000" # Will be set via .env file
-    volumes:
-      - ql_dvol:/app/db
-#    working_dir: /data
-    ports:
-      - "8176:7000"
-    environment:
-#      - PATH="/qlever:/qlever/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-#      - LANG="C.UTF-8"
-#      - LC_ALL="C.UTF-8"
-#      - LC_CTYPE="C.UTF-8"
-#      - DEBIAN_FRONTEND="noninteractive"
-#      - QLEVER_PROFILE="/etc/profile.d/qlever.sh"
-#      - QLEVER_ARGCOMPLETE_ENABLED="1"
-#      - QLEVER_IS_RUNNING_IN_CONTAINER="1"
-      QLEVER_HOST: "http://workstation.lan:7007"
-      QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis-qleverui.sqlite3"
-    command:
-      - "gunicorn"
-      - "--bind"
-      - ":7000"
-      - "--workers"
-      - "3"
-      - "--limit-request-line"
-      - "10000"
-      - "qlever.wsgi:application"
-    restart: unless-stopped
-  #    networks:
-  #      - qlever_network
+    qlever.ui:
+        image: docker.io/adfreiburg/qlever-ui:latest
+        depends_on:
+            qlever.server:
+                condition: service_started
+        container_name: qlever.ui
+        init: true
+        user: "1000:1000" # Will be set via .env file
+        volumes:
+            - ql_dvol:/app/db
+        ports:
+            - "8176:7000"
+        environment:
+            #      - PATH="/qlever:/qlever/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            #      - LANG="C.UTF-8"
+            #      - LC_ALL="C.UTF-8"
+            #      - LC_CTYPE="C.UTF-8"
+            #      - DEBIAN_FRONTEND="noninteractive"
+            #      - QLEVER_PROFILE="/etc/profile.d/qlever.sh"
+            #      - QLEVER_ARGCOMPLETE_ENABLED="1"
+            #      - QLEVER_IS_RUNNING_IN_CONTAINER="1"
+            QLEVER_HOST: "http://workstation.lan:7007"
+            QLEVERUI_DATABASE_URL: "sqlite:////app/db/odis-qleverui.sqlite3"
+        command: bash -c "python manage.py config default /app/db/Qleverfile-ui.yml --hide-all-other-backends && gunicorn --bind :7000 --workers 3 --limit-request-line 10000 qlever.wsgi:application"
+        restart: unless-stopped
+    #    networks:
+    #      - qlever_network
 
-  qlever.petrimaps:
-    image: docker.io/adfreiburg/qlever-petrimaps:latest
-    depends_on:
-      qlever.ui:
-        condition: service_started
-    container_name: qlever.ui.petrimaps
-    hostname: qlever-petrimaps
-    ports:
-      - "9090:9090"
+    qlever.petrimaps:
+        image: docker.io/adfreiburg/qlever-petrimaps:latest
+        depends_on:
+            qlever.ui:
+                condition: service_started
+        container_name: qlever.ui.petrimaps
+        hostname: qlever-petrimaps
+        ports:
+            - "9090:9090"
 #    networks:
 #      - qlever_network
