@@ -22,7 +22,7 @@ volumes:
 configs:
   qlever_config:
     name: glever-config-${PROJECT:-geocodesexamples}
-    file: /Users/valentin/development/dev_earthcube/qleverflow/catalogues/data-geocodesexamples/Qleverfile.geocodesexamples
+    file: ../catalogues/${PREFIX-data}-${PROJECT:-geocodesexamples}/Qleverfile.${PROJECT:-geocodesexamples}
     external: false
 services:
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
@@ -62,7 +62,7 @@ services:
         source: qleverflow_data
         target: /app/db/
       - type: bind
-        source: ../catalogues/${PROJECT:-geocodesexamples}/Qleverfile-ui.yml
+        source: ../catalogues/${PREFIX-data}-${PROJECT:-geocodesexamples}/Qleverfile-ui.yml
         target: /app/Qleverfile-ui-deploy.yml
     ports:
        - "8176:7000"

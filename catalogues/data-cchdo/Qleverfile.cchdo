@@ -6,18 +6,15 @@
 # removed from ui section: UI_CONFIG = eco
 
 [data]
-NAME              = deepoceans
-SOURCES           = bcodmo cchdo ssdbiodp osmc obis wodb emodnet
-#SOURCES           = bcodmo cchdo
+NAME              = cchdo
 BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/geocodes/graphs/latest
-#GET_DATA_CMD      = curl -sLo cchdo_release.nq -C - ${BASE_URL}/cchdo_release.nq
-GET_DATA_CMD      = for source in ${SOURCES}; do curl -sLo $${source}_release.nq -C - ${BASE_URL}/$${source}_release.nq; done
-DESCRIPTION       = eco ${NAME} ${BASE_URL}
-TEXT_DESCRIPTION  = eco release graph for ${NAME} sources: ${SOURCES}
+GET_DATA_CMD      = curl -sLo cchdo_release.nq -C - ${BASE_URL}/cchdo_release.nq
+DESCRIPTION       = eco test ${BASE_URL}
+TEXT_DESCRIPTION  = eco release graph description
 FORMAT            = nq
 
 [index]
-INPUT_FILES     = *_release.nq
+INPUT_FILES     = cchdo_release.nq
 CAT_INPUT_FILES = cat ${INPUT_FILES}
 SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
 

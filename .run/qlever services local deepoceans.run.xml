@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="qlever services local deepoceans" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+    <deployment type="docker-compose.yml">
+      <settings>
+        <option name="envFilePath" value="" />
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="HOST" />
+              <option name="value" value="localhost" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="PROJECT" />
+              <option name="value" value="deepoceans" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="secondarySourceFiles">
+          <list>
+            <option value="deployment/qlever_services_override.yaml" />
+          </list>
+        </option>
+        <option name="sourceFilePath" value="deployment/qlever_services.yaml" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

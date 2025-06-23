@@ -1,19 +1,33 @@
-# Qlever Test Instance
+# Qlever Deployment Instances
 
 ## About
+This is a set of exporatory informtion that was used to test QLEVER
+It now includes  configuration files to deploy a qlever stack locally, and to portainer
+See the [readme](./deployment/README.md#LOCAL)
 
-First, if you are interested in Qlever and running it locally, DO NOT USE THIS REPO.  At least, it's very likely
-not what you want.
+This will provide a 
+* [Qlever](https://github.com/ad-freiburg/qlever) qlever-server-SOURCE
+* [Qlever-ui](https://github.com/ad-freiburg/qlever-ui)  qlever-ui
+* [Petrimaps - mapping for Qlever GeoSPARQL](https://github.com/ad-freiburg/qlever-petrimaps) qlever-petrimaps
 
+## Development, 
+if you are interested in Qlever and running it locally, 
+see the [readme](./deployment/README.md#LOCAL) in deployment
+
+This will provide a 
+* [Qlever](https://github.com/ad-freiburg/qlever) localhost:7019
+* [Qlever-ui](https://github.com/ad-freiburg/qlever-ui) localhost:8176
+* [Petrimaps - mapping for Qlever GeoSPARQL](https://github.com/ad-freiburg/qlever-petrimaps) localhost:9090
+
+# TODO 
+ADD MORE STUFF ABOUT HOW TO USE THIS.
+
+
+
+## QLEVER DOCUMENTS
 You should go to the [qlever-control](https://github.com/ad-freiburg/qlever-control) repo instead.  That 
 is the official repo for a nice server and UI onboarding experience with Qlever.   Also visit the main 
 [qlever](https://github.com/ad-freiburg/qlever) repo or the [Qlever Wiki](https://github.com/ad-freiburg/qlever/wiki).
-
-So why does this repo exist?   I wanted to play with ways to leverage deploying Qlever via 
-docker compose files for some of the workflows and automated approaches I have.   In that case, qlever-control
-was not quite what I needed.  So I basically decomposed its approach into docker compose files.
-
-This repo is for testing those approaches and ideas. 
 
 If you are interested in these components, you should check them out directly at;
 
