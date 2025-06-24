@@ -19,6 +19,7 @@ Deploy with cut and paste for now.
 | PREFIX        | data             | catalogues/PREFIX-PROJECT                                            |
 | QLEVER_CONFIG | geocodesexamples | name of the docker config                                            | 
 | QLEVER_NET    | base             | base namespace for that the qlevels might talk over                  |
+| QLEVER_VOL    | main             |  namespace for UI configuration volume |
 
 # CONFIGURING THE UI
 * initially the UI admin
@@ -45,6 +46,7 @@ PROJECT=deepoceans
 PREFIX=data
 HOST=geocodes-aws-dev.earthcube.org
 QLEVER_CONFIG=deepoceans
+QLEVER_VOL=main
 ```
 
 ## LOCAL
@@ -76,3 +78,31 @@ The data is on the docker volume: qleverflow_data_PROJECT
 Quirks:
 * catalogues/local/Qleverfile-ui-deploy.yml uses port 7019, because that is what is used in the geeocodes demo and deepoceans ports
 * when running with the `-f ./qlever_services_override.yaml` you can't have the network treafik_proxy and qlever-network-base defined externally
+
+
+### TESTING MULTIPLE LOCALLY
+Run a services stack, and a namespace stack with overrides
+
+```
+QLEVER_NET=base
+PROJECT=multifile
+PREFIX=dev
+QLEVER_CONFIG=multifile
+QLEVER_VOL=main
+```
+`cd deployment; /usr/local/bin/docker compose -f ./qlever_services.yaml -f ./qlever_services_override.yaml -p deployment up 
+`
+got to 
+[UI on 8176](http://localhost:8176/)
+
+
+```
+QLEVER_NET=base
+PROJECT=deepoceans
+PREFIX=data
+QLEVER_CONFIG=deepoceans
+QLEVER_VOL=main
+```
+
+`cd deployment; /usr/local/bin/docker compose -f ./qlever_namespace.yaml -f ./qlever__namespace_override.yaml -p deployment up 
+`

@@ -1,0 +1,77 @@
+version: '3.9'
+
+networks:
+  qlever_network:
+      name: qlever-network-${QLEVER_NET:-base}
+      external: false
+  traefik_proxy:
+      name: traefik_proxy
+      external: false
+#export USER_ID=$(id -u)
+#export GROUP_ID=$(id -g)
+volumes:
+  qleverflow_data:
+    name: qleverflow_data_${QLEVER_VOL:-eco}
+    #name: qlever
+configs:
+  qlever_config:
+    name: qlever-config-${PROJECT:-geocodesexamples}
+    file: ../catalogues/${PREFIX-data}-${PROJECT:-geocodesexamples}/Qleverfile.${PROJECT:-geocodesexamples}
+    external: false
+  qlever-ui:
+      name: qlever-ui-${PROJECT:-geocodesexamples}
+      file: ../catalogues/${PREFIX-data}-${PROJECT:-geocodesexamples}/Qleverfile-ui-${PROJECT:-geocodesexamples}.yml
+      external: false
+services:
+
+ qlever-server-project:
+    image: docker.io/adfreiburg/qlever:latest
+    hostname: qlever.server.${PROJECT:-deepoceans}
+    init: true
+    user: "root:root"  # Will be set via .env file
+    #user: "1000:1000"  # Will be set via .env file
+    working_dir: /data
+    # adding ports will cause issues with localhost same port
+#    ports:
+#      - "7019:7019"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+# /data not needed, but for debugging and easy start stop
+      - type: bind
+        source: ./rundata
+        target: /data
+    configs:
+      - source: qlever_config
+        target: /data/Qleverfile
+    entrypoint: /qlever/docker-entrypoint.sh
+    command: >
+         ' ls -l && qlever get-data  --log-level DEBUG && qlever index --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
+
+    restart: unless-stopped
+    networks: &network
+      - qlever_network
+    labels:  !reset []
+
+
+ qlever-ui-config-namespace:
+    image: docker.io/adfreiburg/qlever-ui:latest
+    depends_on:
+      qlever-server-project:
+        condition: service_started
+    volumes: !reset
+      - type: volume
+        source: qleverflow_data
+        target: /app/db/
+    configs:
+      - source: qlever-ui
+        target: /app/Qleverfile-ui-deploy.yml
+    # ports:
+    #   - "8176:7000"
+   #    entrypoint: bash
+    command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config ${PROJECT:-geocodesexamples} /app/Qleverfile-ui-deploy.yml"
+
+    #restart: unless-stopped
+    networks: *network
+
+
+

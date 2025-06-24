@@ -9,9 +9,16 @@ networks:
       external: true
 #export USER_ID=$(id -u)
 #export GROUP_ID=$(id -g)
+volumes:
+  qleverflow_data:
+    name: qleverflow_data_${QLEVER_VOL:-main}
+    #name: qlever
 configs:
   qlever-config:
     name: qlever-config-${QLEVER_CONFIG:-deepoceans}
+    external: true
+  qlever-ui:
+    name: qlever-ui-${QLEVER_CONFIG:-deepoceans}
     external: true
 services:
 
@@ -60,7 +67,25 @@ services:
       - "traefik.http.services.qlever-project-${PROJECT:-deepoceans}.loadbalancer.server.port=7019"
       - "traefik.docker.network=traefik_proxy"
 
+ qlever-ui-config-namespace:
+    image: docker.io/adfreiburg/qlever-ui:latest
+    depends_on:
+      qlever-server-project:
+        condition: service_started
+    volumes:
+      - type: volume
+        source: qleverflow_data
+        target: /app/db/
+    configs:
+      - source: qlever-ui
+        target: /app/Qleverfile-ui-deploy.yml
+    # ports:
+    #   - "8176:7000"
+   #    entrypoint: bash
+    command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config default /app/Qleverfile-ui-deploy.yml"
 
+    #restart: unless-stopped
+    networks: *network
 
 
 

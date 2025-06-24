@@ -13,6 +13,10 @@
               <option name="name" value="PROJECT" />
               <option name="value" value="deepoceans" />
             </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="PREFIX" />
+              <option name="value" value="data" />
+            </DockerEnvVarImpl>
           </list>
         </option>
         <option name="secondarySourceFiles">

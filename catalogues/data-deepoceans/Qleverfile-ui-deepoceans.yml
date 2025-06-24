@@ -1,7 +1,7 @@
 config:
   backend:
-    name: default
-    slug: default
+    name: deepoceans
+    slug: deepoceans
     sortKey: 1
     baseUrl: http://localhost:7019
     apiToken: ""
@@ -263,3 +263,4 @@ config:
       query:  |- 
         select * where {?s ?p ?o}
         limit 1000
+

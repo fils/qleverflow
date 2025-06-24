@@ -1,6 +1,6 @@
 config:
   backend:
-    name: Default
+    name: default
     slug: default
     sortKey: 1
     baseUrl: http://localhost:7019
