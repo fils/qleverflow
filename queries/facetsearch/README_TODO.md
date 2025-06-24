@@ -4,6 +4,9 @@ https://qlever.geocodes-aws-dev.earthcube.org/graphspace/facetsearch
 
 https://qlever.geocodes-aws-dev.earthcube.org/graphspace/facetsearch?cmd=stats
 
+ui for testing:
+https://qlever-iu.geocodes-aws-dev.earthcube.org/facetsearch
+
 we do a full text query, so that needs to be replaced
 
 
