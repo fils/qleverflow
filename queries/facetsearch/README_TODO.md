@@ -1,4 +1,8 @@
 Summary needs to be redone.
+endpoint:
+https://qlever.geocodes-aws-dev.earthcube.org/graphspace/facetsearch
+
+https://qlever.geocodes-aws-dev.earthcube.org/graphspace/facetsearch?cmd=stats
 
 we do a full text query, so that needs to be replaced
 
