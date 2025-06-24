@@ -18,7 +18,7 @@ configs:
     name: qlever-config-${QLEVER_CONFIG:-deepoceans}
     external: true
   qlever-ui:
-    name: qlever-ui-${QLEVER_CONFIG:-deepoceans}
+    name: qlever-ui-${QLEVER_CONFIG_UI:-deepoceans}
     external: true
 services:
 
@@ -60,7 +60,7 @@ services:
       - "traefik.http.middlewares.qlever-project-${PROJECT:-deepoceans}-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.middlewares=qlever-project-${PROJECT:-deepoceans}-https-redirect"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.entrypoints=https"
-      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever.${HOST}&& PathPrefix(`/graphspace/${PROJECT}`)`)"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever.${HOST}`) && PathPrefix(`/graphspace/${PROJECT}`)"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls=true"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls.certresolver=httpresolver"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.service=qlever-project-${PROJECT:-deepoceans}"

@@ -1,0 +1,12 @@
+prefix schema: <https://schema.org/>
+SELECT  ?version (count(distinct ?s) as ?scount)
+WHERE {
+  {
+
+       ?s schema:version ?version .
+
+       }
+}
+GROUP By ?version
+HAVING(count(distinct ?s) >1)
+ORDER By DESC(?scount)
