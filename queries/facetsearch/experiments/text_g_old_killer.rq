@@ -32,12 +32,12 @@ SELECT distinct ?subj ?pubname (GROUP_CONCAT(DISTINCT ?placename; SEPARATOR=", "
               (sschema:DataCatalog  "DataCatalog")
             #(UNDEF "other")  # assume it's data. At least we should get  name.
           } ?subj a ?type .
-            optional {?subj sschema:distribution/sschema:url|sschema:subjectOf/sschema:url|schema:distribution/schema:url|sschema:subjectOf/sschema:url  ?url .}
+            optional {?subj sschema:distribution/sschema:url|sschema:subjectOf/sschema:url|schema:distribution/schema:url|schema:subjectOf/schema:url ?url .}
             OPTIONAL {?subj schema:datePublished|sschema:datePublished ?datep .}
             OPTIONAL {?subj schema:publisher/schema:name|sschema:publisher/sschema:name|schema:publisher/schema:legalName|sschema:publisher/sschema:legalName  ?pub_name .}
             OPTIONAL {?subj schema:spatialCoverage/schema:name|sschema:spatialCoverage/sschema:name|sschema:sdPublisher ?place_name .}
-            OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:latitude|sschema:spatialCoverage/sschema:geo/schema:latitude ?lat .}
-                 OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:longitude|sschema:spatialCoverage/sschema:geo/schema:longitude ?lon .}
+            OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:latitude|sschema:spatialCoverage/sschema:geo/sschema:latitude ?lat .}
+            OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:longitude|sschema:spatialCoverage/sschema:geo/sschema:longitude ?lon .}
                  OPTIONAL {?subj schema:keywords|sschema:keywords ?kwu .}
 
             BIND ( IF ( BOUND(?pub_name), ?pub_name, "No Publisher") as ?pubname ) .
@@ -47,5 +47,7 @@ SELECT distinct ?subj ?pubname (GROUP_CONCAT(DISTINCT ?placename; SEPARATOR=", "
         ORDER BY DESC(?score)
 LIMIT 1000
     #LIMIT 100
-#OFFSET 0
-#OFFSET 0
+#OFFSET 0PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
