@@ -10,6 +10,7 @@ https://qlever-iu.geocodes-aws-dev.earthcube.org/facetsearch
 we do a full text query, so that needs to be replaced
 
 
+
 The queries come from utilities, and facetsearch
 loose files from utilities
 
@@ -18,7 +19,18 @@ original from facetsearch:
 * [others](https://github.com/earthcube/facetsearch/tree/master/client/src/sparql)
 
 experiments are from working on the search
+## NOTES
+Best to test the UI. it provides feedback that is better than just running RDF/SParql from jetbrains
 
+  
+
+## Present Status
+in experimental, there are queries that work (best)[text_g_old_v4_nospatial.rq]
+
+Getting LAT/LONG kills the server (see)[text_g_old_killer.rq]
+
+### Troubleshooting:
+If the server dies, it rebuilds and reboots... that's the good and bad of it.
 
 
 
