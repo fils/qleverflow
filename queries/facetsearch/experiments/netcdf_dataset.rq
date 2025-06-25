@@ -1,0 +1,6 @@
+PREFIX schema: <https://schema.org/>
+SELECT * WHERE {
+  GRAPH <urn:gleaner.io:eco:ssdbiodp:data:edbcd4c004d3f21dcf772956f837fd54a1d6473d> {
+    ?s ?o ?p
+  }
+}

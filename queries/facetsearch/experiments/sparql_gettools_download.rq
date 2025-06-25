@@ -1,0 +1,41 @@
+PREFIX schema:  <https://schema.org/>
+PREFIX schemaold:  <http://schema.org/>
+PREFIX ecrr: <https://qlever.geocodes-aws-dev.earthcube.org/graphspace/ecrr>
+select DISTINCT ?rrs ?name (GROUP_CONCAT(DISTINCT ?curl1; SEPARATOR=", ") AS ?curl)  (GROUP_CONCAT(DISTINCT ?landingPage1; SEPARATOR=", ") AS ?landingPage)
+(GROUP_CONCAT(DISTINCT ?altName1; SEPARATOR=", ") AS ?altName) (GROUP_CONCAT(DISTINCT ?landingName1; SEPARATOR=", ") AS ?landingName) ?swversion ?identifier ?description
+WHERE                    {
+    graph <urn:gleaner.io:eco:ssdbiodp:data:01f777af8e78c3e56a378e4d98337b185d766114>
+      {
+        {
+          ?s schemaold:distribution|schema:distribution ?dist .
+          ?dist  schemaold:encodingFormat|schema:encodingFormat ?type .
+          ?dist schemaold:contentUrl|schema:contentUrl|schema:url|schemaold:url ?curl1
+        }
+        UNION {
+          VALUES (?dataset) { ( schema:Dataset ) ( schemaold:Dataset ) }
+          ?s a ?dataset .
+          ?s  schemaold:encodingFormat|schema:encodingFormat ?type .
+          }
+     }
+     BIND (str(?type) as ?label)
+     SERVICE ecrr: {
+
+         { ?rrs a schema:SoftwareApplication .
+         ?rrs schema:supportingData ?df.
+              ?df schema:encodingFormat  ?label ;
+                  schema:position "input".
+              ?rrs schema:name ?name;
+                   schema:description ?description .
+
+               ?rrs schema:subjectOf/schema:url ?landingPage1
+               OPTIONAL{ ?rrs schema:alternateName ?altName1 }
+               # vue does not like version... observables property, so swversion
+               OPTIONAL{ ?rrs schema:version ?swversion }
+                OPTIONAL{ ?rrs schema:identifier ?identifier }
+                optional{?rrs schema:subjectOf/schema:name ?landingName1 }
+      }
+
+
+  }
+}
+ GROUP BY ?rrs ?name   ?description ?swversion  ?identifier
