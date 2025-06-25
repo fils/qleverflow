@@ -1,4 +1,4 @@
-Summary needs to be redone.
+# Summary needs to be redone.
 endpoint:
 https://qlever.geocodes-aws-dev.earthcube.org/graphspace/facetsearch
 
@@ -22,7 +22,8 @@ experiments are from working on the search
 ## NOTES
 Best to test the UI. it provides feedback that is better than just running RDF/SParql from jetbrains
 
-  
+### UI Saving query.
+Python templates (aka ${q}) using in old queries break the saving in the ui of qlever. **EVEN IF IN A COMMENT**
 
 ## Present Status
 in experimental, there are queries that work (best)[text_g_old_v4_nospatial.rq]
