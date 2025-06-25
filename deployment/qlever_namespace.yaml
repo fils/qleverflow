@@ -82,9 +82,9 @@ services:
     # ports:
     #   - "8176:7000"
    #    entrypoint: bash
-    command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config default /app/Qleverfile-ui-deploy.yml"
+    command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config ${PROJECT:-geocodesexamples} /app/Qleverfile-ui-deploy.yml"
 
-    #restart: unless-stopped
+    restart: on-failure:1
     networks: *network
 
 

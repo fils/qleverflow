@@ -153,8 +153,7 @@ services:
  qlever-ui-config:
     image: docker.io/adfreiburg/qlever-ui:latest
     depends_on:
-      qlever-ui-base:
-        condition: service_started
+      - qlever-server-project
     volumes: *uivol
 
     configs:
@@ -165,5 +164,5 @@ services:
 
     command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config ${PROJECT:-geocodesexamples} /app/Qleverfile-ui-deploy.yml --hide-all-other-backends"
 
-    #restart: unless-stopped
+    restart: on-failure:1
     networks: *network
