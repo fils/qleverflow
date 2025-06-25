@@ -1,0 +1,51 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix schema: <http://schema.org/>
+prefix sschema: <https://schema.org/>
+SELECT distinct ?subj ?pubname (GROUP_CONCAT(DISTINCT ?placename; SEPARATOR=", ") AS ?placenames)
+        (GROUP_CONCAT(DISTINCT ?kwu; SEPARATOR=", ") AS ?kw)
+        ?datep  (GROUP_CONCAT(DISTINCT ?url; SEPARATOR=", ") AS ?disurl)
+		(COUNT(?text) AS ?score) (SAMPLE(?text) AS ?example_text)
+        ?name ?description (GROUP_CONCAT(DISTINCT ?resourceType_u; SEPARATOR=", ") as ?resourceType )  ?type ?g   (MAX(?lat) as ?maxlat) (Min(?lat) as ?minlat) (MAX(?lon) as ?maxlon) (Min(?lon) as ?minlon)
+        WHERE {
+		    ?subj ?o ?item .
+
+    ?text ql:contains-entity ?item .
+    ?text ql:contains-word "water"
+          graph ?g {
+
+             ?subj schema:name|sschema:name ?name .
+                       ?subj schema:description|sschema:description ?description . }
+		values (?type ?resourceType_u) {
+            (schema:Dataset "data")
+            (sschema:Dataset "data")
+            (schema:ResearchProject "researchProject") #BCODMO- project
+            (sschema:ResearchProject  "researchProject")
+             (schema:SoftwareApplication  "tool")
+             (sschema:SoftwareApplication  "tool")
+             (schema:Person  "person") #BCODMO- Person
+             (sschema:Person  "person")
+              (schema:Event  "event") #BCODMO- deployment
+              (sschema:Event  "event")
+               (schema:Award  "award") #BCODMO- Award
+               (sschema:Award  "award")
+              (schema:DataCatalog  "DataCatalog")
+              (sschema:DataCatalog  "DataCatalog")
+            #(UNDEF "other")  # assume it's data. At least we should get  name.
+          } ?subj a ?type .
+            optional {?subj schema:distribution/schema:url|schema:subjectOf/schema:url ?url .}
+            OPTIONAL {?subj schema:datePublished|sschema:datePublished ?datep .}
+            OPTIONAL {?subj schema:publisher/schema:name|sschema:publisher/sschema:name|schema:publisher/schema:legalName|sschema:publisher/sschema:legalName  ?pub_name .}
+            OPTIONAL {?subj schema:spatialCoverage/schema:name|sschema:spatialCoverage/sschema:name|sschema:sdPublisher ?place_name .}
+            OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:latitude|sschema:spatialCoverage/sschema:geo/schema:latitude ?lat .}
+                 OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:longitude|sschema:spatialCoverage/sschema:geo/schema:longitude ?lon .}
+                 OPTIONAL {?subj schema:keywords|sschema:keywords ?kwu .}
+
+            BIND ( IF ( BOUND(?pub_name), ?pub_name, "No Publisher") as ?pubname ) .
+            BIND ( IF ( BOUND(?place_name), ?place_name, "No Placenames") as ?placename ) .
+        }
+        GROUP BY ?subj ?pubname ?placename  ?datep ?url  ?name ?description ?type ?g
+        ORDER BY DESC(?score)
+LIMIT 1000
+    #LIMIT 100
+#OFFSET 0
+#OFFSET 0
