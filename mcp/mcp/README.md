@@ -3,7 +3,15 @@
 ## About
 
 TBD
+## Docker command
 
+```bash
+docker build -t mcp-app .
+```
+
+```bash
+docker run -p 8898:8898 mcp-app
+```
 
 ## TODO
 
@@ -20,6 +28,18 @@ elements of a SPARQL query / template that could be extracted to leverage BAMLs 
 ## FastMCP
 
 Reference https://gofastmcp.com/getting-started/welcome and go to the tools section.
+
+Example json entry for server local
+
+```json{
+  "mcpServers": {
+    "rdf-query-server": {
+      "url": "http://localhost:8898/sse",
+      "env": {}
+    }
+  }
+}
+```
 
 ### Resources
 

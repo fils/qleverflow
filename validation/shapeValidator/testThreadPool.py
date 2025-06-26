@@ -7,6 +7,7 @@ from defs.shaclValidator import validate_with_shacl
 from pyoxigraph import RdfFormat
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed # Import these
+import polars as pl
 
 def process_uri(uri, sf):
     """
@@ -45,6 +46,7 @@ def main():
 
         print(f"Using {max_workers} workers")
 
+        results_list = []
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             # Submit all tasks and get future objects
             future_to_uri = {executor.submit(process_uri, uri, sf): uri for uri in sorted(uris)}
@@ -52,13 +54,29 @@ def main():
             # Use tqdm to show progress as tasks complete
             for future in tqdm(as_completed(future_to_uri), total=len(uris), desc="Processing URIs"):
                 shr = future.result() # Get the result of the completed task
+                if shr:
+                    for line in shr.strip().split('\n'):
+                        if not line:
+                            continue
+                        parts = line.split(None, 2)
+                        if len(parts) == 3:
+                            subject = parts[0]
+                            predicate = parts[1]
+                            obj_part = parts[2]
+                            if obj_part.endswith(' .'):
+                                obj = obj_part[:-2].strip()
+                            else:
+                                obj = obj_part
+                            results_list.append({'subject': subject, 'predicate': predicate, 'object': obj})
 
-                # TODO load to parquet or lance at this point
+        if results_list:
+            df = pl.DataFrame(results_list)
+            print("\nValidation Results:")
+            print(df)
+            # To save the results to a file, you can use:
+            # df.write_parquet("validation_results.parquet")
+            # df.write_csv("validation_results.csv")
 
-                # try:
-                #     store.load(shr, RdfFormat.TURTLE, base_iri=None, to_graph=None)
-                # except Exception as e:
-                #     print(f"An error occurred: {e}")
     else:
         print("No URIs found or query failed.")
 

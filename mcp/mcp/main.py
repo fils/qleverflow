@@ -445,4 +445,4 @@ def generate_code_request(language: str, task_description: str) -> str:
 
 # Run the server
 if __name__ == "__main__":
-       mcp.run(transport="sse", host="localhost", port=8898)
+       mcp.run(transport="sse", host="0.0.0.0", port=8898)
