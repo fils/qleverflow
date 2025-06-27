@@ -1,0 +1,31 @@
+prefix schema: <https://schema.org/>
+   PREFIX schemaold: <http://schema.org/>
+PREFIX ecrr: <https://qlever.geocodes-aws-dev.earthcube.org/graphspace/ecrr>
+   select DISTINCT ?dataname ?appname   ?durl  ?turl ?rrs  ?altName ?description
+   WHERE
+   {
+       graph <urn:gleaner.io:eco:r2r:data:30d759494ff174f38fe074fc91405d0fd8b427ea> {
+       ?s schemaold:distribution|schema:distribution ?dist ;
+            schemaold:name|schema:name ?dataname  .
+       ?dist  schemaold:encodingFormat|schema:encodingFormat ?type .
+             OPTIONAL {?dist schema:contentUrl ?durl }.
+     }
+     BIND (str(?type) as ?label)
+    SERVICE ecrr: {
+
+
+              ?rrs a schema:SoftwareApplication ;
+                   schema:name ?appname ;
+                   schema:supportingData ?df;
+                  schema:description ?description .
+            ?df schema:encodingFormat ?label ;
+                   schema:position "input".
+              ?rrs schema:potentialAction ?act.
+              ?act schema:target ?tar.
+              ?tar a schema:EntryPoint ;
+               schema:urlTemplate ?turl.
+              filter contains(?turl,"{contentURL}")
+              OPTIONAL{ ?rrs schema:alternateName ?altName }
+
+    }
+   }

@@ -1,0 +1,12 @@
+prefix schema: <https://schema.org/>
+SELECT  ?variableName (count(distinct ?s) as ?scount)
+WHERE {
+  {
+
+       ?s schema:variableMeasured ?variableMeasured .
+    ?variableMeasured schema:name ?variableName
+
+       }
+}
+GROUP By ?variableName
+ORDER By DESC(?scount)

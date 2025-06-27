@@ -1,0 +1,19 @@
+# Run in ECRR namespace
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema:  <https://schema.org/>
+select * where { ?rrs a schema:SoftwareApplication .
+         ?rrs schema:supportingData ?df.
+              ?df schema:encodingFormat  ?label ;
+                  schema:position "input".
+              ?rrs schema:name ?name;
+                   schema:description ?description .
+
+               ?rrs schema:subjectOf/schema:url ?landingPage1
+               OPTIONAL{ ?rrs schema:alternateName ?altName1 }
+               # vue does not like version... observables property, so swversion
+               OPTIONAL{ ?rrs schema:version ?swversion }
+                OPTIONAL{ ?rrs schema:identifier ?identifier }
+                optional{?rrs schema:subjectOf/schema:name ?landingName1 }
+      }

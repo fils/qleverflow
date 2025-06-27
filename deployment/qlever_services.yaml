@@ -15,7 +15,7 @@ networks:
 #export GROUP_ID=$(id -g)
 volumes:
   qleverflow_data:
-    name: qleverflow_data_${PROJECT:-geocodesexamples}
+    name: qleverflow_data_${QLEVER_VOL:-main}
     #name: qlever
 
 configs:
@@ -23,6 +23,10 @@ configs:
     name: qlever-config-${QLEVER_CONFIG:-geocodesexamples}
     #file: /Users/valentin/development/dev_earthcube/qleverflow/catalogues/data-geocodesexamples/Qleverfile.geocodesexamples
     external: true
+  qlever-ui:
+      name: qlever-ui-${PROJECT:-geocodesexamples}
+      #file: ../catalogues/${PREFIX-data}-${PROJECT:-geocodesexamples}/Qleverfile-ui-${PROJECT:-geocodesexamples}.yml
+      external: true
 services:
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
  qlever-server-base:
@@ -83,7 +87,7 @@ services:
     image: docker.io/adfreiburg/qlever-ui:latest
     hostname: qlever-ui-${PROJECT:-geocodesexamples}
     #init: true
-    volumes:
+    volumes: &uivol
       - type: volume
         source: qleverflow_data
         target: /app/db/
@@ -146,4 +150,19 @@ services:
       - "traefik.http.routers.qlever-petrimaps-${PROJECT:-geocodesexamples}-secure.service=qlever-petrimaps-${PROJECT:-geocodesexamples}"
       - "traefik.http.services.qlever-petrimaps-${PROJECT:-geocodesexamples}.loadbalancer.server.port=9090"
       - "traefik.docker.network=traefik_proxy"
+ qlever-ui-config:
+    image: docker.io/adfreiburg/qlever-ui:latest
+    depends_on:
+      - qlever-server-project
+    volumes: *uivol
 
+    configs:
+      - source: qlever-ui
+        target: /app/Qleverfile-ui-deploy.yml
+    # ports:
+    #   - "8176:7000"
+
+    command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config ${PROJECT:-geocodesexamples} /app/Qleverfile-ui-deploy.yml --hide-all-other-backends"
+
+    restart: on-failure:1
+    networks: *network

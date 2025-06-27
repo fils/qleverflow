@@ -1,0 +1,21 @@
+# Run in ECRR namespace
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema:  <https://schema.org/>
+select * where {
+
+ ?rrs a schema:SoftwareApplication ;
+                   schema:name ?appname ;
+                   schema:supportingData ?df;
+                  schema:description ?description .
+            ?df schema:encodingFormat ?label ;
+                   schema:position "input".
+              ?rrs schema:potentialAction ?act.
+              ?act schema:target ?tar.
+              ?tar a schema:EntryPoint ;
+               schema:urlTemplate ?turl.
+              filter contains(?turl,"{contentURL}")
+              OPTIONAL{ ?rrs schema:alternateName ?altName }
+		   }
+

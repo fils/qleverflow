@@ -1,0 +1,12 @@
+prefix schema: <https://schema.org/>
+SELECT  ?type  (count(distinct ?s ) as ?scount)
+WHERE {
+{
+
+       ?s a ?type .
+
+       }
+}
+
+GROUP By ?type
+ORDER By DESC(?scount)

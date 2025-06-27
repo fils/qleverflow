@@ -1,0 +1,46 @@
+prefix schema: <https://schema.org/>
+SELECT distinct ?subj ?g ?resourceType ?name ?description  ?pubname
+        (GROUP_CONCAT(DISTINCT ?placename; SEPARATOR=", ") AS ?placenames)
+        (GROUP_CONCAT(DISTINCT ?kwu; SEPARATOR=", ") AS ?kw) ?datep ?sosType
+        (MAX(?maxDepth1) as ?maxDepth) (MIN(?minDepth1) as ?minDepth)
+        #(GROUP_CONCAT(DISTINCT ?url; SEPARATOR=", ") AS ?disurl)
+        WHERE {
+          graph ?g {
+           values ?sosType {
+               schema:Dataset
+#               schema:DataCatalog
+            }
+              ?subj    a    ?sosType .
+             ?subj schema:name ?name .
+             ?subj schema:description ?description .
+            Minus {?subj a schema:Person } .
+ BIND (IF (exists {?subj a schema:Dataset .} ||exists{?subj a schema:DataCatalog .} , "data", "tool") AS ?resourceType).
+
+            optional {?subj schema:distribution/schema:url|schema:subjectOf/schema:url ?url1 .}
+            #OPTIONAL {?subj schema:datePublished ?date_p .}
+             OPTIONAL {?subj schema:datePublished ?datep .}
+            OPTIONAL {?subj schema:publisher/schema:name|schema:sdPublisher|schema:provider/schema:name ?pub_name .}
+            OPTIONAL {?subj schema:spatialCoverage/schema:name ?place_name .}
+            OPTIONAL {?subj schema:keywords ?kw1 .}
+            OPTIONAL {?subj schema:variableMeasured ?vm .
+               ?vm a  schema:PropertyValue  .
+               ?vm schema:name "depth" .
+                    ?vm schema:maxValue ?maxDepth1 .
+                  ?vm schema:minValue ?minDepth1
+           }
+            # need these to get rdflib to work
+            bind ( COALESCE(?kw1, "") As ?kwu) .
+            bind ( COALESCE(?url1, "") As ?url) .
+           # bind ( COALESCE(?maxDepth1, 0.0) As ?maxDepth2) .
+           # bind ( COALESCE(?minDepth1, 0.0) As ?minDepth2) .
+           # Query should not return "No datePublished" is not a valid Date "YYYY-MM-DD" so
+            # UI Date Select failed, because it expects an actual date
+           # BIND ( IF ( BOUND(?date_p), ?date_p, "No datePublished") as ?datep ) .
+            # BIND ( IF ( BOUND(?date_p), ?date_p, "1900-01-01") as ?datep ) .
+            BIND ( IF ( BOUND(?pub_name), ?pub_name, "No Publisher") as ?pubname ) .
+             }
+        }
+        #GROUP BY ?subj ?pubname ?placenames ?kw ?datep   ?name ?description  ?resourceType ?sosType ?maxDepth ?minDepth ?g
+    # oxigraph complains about SELECT overriding variables: remove them from grouping
+        GROUP BY ?subj ?pubname  ?datep   ?name ?description  ?resourceType ?sosType  ?g
+

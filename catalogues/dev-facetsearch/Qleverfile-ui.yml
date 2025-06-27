@@ -1,13 +1,13 @@
 config:
   backend:
-    name: Default
+    name: default
     slug: default
     sortKey: 1
-    baseUrl: https://workstation.lan:7007
+    baseUrl: http://localhost:7019
     apiToken: ""
     isDefault: true
     isNoSlugMode: "False"
-    maxDefault: "100"
+    maxDefault: "10000"
     filteredLanguage: en
     dynamicSuggestions: "2"
     defaultModeTimeout: "5.0"
@@ -256,11 +256,10 @@ config:
       } GROUP BY ?qleverui_entity ORDER BY DESC(?qleverui_count)
 
       # ENDIF #
-    mapViewBaseURL: "https://workstation.lan:9090"
+    mapViewBaseURL: "http://localhost:9090"
   examples:
     - name: test
       sort_key: "~"
       query:  |- 
         select * where {?s ?p ?o}
         limit 1000
-

@@ -6,15 +6,15 @@
 # removed from ui section: UI_CONFIG = eco
 
 [data]
-NAME              = geocodesexamples
-BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/test/graphs/latest
-GET_DATA_CMD      = curl -sLo geocodes_examples_release.nq -C - ${BASE_URL}/geocodes_examples_release.nq
+NAME              = cchdo
+BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/geocodes/graphs/latest
+GET_DATA_CMD      = curl -sLo cchdo_release.nq -C - ${BASE_URL}/cchdo_release.nq
 DESCRIPTION       = eco test ${BASE_URL}
 TEXT_DESCRIPTION  = eco release graph description
 FORMAT            = nq
 
 [index]
-INPUT_FILES     = geocodes_examples_release.nq
+INPUT_FILES     = cchdo_release.nq
 CAT_INPUT_FILES = cat ${INPUT_FILES}
 SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
 

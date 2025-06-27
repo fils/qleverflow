@@ -1,0 +1,2 @@
+SELECT (count(?g ) as ?datasetcount)
+WHERE     {     GRAPH ?g {?s a <https://schema.org/Dataset>}}
