@@ -1,11 +1,27 @@
+PREFIX schema: <https://schema.org/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+
 CONSTRUCT {
-  ?s ?p ?o
+
+             ?s a schema:Dataset .
+             ?s schema:spatialCoverage ?spatialcoverage .
+             ?spatialcoverage schema:geo ?geo .
+                                         ?geo a schema:GeoCoordinates .
+                                         ?geo schema:latitude ?lat .
+             ?geo schema:longitude ?long .
+             ?geo geo:hasGeometry ?geometry .
+             ?geometry a geo:Geometry .
+                         ?geometry geo:asWKT ?wkt .
+
 }
 WHERE {
-  GRAPH <urn:gleaner.io:oih:rda:data:dd8e207482f9378367949c83279ea7e2a17eeb00> {
-    {
-      ?s ?p ?o
-    }
-  }
-}
+      ?s a schema:Dataset .
+     ?s schema:spatialCoverage ?spatialcoverage .
+     ?spatialcoverage schema:geo ?geo .
+     ?geo a schema:GeoCoordinates .
+     ?geo schema:latitude ?lat .
+     ?geo schema:longitude ?long .
 
+    BIND(IRI(CONCAT(STR(?geo), "/geometry")) AS ?geometry)
+    BIND(STRDT( CONCAT("POINT(", STR(?long), " ", STR(?lat), ")"), geo:wktLiteral ) AS ?wkt)
+}

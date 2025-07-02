@@ -9,6 +9,10 @@ curl -s "http://workstation.lan:7001" -H "Accept: text/tab-separated-values" -H 
 ```
 
 ```bash
+curl -s "http://ghost.lan:7007" -H "Accept: text/turtle" -H "Content-type: application/sparql-query" --data @../queries/constructTest.rq
+```
+
+```bash
 curl -s "http://workstation.lan:7001" -H "Accept: text/tab-separated-values" -H "Content-type: application/sparql-query" --data @./searchODIS/dataset.rq ;
 
 ```
