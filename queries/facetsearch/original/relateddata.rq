@@ -1,0 +1,23 @@
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix schema: <http://schema.org/>
+prefix sschema: <https://schema.org/>
+select ?subj ?name ?g ?description
+       WHERE {
+            ?lit bds:search "${relatedData}" .
+            ?lit bds:matchAllTerms false .
+            ?lit bds:relevance ?score1 .
+            ?subj ?p ?lit .
+            filter( ?score1 > 0.4).
+          graph ?g {
+            FILTER ( ! isBlank(?subj) )
+            ?subj schema:name|sschema:name ?name .
+            ?subj schema:description|sschema:description ?description .
+             }
+            optional {?subj schema:distribution/schema:url|schema:subjectOf/schema:url ?url .}
+}
+group by ?subj ?name ?g ?description
+order by DESC(?score1 )
+LIMIT ${n}
+

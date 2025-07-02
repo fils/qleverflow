@@ -1,0 +1,10 @@
+# needs work... keywords can be an array.
+prefix schema: <https://schema.org/>
+SELECT  ?keyword (count(distinct ?s) as ?scount)
+WHERE {
+  {
+    ?s schema:keywords ?keyword .
+   }
+}
+GROUP By ?keyword
+ORDER By DESC(?scount)

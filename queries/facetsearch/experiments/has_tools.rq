@@ -1,0 +1,32 @@
+# run in a DATASET namespace
+PREFIX schema:  <https://schema.org/>
+	PREFIX schemaold:  <http://schema.org/>
+PREFIX ecrr: <https://qlever.geocodes-aws-dev.earthcube.org/graphspace/ecrr>
+# run in a DATASET namespace
+ASK
+	WHERE                    {
+	  graph  <urn:gleaner.io:eco:ssdbiodp:data:01f777af8e78c3e56a378e4d98337b185d766114>
+		  {
+			{
+			  ?s schemaold:distribution|schema:distribution ?dist .
+			  ?dist  schemaold:encodingFormat|schema:encodingFormat ?type .
+              ?dist schemaold:contentUrl|schema:contentUrl|schema:url|schemaold:url  ?curl
+			}
+			UNION {
+			  VALUES (?dataset) { ( schema:Dataset ) ( schemaold:Dataset ) }
+			  ?s a ?dataset .
+			  ?s  schemaold:encodingFormat|schema:encodingFormat ?type .
+			  }
+		 }
+		 BIND (str(?type) as ?label)
+		 SERVICE ecrr: {
+
+			  ?rrs schema:supportingData ?df.
+				  ?df schema:encodingFormat  ?label ;
+					  schema:position "input".
+				  ?rrs schema:name ?name.
+
+	   }
+	}
+
+

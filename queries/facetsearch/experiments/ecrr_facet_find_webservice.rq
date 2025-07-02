@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema:  <https://schema.org/>
+	PREFIX schemaold:  <http://schema.org/>
+# run in a DATASET namespace
+select ?type ?label ?g
+WHERE {
+
+       graph ?g {
+       ?s schemaold:distribution|schema:distribution ?dist ;
+            schemaold:name|schema:name ?dataname  .
+       ?dist  schemaold:encodingFormat|schema:encodingFormat 'application/zip;type=LiPD' .
+             OPTIONAL {?dist schema:contentUrl ?durl }.
+     }
+    BIND (str(?type) as ?label)
+}

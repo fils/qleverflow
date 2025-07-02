@@ -1,4 +1,4 @@
-# Qleverfile for Olympics, use with https://github.com/ad-freiburg/qlever-control
+# Qleverfile for Earthcube Decoder/Geocodes, use with https://github.com/ad-freiburg/qlever-control
 #
 # qlever get-data  # downloads .zip file of size 13 MB, uncompressed to 323 MB
 # qlever index     # takes ~10 seconds and ~1 GB RAM (on an AMD Ryzen 9 5900X)
@@ -6,15 +6,18 @@
 # removed from ui section: UI_CONFIG = eco
 
 [data]
-NAME              = cchdo
+NAME              = deepoceans
+SOURCES           = bcodmo cchdo ssdbiodp osmc obis wodb emodnet
+#SOURCES           = bcodmo cchdo
 BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/geocodes/graphs/latest
-GET_DATA_CMD      = curl -sLo cchdo_release.nq -C - ${BASE_URL}/cchdo_release.nq
-DESCRIPTION       = eco test ${BASE_URL}
-TEXT_DESCRIPTION  = eco release graph description
+#GET_DATA_CMD      = curl -sLo cchdo_release.nq -C - ${BASE_URL}/cchdo_release.nq
+GET_DATA_CMD      = for source in ${SOURCES}; do curl -sLo $${source}_release.nq -C - ${BASE_URL}/$${source}_release.nq; done
+DESCRIPTION       = eco ${NAME} ${BASE_URL}
+TEXT_DESCRIPTION  = eco release graph for ${NAME} sources: ${SOURCES}
 FORMAT            = nq
 
 [index]
-INPUT_FILES     = cchdo_release.nq
+INPUT_FILES     = *_release.nq
 CAT_INPUT_FILES = cat ${INPUT_FILES}
 SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
 

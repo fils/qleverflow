@@ -1,0 +1,15 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gn: <https://www.geonames.org/ontology#>
+PREFIX text: <http://jena.apache.org/text#>
+PREFIX vrank: <http://purl.org/voc/vrank#>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+PREFIX gn: <https://www.geonames.org/ontology#>
+prefix schema: <https://schema.org/>
+SELECT ?uri (COUNT(?text) AS ?count) (SAMPLE(?text) AS ?example_text) WHERE {
+    ?uri ?o ?item .
+    ?uri a schema:Dataset .
+    ?text ql:contains-entity ?item .
+    ?text ql:contains-word "water" .
+}
+GROUP BY ?uri
+

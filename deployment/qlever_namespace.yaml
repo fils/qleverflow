@@ -9,9 +9,16 @@ networks:
       external: true
 #export USER_ID=$(id -u)
 #export GROUP_ID=$(id -g)
+volumes:
+  qleverflow_data:
+    name: qleverflow_data_${QLEVER_VOL:-main}
+    #name: qlever
 configs:
   qlever-config:
     name: qlever-config-${QLEVER_CONFIG:-deepoceans}
+    external: true
+  qlever-ui:
+    name: qlever-ui-${QLEVER_CONFIG_UI:-deepoceans}
     external: true
 services:
 
@@ -53,14 +60,32 @@ services:
       - "traefik.http.middlewares.qlever-project-${PROJECT:-deepoceans}-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}.middlewares=qlever-project-${PROJECT:-deepoceans}-https-redirect"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.entrypoints=https"
-      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever.${HOST}&& PathPrefix(`/graphspace/${PROJECT}`)`)"
+      - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.rule=Host(`qlever.${HOST}`) && PathPrefix(`/graphspace/${PROJECT}`)"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls=true"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.tls.certresolver=httpresolver"
       - "traefik.http.routers.qlever-project-${PROJECT:-deepoceans}-secure.service=qlever-project-${PROJECT:-deepoceans}"
       - "traefik.http.services.qlever-project-${PROJECT:-deepoceans}.loadbalancer.server.port=7019"
       - "traefik.docker.network=traefik_proxy"
 
+ qlever-ui-config-namespace:
+    image: docker.io/adfreiburg/qlever-ui:latest
+    depends_on:
+      qlever-server-project:
+        condition: service_started
+    volumes:
+      - type: volume
+        source: qleverflow_data
+        target: /app/db/
+    configs:
+      - source: qlever-ui
+        target: /app/Qleverfile-ui-deploy.yml
+    # ports:
+    #   - "8176:7000"
+   #    entrypoint: bash
+    command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config ${PROJECT:-geocodesexamples} /app/Qleverfile-ui-deploy.yml"
 
+    restart: on-failure:1
+    networks: *network
 
 
 

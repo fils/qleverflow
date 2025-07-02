@@ -1,0 +1,23 @@
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix schema: <http://schema.org/>
+prefix sschema: <https://schema.org/>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+select ?subj ?name ?g ?description (COUNT(?text) AS ?score) (SAMPLE(?text) AS ?example_text)
+       WHERE {
+    ?subj ?o ?item .
+
+    ?text ql:contains-entity ?item .
+    ?text ql:contains-word "water" .
+
+          graph ?g {
+            FILTER ( ! isBlank(?subj) )
+            ?subj schema:name|sschema:name ?name .
+            ?subj schema:description|sschema:description ?description .
+             }
+            optional {?subj schema:distribution/schema:url|schema:subjectOf/schema:url ?url .}
+}
+group by ?subj ?name ?g ?description
+order by DESC(?score )
+LIMIT 10

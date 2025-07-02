@@ -1,14 +1,26 @@
-# Qlever Test Instance
+# Qlever Deployment Instances
 
 ## About
+This is a set of exporatory informtion that was used to test QLEVER
+It now includes  configuration files to deploy a qlever stack locally, and to portainer
+See the [readme](./deployment/README.md#LOCAL)
 
-First, if you are interested in Qlever and running it locally, DO NOT USE THIS REPO.  At least, it's very likely this is
-not what you want.
+This will provide a 
+* [Qlever](https://github.com/ad-freiburg/qlever) qlever-server-SOURCE
+* [Qlever-ui](https://github.com/ad-freiburg/qlever-ui)  qlever-ui
+* [Petrimaps - mapping for Qlever GeoSPARQL](https://github.com/ad-freiburg/qlever-petrimaps) qlever-petrimaps
 
-You likely want to go to the [qlever-control](https://github.com/ad-freiburg/qlever-control) repo instead.  That
-is the official repo for a nice server and UI onboarding experience with Qlever.   Also visit the main
-[qlever](https://github.com/ad-freiburg/qlever) repo or the [Qlever Wiki](https://github.com/ad-freiburg/qlever/wiki).
+## Development, 
+if you are interested in Qlever and running it locally, 
+see the [readme](./deployment/README.md#LOCAL) in deployment
 
+This will provide a 
+* [Qlever](https://github.com/ad-freiburg/qlever) localhost:7019
+* [Qlever-ui](https://github.com/ad-freiburg/qlever-ui) localhost:8176
+* [Petrimaps - mapping for Qlever GeoSPARQL](https://github.com/ad-freiburg/qlever-petrimaps) localhost:9090
+
+# TODO 
+ADD MORE STUFF ABOUT HOW TO USE THIS.
 
 ## What does this repo do?
 So why does this repo exist?   It is mostly to explore deploying Qlever via
@@ -17,6 +29,18 @@ was not quite what was needed.  So we basically decomposed qlever-control logic 
 
 If you are interested in deploying Qlever leveraging Docker Compose and data volumes or interfaces such
 as Portainer, this repository may provide some use for you.   Or you may provide us some insight (i.e., pull requests welcome).
+
+
+## QLEVER DOCUMENTS
+You should go to the [qlever-control](https://github.com/ad-freiburg/qlever-control) repo instead.  That 
+is the official repo for a nice server and UI onboarding experience with Qlever.   Also visit the main 
+[qlever](https://github.com/ad-freiburg/qlever) repo or the [Qlever Wiki](https://github.com/ad-freiburg/qlever/wiki).
+
+If you are interested in these components, you should check them out directly at;
+
+
+
+
 
 ## Graph as Data Product
 

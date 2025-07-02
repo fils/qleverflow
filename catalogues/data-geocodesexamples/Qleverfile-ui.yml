@@ -1,13 +1,13 @@
 config:
   backend:
-    name: Default
+    name: default
     slug: default
     sortKey: 1
     baseUrl: http://localhost:7019
     apiToken: ""
     isDefault: true
     isNoSlugMode: "False"
-    maxDefault: "100"
+    maxDefault: "10000"
     filteredLanguage: en
     dynamicSuggestions: "2"
     defaultModeTimeout: "5.0"
@@ -140,6 +140,13 @@ config:
       @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
       @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
       @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+      @prefix schema: <https://schema.org/> .
+      @prefix dcat: <http://www.w3.org/ns/dcat#> .
+      @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+      @prefix gn: <https://www.geonames.org/ontology#> .
+      @prefix text: <http://jena.apache.org/text#> .
+      @prefix vrank: <http://purl.org/voc/vrank#> .
+      @prefix ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/> .
     suggestionEntityVariable: ?qleverui_entity
     suggestionNameVariable: ?qleverui_name
     suggestionAltNameVariable: ?qleverui_alias
@@ -250,4 +257,10 @@ config:
 
       # ENDIF #
     mapViewBaseURL: "http://localhost:9090"
-  examples: []
+  examples:
+    - name: test
+      sort_key: "~"
+      query:  |- 
+        select * where {?s ?p ?o}
+        limit 1000
+

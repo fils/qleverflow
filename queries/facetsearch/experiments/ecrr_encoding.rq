@@ -1,0 +1,14 @@
+# Run in ECRR namespace
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema:  <https://schema.org/>
+select * where {
+
+         #?rrs a <https://schema.org/ResearchResource> ;
+			      ?rrs schema:supportingData ?df .
+				  ?df schema:encodingFormat  'application/x-netcdf' ;
+					  schema:position "input".
+				  ?rrs schema:name ?name.
+		   }
+

@@ -1,0 +1,58 @@
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix schema: <http://schema.org/>
+prefix sschema: <https://schema.org/>
+SELECT distinct ?subj ?g ?resourceType ?name ?description  ?pubname
+	(GROUP_CONCAT(DISTINCT ?placename; SEPARATOR=", ") AS ?placenames)
+        (GROUP_CONCAT(DISTINCT ?kwu; SEPARATOR=", ") AS ?kw)
+        ?datep  (GROUP_CONCAT(DISTINCT ?url; SEPARATOR=", ") AS ?disurl) (MAX(?score1) as ?score)
+	#   (MAX(?lat) as ?maxlat) (Min(?lat) as ?minlat) (MAX(?lon) as ?maxlon) (Min(?lon) as ?minlon)
+        WHERE {
+            ?lit bds:search "${q}" .
+            ?lit bds:matchAllTerms false .
+            ?lit bds:relevance ?score1 .
+            ?lit bds:minRelevance 0.15 .
+            ?subj ?p ?lit .
+            #filter( ?score1 > 0.15).
+          graph ?g {
+    	     ?subj schema:name|sschema:name ?name .
+             ?subj schema:description|sschema:description ?description .
+            #Minus {?subj a sschema:ResearchProject } .
+           # Minus {?subj a schema:ResearchProject } .
+           # Minus {?subj a schema:Person } .
+           # Minus {?subj a sschema:Person } .
+             }
+#BIND (IF (exists {?subj a schema:Dataset .} ||exists{?subj a sschema:Dataset .} , "data", "tool" ) AS ?resourceType).
+          values (?type ?resourceType) {
+            (schema:Dataset "data")
+            (sschema:Dataset "data")
+            (schema:ResearchProject "Research Project") #BCODMO- project
+            (sschema:ResearchProject  "Research Project")
+             (schema:SoftwareApplication  "tool")
+             (sschema:SoftwareApplication  "tool")
+             (schema:Person  "Person") #BCODMO- Person
+             (sschema:Person  "Person")
+              (schema:Event  "Event") #BCODMO- deployment
+              (sschema:Event  "Event")
+               (schema:Award  "Award") #BCODMO- Award
+               (sschema:Award  "Award")
+              (schema:DataCatalog  "DataCatalog")
+              (sschema:DataCatalog  "DataCatalog")
+            #(UNDEF "other")  # assume it's data. At least we should get  name.
+          } ?subj a ?type .
+            optional {?subj schema:distribution/schema:url|sschema:subjectOf/sschema:url ?url .}
+            OPTIONAL {?subj schema:datePublished|sschema:datePublished ?datep .}
+            OPTIONAL {?subj schema:publisher/schema:name|sschema:publisher/sschema:name|sschema:sdPublisher|sschema:provider/schema:name ?pubname .}
+            OPTIONAL {?subj schema:spatialCoverage/schema:name|sschema:spatialCoverage/sschema:name ?placename .}
+
+            OPTIONAL {?subj schema:keywords|sschema:keywords ?kwu .}
+
+        }
+        GROUP BY
+	# ?subj ?pubname ?placenames ?kw ?datep ?disurl ?score ?name ?description  ?resourceType ?g ?minlat ?maxlat ?minlon ?maxlon
+	?subj ?g ?resourceType ?name ?description ?pubname ?placenames ?kw ?datep ?disurl ?score
+        ORDER BY DESC(?score)
+LIMIT ${n}
+OFFSET ${o}
+
