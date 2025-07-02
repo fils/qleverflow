@@ -6,3 +6,4 @@ secret
 CLAUDE.md
 /deployment/rundata/
 __pycache__/
+**/*.pyc
