@@ -5,3 +5,4 @@ configs
 secret
 CLAUDE.md
 /deployment/rundata/
+__pycache__/
