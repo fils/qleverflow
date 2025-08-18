@@ -69,7 +69,7 @@ values ?sosType {
              OPTIONAL {?subj sschema:variableMeasured ?vm .
                ?vm a  sschema:PropertyValue  .
                ?vm sschema:name ?namedepth  .
-               FILTER (?namedepth IN ("depth", "CmpDep") ) .
+               FILTER (?namedepth IN ("depth", "CmpDep", "btm_depth") ) .
                     ?vm sschema:maxValue ?maxdepth_d .
                   ?vm sschema:minValue ?minDepth_d
            }
