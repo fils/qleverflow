@@ -6,12 +6,12 @@
 # removed from ui section: UI_CONFIG = eco
 
 [data]
-NAME              = ecological
+NAME              = ecoforecast
 SOURCES           =   neon4cast usgsrc4cast vera4cast
 BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/geocodes/graphs/latest
 GET_DATA_CMD      = for source in ${SOURCES}; do curl -sLo $${source}_release.nq -C - ${BASE_URL}/$${source}_release.nq; done
-DESCRIPTION       = ecological ${NAME} ${BASE_URL}
-TEXT_DESCRIPTION  = ecological release graph for ${NAME} sources: ${SOURCES}
+DESCRIPTION       = ecoforecast ${NAME} ${BASE_URL}
+TEXT_DESCRIPTION  = ecoforecast release graph for ${NAME} sources: ${SOURCES}
 FORMAT            = nq
 
 
