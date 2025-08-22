@@ -23,7 +23,7 @@ configs:
 services:
 
  qlever-server-project:
-    image: docker.io/adfreiburg/qlever:latest
+    image: docker.io/adfreiburg/qlever:${QLEVER_CONTAINER_TAG:-latest}
     hostname: qlever.server.${PROJECT:-deepoceans}
     init: true
     user: "root:root"  # Will be set via .env file
@@ -47,11 +47,8 @@ services:
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-      ' ls -l && qlever get-data  --log-level DEBUG && qlever index --overwrite-existing --text-index from_text_records_and_literals  && qlever start --use-text-index yes --run-in-foreground '
-    # ' ls -l && qlever get-data  --log-level DEBUG && qlever index --overwrite-existing --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
-    #      ' ls -l && qlever get-data  --log-level DEBUG && qlever index --overwrite-existing --text-index from_text_records_and_literals --vocabulary-type on-disk-compressed-geo-split && qlever start --use-text-index yes --run-in-foreground '
-
-    restart: unless-stopped
+     ' ls -l && qlever get-data  --log-level DEBUG && qlever index --overwrite-existing --text-index from_text_records_and_literals  && qlever start --use-text-index yes --run-in-foreground '
+    #restart: unless-stopped
     networks: &network
       - qlever_network
       - traefik_proxy
@@ -72,8 +69,7 @@ services:
  qlever-ui-config-namespace:
     image: docker.io/adfreiburg/qlever-ui:latest
     depends_on:
-      qlever-server-project:
-        condition: service_started
+      - qlever-server-project
     volumes:
       - type: volume
         source: qleverflow_data
@@ -88,6 +84,5 @@ services:
 
     restart: on-failure:1
     networks: *network
-
 
 
