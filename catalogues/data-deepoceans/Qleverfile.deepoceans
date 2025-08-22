@@ -19,6 +19,7 @@ FORMAT            = nq
 [index]
 INPUT_FILES     = *_release.nq
 CAT_INPUT_FILES = cat ${INPUT_FILES}
+VOCABULARY_TYPE = on-disk-compressed-geo-split
 SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
 #SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000, "vocabulary-type": "on-disk-compressed-geo-split" }
 
