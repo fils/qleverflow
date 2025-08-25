@@ -1,8 +1,6 @@
 ### basic services and a single container for qlver
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
 # Environment variables need to be set in a .env file:
-
-# the server will be located at namespace/PROJECT
 version: '3.9'
 networks:
   qlever_network:
@@ -15,7 +13,7 @@ networks:
 #export GROUP_ID=$(id -g)
 volumes:
   qleverflow_data:
-    name: qleverflow_data_${QLEVER_VOL:-main}
+    name: qleverflow_data_${PROJECT:-geocodesexamples}
     #name: qlever
 
 configs:
@@ -23,14 +21,10 @@ configs:
     name: qlever-config-${QLEVER_CONFIG:-geocodesexamples}
     #file: /Users/valentin/development/dev_earthcube/qleverflow/catalogues/data-geocodesexamples/Qleverfile.geocodesexamples
     external: true
-  qlever-ui:
-      name: qlever-ui-${PROJECT:-geocodesexamples}
-      #file: ../catalogues/${PREFIX-data}-${PROJECT:-geocodesexamples}/Qleverfile-ui-${PROJECT:-geocodesexamples}.yml
-      external: true
 services:
 # PROJECT MUST BE A DNS COMPLAINT NAME. NO UNDER_SCORES
  qlever-server-base:
-    image: docker.io/adfreiburg/qlever:${QLEVER_TAG:-latest}
+    image: docker.io/adfreiburg/qlever:latest
     hostname: qlever-server-${PROJECT:-geocodesexamples}
     user: "root:root"  # Will be set via .env file
     #user: "1011:1011"
@@ -60,9 +54,8 @@ services:
         target: /data/Qleverfile
     entrypoint: /qlever/docker-entrypoint.sh
     command: >
-       ' ls -l && qlever get-data  --log-level DEBUG && qlever index --overwrite-existing --text-index from_text_records_and_literals  && qlever start --use-text-index yes --run-in-foreground '
-    # ' ls -l && qlever get-data  --log-level DEBUG && qlever index --overwrite-existing --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
-    #      ' ls -l && qlever get-data  --log-level DEBUG && qlever index --overwrite-existing --text-index from_text_records_and_literals --vocabulary-type on-disk-compressed-geo-split && qlever start --use-text-index yes --run-in-foreground '
+               ' ls -l && qlever get-data  --log-level DEBUG && qlever index --text-index from_text_records_and_literals && qlever start --use-text-index yes --run-in-foreground '
+
     # run in forground, otherwise docker thinks run is complete.
     # 'qlever setup-config ${PROJECT:-geocodesexamples} && qlever get-data && qlever index &&  qlever start'
     # -c 'ServerMain -i ${PROJECT:-geocodesexamples} -j 8 -p 7019 -m 25G -c 20G -e 1G -k 200 -s 240s'
@@ -89,7 +82,7 @@ services:
     image: docker.io/adfreiburg/qlever-ui:latest
     hostname: qlever-ui-${PROJECT:-geocodesexamples}
     #init: true
-    volumes: &uivol
+    volumes:
       - type: volume
         source: qleverflow_data
         target: /app/db/
@@ -133,8 +126,6 @@ services:
  qlever-petrimaps-base:
     image: docker.io/adfreiburg/qlever-petrimaps:latest
     hostname: qlever-petrimaps
-    depends_on:
-      - qlever-ui-base
     # ports:
     #   - "9090:9090"
     networks: *network
@@ -151,19 +142,3 @@ services:
       - "traefik.http.routers.qlever-petrimaps-${PROJECT:-geocodesexamples}-secure.service=qlever-petrimaps-${PROJECT:-geocodesexamples}"
       - "traefik.http.services.qlever-petrimaps-${PROJECT:-geocodesexamples}.loadbalancer.server.port=9090"
       - "traefik.docker.network=traefik_proxy"
- qlever-ui-config:
-    image: docker.io/adfreiburg/qlever-ui:latest
-    depends_on:
-      - qlever-server-base
-    volumes: *uivol
-
-    configs:
-      - source: qlever-ui
-        target: /app/Qleverfile-ui-deploy.yml
-    # ports:
-    #   - "8176:7000"
-
-    command: bash -c "python manage.py copy default ${PROJECT:-geocodesexamples} && python manage.py config ${PROJECT:-geocodesexamples} /app/Qleverfile-ui-deploy.yml --hide-all-other-backends"
-
-    restart: on-failure:1
-    networks: *network
