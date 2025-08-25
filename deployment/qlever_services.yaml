@@ -116,7 +116,7 @@ services:
       - "traefik.http.middlewares.qlever-ui-${PROJECT:-geocodesexamples}-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.qlever-ui-${PROJECT:-geocodesexamples}.middlewares=qlever-ui-${PROJECT:-geocodesexamples}-https-redirect"
       - "traefik.http.routers.qlever-ui-${PROJECT:-geocodesexamples}-secure.entrypoints=https"
-      - "traefik.http.routers.qlever-ui-${PROJECT:-geocodesexamples}-secure.rule=Host(`qlever-iu.${HOST}`)"
+      - "traefik.http.routers.qlever-ui-${PROJECT:-geocodesexamples}-secure.rule=Host(`qlever-ui.${HOST}`)"
       - "traefik.http.routers.qlever-ui-${PROJECT:-geocodesexamples}-secure.tls=true"
       - "traefik.http.routers.qlever-ui-${PROJECT:-geocodesexamples}-secure.tls.certresolver=httpresolver"
       - "traefik.http.routers.qlever-ui-${PROJECT:-geocodesexamples}-secure.service=qlever-ui-${PROJECT:-geocodesexamples}"
