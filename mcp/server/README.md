@@ -3,6 +3,12 @@
 ## About
 
 TBD
+
+## Next steps
+
+- [ ]  I'd like the server to recognize types like Course or Dataset as being the focus
+of a query and then limit the generated SPARQL to those types.
+
 ## Docker command
 
 ```bash

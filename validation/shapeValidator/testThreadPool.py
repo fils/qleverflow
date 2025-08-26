@@ -42,9 +42,9 @@ def main():
         print(f"\nFound {len(uris)} unique URIs:")
         # Determine an appropriate max_workers. A good starting point might be 2x or 4x the number of CPU cores
         # or adjust based on how many concurrent network requests your SPARQL endpoint can handle.
-        max_workers = os.cpu_count() * 2 if os.cpu_count() else 4 # Example: 2x CPU cores, min 4
+        max_workers = os.cpu_count() * 1 if os.cpu_count() else 4 # Example: 2x CPU cores, min 4
 
-        print(f"Using {max_workers} workers")
+        print(f"Max workers set to: {max_workers}")
 
         results_list = []
         with ThreadPoolExecutor(max_workers=max_workers) as executor:

@@ -1,0 +1,16 @@
+PREFIX schema: <https://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex: <http://example.org/> # Replace with your actual base URI
+
+SELECT DISTINCT ?resource ?downwardLinkedType
+WHERE {
+
+  BIND(<http://portal.medin.org.uk/portal/json-ld/00040230-d455-4fea-8747-6179d77ab103.jsonld> AS ?resource)
+
+  ?resource (rdf:type / rdfs:subClassOf*) ?downwardLinkedType .
+
+  OPTIONAL { ?downwardLinkedType rdf:type rdfs:Class . }
+  FILTER (BOUND(?downwardLinkedType) || !BOUND(?downwardLinkedType)) # This filter is a no-op, just to show where a filter could go.
+
+}

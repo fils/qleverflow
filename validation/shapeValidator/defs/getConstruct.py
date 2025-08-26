@@ -9,11 +9,10 @@ def construct_graph(url):
     Query a SPARQL endpoint (QLever) and return a list of URIs from the response.
 
     Args:
-        url (str): The URL of the SPARQL endpoint
-        sparql_query (str): The SPARQL query to execute
+        url (str): The URI of the named graph
 
     Returns:
-        list: A list of unique URIs found in the query results
+        the triples for that graph
     """
     headers = {
         "Accept": "application/qlever-results+json",

@@ -15,9 +15,9 @@ SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-t
 
 [server]
 PORT               = 7007
-ACCESS_TOKEN       = ${data:NAME}_7643543846_6dMISzlPrD7i
-MEMORY_FOR_QUERIES = 25G
-CACHE_MAX_SIZE     = 20G
+#ACCESS_TOKEN       = ${data:NAME}_7643543846_6dMISzlPrD7i
+#MEMORY_FOR_QUERIES = 25G
+#CACHE_MAX_SIZE     = 20G
 TIMEOUT            = 240s
 
 [runtime]
