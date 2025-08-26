@@ -1,0 +1,95 @@
+PREFIX textSearch: <https://qlever.cs.uni-freiburg.de/textSearch/>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix schema: <http://schema.org/>
+prefix sschema: <https://schema.org/>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+SELECT distinct ?subj ?pubname (GROUP_CONCAT(DISTINCT ?placename; SEPARATOR=", ") AS ?placenames)
+        (GROUP_CONCAT(DISTINCT ?kwu; SEPARATOR=", ") AS ?kw)
+        ?datep  (GROUP_CONCAT(DISTINCT ?url; SEPARATOR=", ") AS ?disurl)
+		(COUNT(?t) AS ?score) (SAMPLE(?text) AS ?example_text)
+        ?name ?description (GROUP_CONCAT(DISTINCT ?resourceType_u; SEPARATOR=", ") as ?resourceType )  ?type ?g   (MAX(?lat) as ?maxlat) (Min(?lat) as ?minlat) (MAX(?lon) as ?maxlon) (Min(?lon) as ?minlon)
+ ?maxdepth ?minDepth ?temporalCoverage (GROUP_CONCAT(DISTINCT ?variableMeasured_a; SEPARATOR=", ") as ?variableMeasured  )
+ ?bbox
+WHERE {
+		    ?subj ?o ?item .
+
+
+  		SERVICE textSearch: {
+		?t textSearch:contains [textSearch:word "water*" ; textSearch:prefix-match ?prefix_match ; textSearch:score ?prefix_score] .
+		?t textSearch:contains [textSearch:entity ?item  ; textSearch:score ?entity_score] .
+	}
+          graph ?g {
+values ?sosType {
+               sschema:Dataset
+#               sschema:DataCatalog
+     schema:Dataset
+#               schema:DataCatalog
+            }
+              ?subj    a    ?sosType .
+             ?subj schema:name|sschema:name ?name .
+                       ?subj schema:description|sschema:description ?description . }
+		values (?type ?resourceType_u) {
+            (schema:Dataset "data")
+            (sschema:Dataset "data")
+            (schema:ResearchProject "researchProject") #BCODMO- project
+            (sschema:ResearchProject  "researchProject")
+             (schema:SoftwareApplication  "tool")
+             (sschema:SoftwareApplication  "tool")
+             (schema:Person  "person") #BCODMO- Person
+             (sschema:Person  "person")
+              (schema:Event  "event") #BCODMO- deployment
+              (sschema:Event  "event")
+               (schema:Award  "award") #BCODMO- Award
+               (sschema:Award  "award")
+              (schema:DataCatalog  "DataCatalog")
+              (sschema:DataCatalog  "DataCatalog")
+            #(UNDEF "other")  # assume it's data. At least we should get  name.
+          } ?subj a ?type .
+            optional {?subj sschema:distribution/sschema:url|sschema:subjectOf/sschema:url|schema:distribution/schema:url|schema:subjectOf/schema:url ?url1 .}
+            OPTIONAL {?subj schema:datePublished|sschema:datePublished ?datep1 .}
+            OPTIONAL {?subj schema:dateCreated|sschema:dateCreated ?datec .}
+            OPTIONAL {?subj schema:dateModified|sschema:dateModified ?datem .}
+            OPTIONAL {?subj schema:temporalCoverage|sschema:temporalCoverage ?temporalCoverage .}
+            OPTIONAL {?subj schema:publisher/schema:name|sschema:publisher/sschema:name|schema:publisher/schema:legalName|sschema:publisher/sschema:legalName  ?pub_name .}
+            OPTIONAL {?subj schema:spatialCoverage/schema:name|sschema:spatialCoverage/sschema:name|sschema:sdPublisher ?place_name .}
+           # OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:latitude|sschema:spatialCoverage/sschema:geo/sschema:latitude ?lat .}
+           # OPTIONAL {?subj sschema:spatialCoverage/sschema:geo ?geo .
+			#         ?geo a sschema:GeoCoordinates .
+			#		 ?geo sschema:longitude ?lon .
+			#		 ?geo sschema:llatitude ?lat .}
+
+			#OPTIONAL {?subj sschema:spatialCoverage/sschema:geo ?geo .
+			#         ?geo a sschema:GeoShape .
+			#		 ?geo sschema:box ?box .}
+            #     bind ( COALESCE(?box) As ?bbox)
+				 OPTIONAL {?subj sschema:keywords|sschema:keywords ?kw1 .}
+#            OPTIONAL {
+#                ?subj sschema:variableMeasured ?vm .
+#                ?vm a sschema:PropertyValue .
+#                ?vm sschema:name ?variableMeasured_a .
+#            }
+				 # getting all names of variables. kills query
+                 # if there is more than one location, then coallese to get the versions.
+             OPTIONAL {?subj sschema:variableMeasured ?vm .
+               ?vm a  sschema:PropertyValue  .
+               ?vm sschema:name ?namedepth  .
+               FILTER (?namedepth IN ("depth", "CmpDep") ) .
+                    ?vm sschema:maxValue ?maxdepth_d .
+                  ?vm sschema:minValue ?minDepth_d
+           }
+             bind ( COALESCE(?maxdepth_d) As ?maxdepth)
+            bind ( COALESCE(?minDepth_d) As ?minDepth)
+
+             # temporal coverage.
+             bind ( COALESCE(?kw1, "") As ?kwu)
+            bind ( COALESCE(?url1, "") As ?url)
+            # pick one date
+            bind ( COALESCE(?datec,?datem,?datep1) As ?datep)
+            BIND ( IF ( BOUND(?pub_name), ?pub_name, "No Publisher") as ?pubname ) .
+            BIND ( IF ( BOUND(?place_name), ?place_name, "No Placenames") as ?placename ) .
+        }
+        GROUP BY ?subj ?pubname ?placename  ?datep ?url  ?name ?description ?type ?maxdepth ?minDepth ?temporalCoverage ?bbox ?g
+        ORDER BY DESC(?score)
+LIMIT 1000
+

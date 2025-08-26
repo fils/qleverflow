@@ -1,0 +1,11 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+SELECT *
+WHERE {
+  ?geom geo:asWKT ?wkt .
+  BIND("POLYGON((28 -145, 40 -145, 40 -116, 28 -116, 28 -145))"^^geo:wktLiteral as ?geom1)
+  FILTER (geof:sfContains(?geom1, ?wkt))
+}
+limit 10

@@ -5,6 +5,7 @@
 # qlever start     # starts the server (instant)
 # removed from ui section: UI_CONFIG = eco
 
+# THIS IS FOR A SINGLE SOURCE. See dev-multifile for an example of mulitple sources
 [data]
 NAME              = cchdo
 BASE_URL          = https://oss.geocodes-aws-dev.earthcube.org/geocodes/graphs/latest
@@ -16,7 +17,10 @@ FORMAT            = nq
 [index]
 INPUT_FILES     = cchdo_release.nq
 CAT_INPUT_FILES = cat ${INPUT_FILES}
+VOCABULARY_TYPE = on-disk-compressed-geo-split
 SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
+#SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000, "vocabulary-type": "on-disk-compressed-geo-split" }
+
 
 [server]
 PORT               = 7019

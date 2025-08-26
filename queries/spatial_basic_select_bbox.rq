@@ -1,0 +1,49 @@
+PREFIX schema: <https://schema.org/>
+PREFIX schema: <https://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql#>
+
+select *
+WHERE {
+  ?s a schema:Dataset .
+  ?s schema:spatialCoverage ?spatialcoverage .
+  ?spatialcoverage schema:geo ?geo .
+  ?geo a schema:GeoShape .
+  ?geo schema:box ?coordString .
+
+  # Parse first value before first comma
+  BIND(STRBEFORE(?coordString, ",") AS ?x1_str)
+
+  # After first comma: everything after '162,'
+  BIND(STRAFTER(?coordString, ",") AS ?afterFirstComma)
+
+  # Remove leading whitespace
+  BIND(REPLACE(?afterFirstComma, "^\\s+", "") AS ?afterFirstCommaTrimmed)
+
+  # Second value: number before first space
+  BIND(STRBEFORE(?afterFirstCommaTrimmed, " ") AS ?y1_str)
+
+  # After first space: get the rest ("169, -75")
+  BIND(STRAFTER(?afterFirstCommaTrimmed, " ") AS ?afterFirstSpace)
+
+  # Third value: before second comma
+  BIND(STRBEFORE(?afterFirstSpace, ",") AS ?x2_str)
+
+  # Fourth value: after second comma, remove leading whitespace
+  BIND(REPLACE(STRAFTER(?afterFirstSpace, ","), "^\\s+", "") AS ?y2_str)
+BIND(IRI(CONCAT(STR(?geo), "/geometry")) AS ?geometry)
+  # Rectangle WKT: (x1 y1, x2 y1, x2 y2, x1 y2, x1 y1)
+  BIND(
+    STRDT(
+	CONCAT(
+      "POLYGON((",
+      ?x1_str, " ", ?y1_str, ", ",
+      ?x2_str, " ", ?y1_str, ", ",
+      ?x2_str, " ", ?y2_str, ", ",
+      ?x1_str, " ", ?y2_str, ", ",
+      ?x1_str, " ", ?y1_str, "))"
+    ), geo:wktLiteral
+	) AS ?wktBbox
+  )
+}

@@ -1,0 +1,10 @@
+PREFIX schema: <http://schema.org/>
+PREFIX sschema: <https://schema.org/>
+
+SELECT DISTINCT   ?name (count(?subj) as ?datasetcount)  (count(?name) as ?count) WHERE {
+  ?subj sschema:variableMeasured ?vm .
+  ?vm a sschema:PropertyValue .
+  ?vm sschema:name ?name .
+}
+group by ?name
+ORDER BY ?name

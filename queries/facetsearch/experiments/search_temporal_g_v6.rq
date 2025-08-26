@@ -1,0 +1,94 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+PREFIX sschema: <https://schema.org/>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+
+SELECT DISTINCT ?subj ?pubname (GROUP_CONCAT(DISTINCT ?placename; SEPARATOR=", ") AS ?placenames) (GROUP_CONCAT(DISTINCT ?kwu; SEPARATOR=", ") AS ?kw) ?datep (GROUP_CONCAT(DISTINCT ?url; SEPARATOR=", ") AS ?disurl) (COUNT(?text) AS ?score) (SAMPLE(?text) AS ?example_text) ?name ?description (GROUP_CONCAT(DISTINCT ?resourceType_u; SEPARATOR=", ") AS ?resourceType) ?type ?g (MAX(?lat) AS ?maxlat) (MIN(?lat) AS ?minlat) (MAX(?lon) AS ?maxlon) (MIN(?lon) AS ?minlon) ?maxdepth ?minDepth ?temporalCoverage (GROUP_CONCAT(DISTINCT ?variableMeasured_a; SEPARATOR=", ") AS ?variableMeasured) ?bbox WHERE {
+  ?subj ?o ?item .
+   ?subj ?property ?date .
+  VALUES ?property { sschema:dateCreated sschema:dateModified sschema:datePublished }
+
+  FILTER (
+          ?date > "2018-01-01"
+          &&
+          ?date <= "2025-01-01"
+  )
+  GRAPH ?g {
+    VALUES ?sosType { sschema:Dataset
+    #               sschema:DataCatalog
+    schema:Dataset
+    #               schema:DataCatalog
+  }
+    ?subj a ?sosType .
+    ?subj schema:name | sschema:name ?name .
+    ?subj schema:description | sschema:description ?description .
+  }
+  VALUES ( ?type ?resourceType_u ) { ( schema:Dataset "data" ) ( sschema:Dataset "data" ) ( schema:ResearchProject "researchProject" ) #BCODMO- project
+  ( sschema:ResearchProject "researchProject" ) ( schema:SoftwareApplication "tool" ) ( sschema:SoftwareApplication "tool" ) ( schema:Person "person" ) #BCODMO- Person
+  ( sschema:Person "person" ) ( schema:Event "event" ) #BCODMO- deployment
+  ( sschema:Event "event" ) ( schema:Award "award" ) #BCODMO- Award
+  ( sschema:Award "award" ) ( schema:DataCatalog "DataCatalog" ) ( sschema:DataCatalog "DataCatalog" )
+  #(UNDEF "other")  # assume it's data. At least we should get  name.
+}
+  ?subj a ?type .
+  OPTIONAL {
+    ?subj sschema:distribution/sschema:url | sschema:subjectOf/sschema:url | schema:distribution/schema:url | schema:subjectOf/schema:url ?url1 .
+  }
+  OPTIONAL {
+    ?subj schema:datePublished | sschema:datePublished ?datep1 .
+  }
+  OPTIONAL {
+    ?subj schema:dateCreated | sschema:dateCreated ?datec .
+  }
+  OPTIONAL {
+    ?subj schema:dateModified | sschema:dateModified ?datem .
+  }
+  OPTIONAL {
+    ?subj schema:temporalCoverage | sschema:temporalCoverage ?temporalCoverage .
+  }
+  OPTIONAL {
+    ?subj schema:publisher/schema:name | sschema:publisher/sschema:name | schema:publisher/schema:legalName | sschema:publisher/sschema:legalName ?pub_name .
+  }
+  OPTIONAL {
+    ?subj schema:spatialCoverage/schema:name | sschema:spatialCoverage/sschema:name | sschema:sdPublisher ?place_name .
+  }
+  # OPTIONAL {?subj schema:spatialCoverage/schema:geo/schema:latitude|sschema:spatialCoverage/sschema:geo/sschema:latitude ?lat .}
+  # OPTIONAL {?subj sschema:spatialCoverage/sschema:geo ?geo .
+  #         ?geo a sschema:GeoCoordinates .
+  #		 ?geo sschema:longitude ?lon .
+  #		 ?geo sschema:latitude ?lat .}
+  #OPTIONAL {?subj sschema:spatialCoverage/sschema:geo ?geo .
+  #         ?geo a sschema:GeoShape .
+  #		 ?geo sschema:box ?box .}
+  #     bind ( COALESCE(?box) As ?bbox)
+  OPTIONAL {
+    ?subj schema:keywords | sschema:keywords ?kw1 .
+  }
+  OPTIONAL {
+    ?subj sschema:variableMeasured ?vm .
+    ?vm a sschema:PropertyValue .
+    ?vm sschema:name ?variableMeasured_a .
+  }
+  # if there is more than one location, then coallese to get the versions.
+  OPTIONAL {
+    ?subj sschema:variableMeasured ?vm .
+    ?vm a sschema:PropertyValue .
+    ?vm sschema:name "depth" .
+    ?vm sschema:maxValue ?maxdepth_d .
+    ?vm sschema:minValue ?minDepth_d
+  }
+  BIND (COALESCE(?maxdepth_d) AS ?maxdepth)
+  BIND (COALESCE(?minDepth_d) AS ?minDepth)
+  # temporal coverage.
+  BIND (COALESCE(?kw1, "") AS ?kwu)
+  BIND (COALESCE(?url1, "") AS ?url)
+  # pick one date
+  BIND (COALESCE(?datec, ?dateM, ?datep1) AS ?datep)
+  BIND (IF(BOUND(?pub_name),?pub_name,"No Publisher") AS ?pubname) .
+  BIND (IF(BOUND(?place_name),?place_name,"No Placenames") AS ?placename) .
+}
+GROUP BY ?subj ?pubname ?placename ?datep ?url ?name ?description ?type ?maxdepth ?minDepth ?temporalCoverage ?bbox ?g
+ORDER BY DESC(?score)
+LIMIT 1000
+

@@ -1,0 +1,18 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX schema: <https://schema.org/>
+SELECT ?g ?box ?name ?wkt
+WHERE {
+
+  ?box schema:spatialCoverage ?boxspatialcoverage .
+    ?boxspatialcoverage schema:geo ?boxgeom .
+	?boxgeom geo:hasGeometry ?geom .
+  ?geom a sf:Polygon .
+  ?geom geo:asWKT ?wkt .
+ graph ?g { ?box  schema:name ?name
+
+}
+}
+limit 10

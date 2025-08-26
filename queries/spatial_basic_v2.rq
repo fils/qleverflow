@@ -1,0 +1,22 @@
+PREFIX qlss: <https://qlever.cs.uni-freiburg.de/spatialSearch/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+
+SELECT * WHERE {
+  # Arbitrary operations that select ?left_geometry
+  ?some_entity geo:hasCentroid/geo:asWKT ?left_geometry .
+# <https://gleaner.io/xid/genid/d0r8g9nqn67s73d253rg>
+  SERVICE qlss: {
+    _:config  qlss:algorithm qlss:s2 ;
+              qlss:left ?left_geometry ;
+              qlss:right ?right_geometry ;
+              qlss:numNearestNeighbors 2 ;
+              qlss:maxDistance 500 ;
+              qlss:bindDistance ?dist_left_right ;
+              qlss:payload ?payloadA , ?payloadB .
+    {
+      # Any subquery, that selects ?right_geometry, ?payloadA and ?payloadB
+      ?some_other_entity geo:hasCentroid/geo:asWKT ?right_geometry .
+      # ...
+    }
+  }
+}

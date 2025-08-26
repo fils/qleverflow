@@ -1,0 +1,13 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?feature ?wkt
+WHERE {
+  ?feature geo:hasGeometry ?geom .
+  ?geom geo:asWKT ?wkt .
+  FILTER(geof:distance(?wkt, "POINT(125.726 28.5262)"^^geo:wktLiteral, "http://qudt.org/vocab/unit/M"^^xsd:anyURI) > 1)
+}
+limit 10
+

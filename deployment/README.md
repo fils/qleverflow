@@ -1,6 +1,6 @@
 # Deployment for Portainer.
 
-**Local, see below**
+## **Local, see below**
 
 # Three containers run:
 * qlever-base.{HOST}
@@ -106,3 +106,6 @@ QLEVER_VOL=main
 
 `cd deployment; /usr/local/bin/docker compose -f ./qlever_namespace.yaml -f ./qlever__namespace_override.yaml -p deployment up 
 `
+
+## TROUBLESHOOTING LOCAL
+there is a deployment/rundata. when docker is not running the stack, remove all but the .gitkeep files

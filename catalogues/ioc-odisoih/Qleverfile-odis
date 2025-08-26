@@ -12,7 +12,7 @@ FORMAT            = nq
 INPUT_FILES     = odis.nq
 CAT_INPUT_FILES = cat ${INPUT_FILES}
 SETTINGS_JSON   = { "add-text-index": true, "ascii-prefixes-only": false, "num-triples-per-batch": 100000 }
-
+VOCABULARY_TYPE = on-disk-compressed-geo-split
 [server]
 PORT               = 7007
 ACCESS_TOKEN       = ${data:NAME}_7643543846_6dMISzlPrD7i

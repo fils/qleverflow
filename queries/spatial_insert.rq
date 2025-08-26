@@ -1,0 +1,19 @@
+PREFIX schema: <https://schema.org/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+
+INSERT {
+    ?geo geo:hasGeometry ?geometry .
+    ?geometry a sf:Point .
+    ?geometry geo:asWKT ?wkt .
+}
+WHERE {
+    ?s a schema:Dataset .
+    ?s schema:spatialCoverage ?spatialcoverage .
+    ?spatialcoverage schema:geo ?geo .
+    ?geo a schema:GeoCoordinates .
+    ?geo schema:latitude ?lat .
+    ?geo schema:longitude ?long .
+    BIND(IRI(CONCAT(STR(?geo), "/geometry")) AS ?geometry)
+    BIND(STRDT(CONCAT("POINT(", STR(?long), " ", STR(?lat), ")"), geo:wktLiteral) AS ?wkt)
+}

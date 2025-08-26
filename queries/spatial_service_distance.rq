@@ -1,0 +1,28 @@
+PREFIX spatialSearch: <https://qlever.cs.uni-freiburg.de/spatialSearch/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX schema: <https://schema.org/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+
+SELECT * WHERE {
+  # Arbitrary operations that select ?left_geometry
+     # ?s a schema:Dataset .
+    <DOI:10.15784/600043> schema:spatialCoverage ?spatialcoverage .
+    ?spatialcoverage schema:geo ?geom .
+
+   ?geom geo:hasGeometry/geo:asWKT ?wkt .
+
+  SERVICE spatialSearch: {
+    _:config  spatialSearch:algorithm spatialSearch:libspatialjoin ;
+              spatialSearch:left ?wkt ;
+              spatialSearch:right  ?right_geometry;
+              spatialSearch:numNearestNeighbors 100 ;
+             # spatialSearch:maxDistance 200000 ;
+             # spatialSearch:bindDistance ?dist_left_right ;
+			  spatialSearch:payload  ?some_other_entity ;
+			 spatialSearch:joinType spatialSearch:within-dist .
+    {
+      ?some_other_entity geo:hasGeometry/geo:asWKT ?right_geometry .
+    }
+  }
+}
