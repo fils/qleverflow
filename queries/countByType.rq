@@ -1,0 +1,18 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?type (COUNT(?entity) AS ?count) WHERE {
+  ?entity a ?type .
+  VALUES ?type {
+    schema:Dataset
+    schema:Person
+    schema:Map
+    schema:Vehicle
+    schema:Organization
+    schema:Project
+  }
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
+

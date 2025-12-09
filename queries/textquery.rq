@@ -10,8 +10,7 @@ SELECT ?uri (COUNT(?text) AS ?count) (SAMPLE(?text) AS ?example_text) ?item  WHE
   ?uri rdf:type <https://schema.org/Person> .
     ?uri <https://schema.org/name> ?item .
     ?text ql:contains-entity ?item .
-    ?text ql:contains-word "Arno" .
-	  FILTER (!CONTAINS(STR(?uri), "gleaner.io"))
-  FILTER (!isBLANK(?uri))
+    ?text ql:contains-word "ocean" .
+   FILTER (!isBLANK(?uri))
 }
 GROUP BY ?uri ?item

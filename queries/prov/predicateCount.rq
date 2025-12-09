@@ -1,0 +1,11 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
+
+SELECT ?predicate (COUNT(?predicate) as ?count) WHERE {
+  ?x a <http://www.w3.org/ns/prov#Activity> .
+  ?x ql:has-predicate ?predicate
+}
+GROUP BY ?predicate
+ORDER BY DESC(?count)
