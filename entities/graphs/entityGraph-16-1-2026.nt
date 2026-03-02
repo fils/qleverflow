@@ -1,0 +1,674 @@
+_:a425f842fb42e8da10ccfacc9c15d42 <http://schema.org/value> "shellfish" .
+_:a48aa8a3447ebe5d2e180b42f05770e2 <http://schema.org/value> "East Grampian Local Coastal Partnership" .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://schema.org/additionalProperty> _:a425f842fb42e8da10ccfacc9c15d42 .
+_:a8b1343bae1b8ccb297f059ff3e4668 <http://schema.org/value> "Gourdon" .
+_:a8b1343bae1b8ccb297f059ff3e4668 <http://schema.org/value> "Fraserburgh" .
+_:a425f842fb42e8da10ccfacc9c15d42 <http://schema.org/name> "marine species" .
+_:a8b1343bae1b8ccb297f059ff3e4668 <http://schema.org/name> "geospatial region" .
+_:a8b1343bae1b8ccb297f059ff3e4668 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a48aa8a3447ebe5d2e180b42f05770e2 <http://schema.org/value> "Marine Scotland" .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://schema.org/additionalProperty> _:a8b1343bae1b8ccb297f059ff3e4668 .
+_:a48aa8a3447ebe5d2e180b42f05770e2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://schema.org/additionalProperty> _:a48aa8a3447ebe5d2e180b42f05770e2 .
+_:a48aa8a3447ebe5d2e180b42f05770e2 <http://schema.org/name> "organizations" .
+_:a8b1343bae1b8ccb297f059ff3e4668 <http://schema.org/value> "Grampian" .
+_:a425f842fb42e8da10ccfacc9c15d42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bda81c126d0d28e8a4b4d1f80275ac96 <http://schema.org/value> "Southeast of England region" .
+_:bda81c126d0d28e8a4b4d1f80275ac96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d574aaf8a7db0356c7f5a4395cf0403e <http://schema.org/name> "organizations" .
+_:bda81c126d0d28e8a4b4d1f80275ac96 <http://schema.org/value> "Balanced Seas region" .
+_:d6c53a403c6df9b60fed40ebca49d910 <http://schema.org/value> "home port frequency" .
+_:d574aaf8a7db0356c7f5a4395cf0403e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://schema.org/additionalProperty> _:d574aaf8a7db0356c7f5a4395cf0403e .
+_:d6c53a403c6df9b60fed40ebca49d910 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d574aaf8a7db0356c7f5a4395cf0403e <http://schema.org/value> "Balanced Seas project team" .
+_:bda81c126d0d28e8a4b4d1f80275ac96 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://schema.org/additionalProperty> _:bda81c126d0d28e8a4b4d1f80275ac96 .
+_:d6c53a403c6df9b60fed40ebca49d910 <http://schema.org/name> "measurements and facts" .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://schema.org/additionalProperty> _:d6c53a403c6df9b60fed40ebca49d910 .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:ecfbbcda1a7a5451f255c8669244f8b0af11ffe1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:ce4e2e42d3ba2d76e206d956b87f73ae <http://schema.org/name> "organizations" .
+_:c1ba678b72eccc0507a2a3d176306fa6 <http://schema.org/name> "geospatial region" .
+_:ce4e2e42d3ba2d76e206d956b87f73ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:ecfbbcda1a7a5451f255c8669244f8b0af11ffe1> <http://schema.org/additionalProperty> _:c1ba678b72eccc0507a2a3d176306fa6 .
+_:ce4e2e42d3ba2d76e206d956b87f73ae <http://schema.org/value> "Channel Coastal Observatory" .
+<urn:gleaner.io:oih:medin:data:ecfbbcda1a7a5451f255c8669244f8b0af11ffe1> <http://schema.org/additionalProperty> _:ce4e2e42d3ba2d76e206d956b87f73ae .
+_:c1ba678b72eccc0507a2a3d176306fa6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c1ba678b72eccc0507a2a3d176306fa6 <http://schema.org/value> "North West" .
+_:e4aa753bb566f7c9403898dc929cad91 <http://schema.org/name> "measurements and facts" .
+_:be06f77978c172991e3a8b0fcc3e571 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://schema.org/additionalProperty> _:b092e6a73eb538344ecf07a7b1a02b14 .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://schema.org/additionalProperty> _:be06f77978c172991e3a8b0fcc3e571 .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://schema.org/additionalProperty> _:e4aa753bb566f7c9403898dc929cad91 .
+_:b092e6a73eb538344ecf07a7b1a02b14 <http://schema.org/name> "organizations" .
+_:b092e6a73eb538344ecf07a7b1a02b14 <http://schema.org/value> "British Oceanographic Data Centre" .
+_:b092e6a73eb538344ecf07a7b1a02b14 <http://schema.org/value> "National Oceanography Centre" .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b092e6a73eb538344ecf07a7b1a02b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:be06f77978c172991e3a8b0fcc3e571 <http://schema.org/name> "geospatial region" .
+_:e4aa753bb566f7c9403898dc929cad91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e4aa753bb566f7c9403898dc929cad91 <http://schema.org/value> "Argo float measurements" .
+_:be06f77978c172991e3a8b0fcc3e571 <http://schema.org/value> "North Atlantic region" .
+_:e552feac08e01ce393cfe99afb65a064 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e552feac08e01ce393cfe99afb65a064 <http://schema.org/name> "marine biodiversity" .
+_:e552feac08e01ce393cfe99afb65a064 <http://schema.org/value> "cetaceans" .
+<urn:gleaner.io:oih:medin:data:e411c2adc9b29a66d1063c3d811b2431e13932a2> <http://schema.org/additionalProperty> _:e552feac08e01ce393cfe99afb65a064 .
+<urn:gleaner.io:oih:medin:data:e411c2adc9b29a66d1063c3d811b2431e13932a2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e552feac08e01ce393cfe99afb65a064 <http://schema.org/value> "seabirds" .
+<urn:gleaner.io:oih:medin:data:dd7e2fb341011cd0d0b9f0190c57016fb3276a44> <http://schema.org/additionalProperty> _:e548787b85e463181904f16687864d5b .
+<urn:gleaner.io:oih:medin:data:dd7e2fb341011cd0d0b9f0190c57016fb3276a44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d3277f0eefd555772b54a9a83c610035 <http://schema.org/name> "organizations" .
+_:e548787b85e463181904f16687864d5b <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:dd7e2fb341011cd0d0b9f0190c57016fb3276a44> <http://schema.org/additionalProperty> _:d3277f0eefd555772b54a9a83c610035 .
+_:e548787b85e463181904f16687864d5b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d3277f0eefd555772b54a9a83c610035 <http://schema.org/value> "Channel Coastal Observatory" .
+_:e548787b85e463181904f16687864d5b <http://schema.org/value> "South East" .
+_:d3277f0eefd555772b54a9a83c610035 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d9838384aa0f863e91c9bbfe497fb8cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:dc3d6d976adcd154e97254f0d7ed2eb0fd9b8ddf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c9aed02d76681e90882d8aaae48beeeb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d9838384aa0f863e91c9bbfe497fb8cf <http://schema.org/value> "Centrica" .
+_:c9aed02d76681e90882d8aaae48beeeb <http://schema.org/value> "Irish Sea" .
+<urn:gleaner.io:oih:medin:data:dc3d6d976adcd154e97254f0d7ed2eb0fd9b8ddf> <http://schema.org/additionalProperty> _:d9838384aa0f863e91c9bbfe497fb8cf .
+_:c9aed02d76681e90882d8aaae48beeeb <http://schema.org/name> "geospatial region" .
+_:d9838384aa0f863e91c9bbfe497fb8cf <http://schema.org/name> "organizations" .
+_:d9838384aa0f863e91c9bbfe497fb8cf <http://schema.org/value> "Liverpool University" .
+<urn:gleaner.io:oih:medin:data:dc3d6d976adcd154e97254f0d7ed2eb0fd9b8ddf> <http://schema.org/additionalProperty> _:c9aed02d76681e90882d8aaae48beeeb .
+<urn:gleaner.io:oih:medin:data:db847352d4401abfda923b2a3ca9959005951236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:a889264e551152a47d5119cf0af2f72b <http://schema.org/name> "policies" .
+<urn:gleaner.io:oih:medin:data:db847352d4401abfda923b2a3ca9959005951236> <http://schema.org/additionalProperty> _:c3111223c16cd852af5d441d52bfe6ba .
+_:a889264e551152a47d5119cf0af2f72b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c3111223c16cd852af5d441d52bfe6ba <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:db847352d4401abfda923b2a3ca9959005951236> <http://schema.org/additionalProperty> _:a889264e551152a47d5119cf0af2f72b .
+_:a889264e551152a47d5119cf0af2f72b <http://schema.org/value> "CAR licence" .
+_:c3111223c16cd852af5d441d52bfe6ba <http://schema.org/value> "fish" .
+_:c3111223c16cd852af5d441d52bfe6ba <http://schema.org/name> "migratory marine species" .
+_:bf750956e07aa8a17330b5981a0036bf <http://schema.org/name> "marine species" .
+_:ff37aab69a51bd5ace62d68462a27a66 <http://schema.org/name> "person" .
+_:ff37aab69a51bd5ace62d68462a27a66 <http://schema.org/value> "Jensen" .
+_:c857c4d5f51fd7ca678386ad96e041a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f34e64171b8c4794c1bf99966d3ac0fd <http://schema.org/value> "NCC" .
+_:c857c4d5f51fd7ca678386ad96e041a <http://schema.org/value> "Handfast Point" .
+_:bc9d6e75f09492e2d94da4b02eb7b753 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bf750956e07aa8a17330b5981a0036bf <http://schema.org/value> "maerl" .
+_:c857c4d5f51fd7ca678386ad96e041a <http://schema.org/value> "Poole Bay" .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:bc9d6e75f09492e2d94da4b02eb7b753 .
+_:ff37aab69a51bd5ace62d68462a27a66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:bf750956e07aa8a17330b5981a0036bf .
+_:bf750956e07aa8a17330b5981a0036bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f34e64171b8c4794c1bf99966d3ac0fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ff37aab69a51bd5ace62d68462a27a66 <http://schema.org/value> "Sheader" .
+_:ff37aab69a51bd5ace62d68462a27a66 <http://schema.org/value> "G.A. Rowe" .
+_:c857c4d5f51fd7ca678386ad96e041a <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:f34e64171b8c4794c1bf99966d3ac0fd .
+_:f34e64171b8c4794c1bf99966d3ac0fd <http://schema.org/value> "English Nature" .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:c857c4d5f51fd7ca678386ad96e041a .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c857c4d5f51fd7ca678386ad96e041a <http://schema.org/value> "Studland Bay" .
+_:f34e64171b8c4794c1bf99966d3ac0fd <http://schema.org/value> "Southampton Oceanography Centre" .
+_:bc9d6e75f09492e2d94da4b02eb7b753 <http://schema.org/value> "Day grab" .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:ff37aab69a51bd5ace62d68462a27a66 .
+_:f34e64171b8c4794c1bf99966d3ac0fd <http://schema.org/name> "organizations" .
+_:bc9d6e75f09492e2d94da4b02eb7b753 <http://schema.org/name> "procedures" .
+_:ff37aab69a51bd5ace62d68462a27a66 <http://schema.org/value> "Rowe" .
+_:ceac4ff4973388db5c4e3dc8241a7b6c <http://schema.org/value> "BODC" .
+<urn:gleaner.io:oih:medin:data:cd719f005926c024536e358893ab3244f0938315> <http://schema.org/additionalProperty> _:ceac4ff4973388db5c4e3dc8241a7b6c .
+_:ceac4ff4973388db5c4e3dc8241a7b6c <http://schema.org/name> "organizations" .
+_:ceac4ff4973388db5c4e3dc8241a7b6c <http://schema.org/value> "National Oceanography Centre" .
+_:ceac4ff4973388db5c4e3dc8241a7b6c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ceac4ff4973388db5c4e3dc8241a7b6c <http://schema.org/value> "National Marine Facilities Sea Systems" .
+<urn:gleaner.io:oih:medin:data:cd719f005926c024536e358893ab3244f0938315> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:ed8812261a169bdfe95224dc48502dcc .
+_:b928e8087ffcb8d2a03d8a70f64d318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b928e8087ffcb8d2a03d8a70f64d318 <http://schema.org/name> "marine biodiversity" .
+_:ed8812261a169bdfe95224dc48502dcc <http://schema.org/value> "UK" .
+_:ed8812261a169bdfe95224dc48502dcc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ed8812261a169bdfe95224dc48502dcc <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:bce21e6d41a24fd4222f73eeba104e2b .
+_:c76a18c8abb2c4a6dd7a20820a844a09 <http://schema.org/value> "Red-throated Divers" .
+_:c76a18c8abb2c4a6dd7a20820a844a09 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ed8812261a169bdfe95224dc48502dcc <http://schema.org/value> "Britain" .
+_:ed8812261a169bdfe95224dc48502dcc <http://schema.org/value> "Norfolk coast" .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:c76a18c8abb2c4a6dd7a20820a844a09 .
+_:ed8812261a169bdfe95224dc48502dcc <http://schema.org/value> "Lowestoft" .
+_:b928e8087ffcb8d2a03d8a70f64d318 <http://schema.org/value> "waterbirds" .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:b928e8087ffcb8d2a03d8a70f64d318 .
+_:bce21e6d41a24fd4222f73eeba104e2b <http://schema.org/name> "person" .
+_:c76a18c8abb2c4a6dd7a20820a844a09 <http://schema.org/name> "marine species" .
+_:bce21e6d41a24fd4222f73eeba104e2b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bce21e6d41a24fd4222f73eeba104e2b <http://schema.org/value> "O’Brien" .
+<urn:gleaner.io:oih:medin:data:c42941303503a9f8563ecbf39929b93fbad6a93b> <http://schema.org/additionalProperty> _:f723563a55fdc12b424b96ec92ff7a16 .
+_:adcd62b32c968d653d369b5bec81ed99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f723563a55fdc12b424b96ec92ff7a16 <http://schema.org/name> "policies" .
+_:adcd62b32c968d653d369b5bec81ed99 <http://schema.org/name> "migratory marine species" .
+_:f723563a55fdc12b424b96ec92ff7a16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:c42941303503a9f8563ecbf39929b93fbad6a93b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:adcd62b32c968d653d369b5bec81ed99 <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:c42941303503a9f8563ecbf39929b93fbad6a93b> <http://schema.org/additionalProperty> _:adcd62b32c968d653d369b5bec81ed99 .
+_:f723563a55fdc12b424b96ec92ff7a16 <http://schema.org/value> "CAR licence" .
+_:aa5e372ca205610c534944ce588f662d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bb8fc99d38c982d42ae1aea49baec550 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:aa5e372ca205610c534944ce588f662d .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:bb8fc99d38c982d42ae1aea49baec550 .
+_:bb8fc99d38c982d42ae1aea49baec550 <http://schema.org/name> "taxon" .
+_:aa5e372ca205610c534944ce588f662d <http://schema.org/name> "organizations" .
+_:d1205bbe4754ea1bd3b6284f9668ea75 <http://schema.org/name> "undescribed biodiversity" .
+_:aa5e372ca205610c534944ce588f662d <http://schema.org/value> "Essex Wildlife Trust" .
+_:d1205bbe4754ea1bd3b6284f9668ea75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bb8fc99d38c982d42ae1aea49baec550 <http://schema.org/value> "U. pinnatifida" .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d1205bbe4754ea1bd3b6284f9668ea75 <http://schema.org/value> "U. pinnatifida sporophyte" .
+_:f70490db9717ad2b73f0ca075d93bd <http://schema.org/value> "U. pinnatifida sporophyte" .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:d1205bbe4754ea1bd3b6284f9668ea75 .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:f70490db9717ad2b73f0ca075d93bd .
+_:f70490db9717ad2b73f0ca075d93bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f70490db9717ad2b73f0ca075d93bd <http://schema.org/name> "species occurrence" .
+_:d25da436a002a0808fb39ddd91cea9b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:edf8b8eed374a06402094179dd2a9ee1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://schema.org/additionalProperty> _:d25da436a002a0808fb39ddd91cea9b .
+_:edf8b8eed374a06402094179dd2a9ee1 <http://schema.org/value> "Loch Alsh" .
+_:ec572f45971fe5163fce5bf01447be2b <http://schema.org/value> "SNH" .
+_:d25da436a002a0808fb39ddd91cea9b <http://schema.org/name> "taxon" .
+_:edf8b8eed374a06402094179dd2a9ee1 <http://schema.org/name> "geospatial region" .
+_:ec572f45971fe5163fce5bf01447be2b <http://schema.org/value> "Marine Scotland Science" .
+_:d25da436a002a0808fb39ddd91cea9b <http://schema.org/value> "species" .
+_:ec572f45971fe5163fce5bf01447be2b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ec572f45971fe5163fce5bf01447be2b <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://schema.org/additionalProperty> _:ec572f45971fe5163fce5bf01447be2b .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://schema.org/additionalProperty> _:edf8b8eed374a06402094179dd2a9ee1 .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:bd3525c7ec6b9afd0fd096a7c46f280a <http://schema.org/value> "Lithothamnion corallioides" .
+_:db5b65ecb36b1b4fcf05c78336c6caef <http://schema.org/value> "Phymatolithon calcareum" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:eb6290918d8d6be69671fea31e5efe55 .
+_:eb6290918d8d6be69671fea31e5efe55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a25d564069fd7ee4759318de4fa035f6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:db5b65ecb36b1b4fcf05c78336c6caef .
+_:db5b65ecb36b1b4fcf05c78336c6caef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:eb6290918d8d6be69671fea31e5efe55 <http://schema.org/value> "Queens Wharf" .
+_:a25d564069fd7ee4759318de4fa035f6 <http://schema.org/value> "in situ habitat observations" .
+_:f011c62a58b395e6dc8bf7546695b186 <http://schema.org/value> "Falmouth Harbour Commissioners" .
+_:bd3525c7ec6b9afd0fd096a7c46f280a <http://schema.org/value> "Phymatolithon calcareum" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:bd3525c7ec6b9afd0fd096a7c46f280a .
+_:f011c62a58b395e6dc8bf7546695b186 <http://schema.org/value> "Falmouth Docks and Engineering Co. Ltd." .
+_:f011c62a58b395e6dc8bf7546695b186 <http://schema.org/value> "Royal Haskoning Ltd." .
+_:bd3525c7ec6b9afd0fd096a7c46f280a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a25d564069fd7ee4759318de4fa035f6 <http://schema.org/name> "procedures" .
+_:db5b65ecb36b1b4fcf05c78336c6caef <http://schema.org/name> "marine species" .
+_:eb6290918d8d6be69671fea31e5efe55 <http://schema.org/value> "Falmouth Harbour" .
+_:a25d564069fd7ee4759318de4fa035f6 <http://schema.org/value> "diver sediment coring" .
+_:f011c62a58b395e6dc8bf7546695b186 <http://schema.org/value> "Falmouth Harbour commission" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:f011c62a58b395e6dc8bf7546695b186 .
+_:da8e84f32fe4d9c542a494af34cc8097 <http://schema.org/name> "ecosystems" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:da8e84f32fe4d9c542a494af34cc8097 .
+_:da8e84f32fe4d9c542a494af34cc8097 <http://schema.org/value> "maerl beds" .
+_:a25d564069fd7ee4759318de4fa035f6 <http://schema.org/value> "diver video transects" .
+_:eb6290918d8d6be69671fea31e5efe55 <http://schema.org/name> "geospatial region" .
+_:da8e84f32fe4d9c542a494af34cc8097 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f011c62a58b395e6dc8bf7546695b186 <http://schema.org/name> "organizations" .
+_:f011c62a58b395e6dc8bf7546695b186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bd3525c7ec6b9afd0fd096a7c46f280a <http://schema.org/name> "taxon" .
+_:db5b65ecb36b1b4fcf05c78336c6caef <http://schema.org/value> "Lithothamnion corallioides" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:a25d564069fd7ee4759318de4fa035f6 .
+_:c6061cf5e3c70467f84706cc3d066415 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b2e626fd5258a0ecf2c4cb063e0f850fb887a3c2> <http://schema.org/additionalProperty> _:f264a9db4175aa98b289e5ac51a1e608 .
+<urn:gleaner.io:oih:medin:data:b2e626fd5258a0ecf2c4cb063e0f850fb887a3c2> <http://schema.org/additionalProperty> _:c6061cf5e3c70467f84706cc3d066415 .
+_:f264a9db4175aa98b289e5ac51a1e608 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f264a9db4175aa98b289e5ac51a1e608 <http://schema.org/name> "geospatial region" .
+_:c6061cf5e3c70467f84706cc3d066415 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:b2e626fd5258a0ecf2c4cb063e0f850fb887a3c2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f264a9db4175aa98b289e5ac51a1e608 <http://schema.org/value> "UK" .
+_:c6061cf5e3c70467f84706cc3d066415 <http://schema.org/value> "Aggregate Levy\r\nSustainability Fund (ALSF)" .
+_:a0f14fddd935006c4d5e1c32675da9f7 <http://schema.org/name> "projects" .
+_:d39fc0d2b89fc575b7c32c8cc88112fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a0f14fddd935006c4d5e1c32675da9f7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c73c9a67aedee742e4b06fb813871cbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:d39fc0d2b89fc575b7c32c8cc88112fc .
+_:de22877a5d398b8d0be50696fdeb174d <http://schema.org/value> "species" .
+_:c73c9a67aedee742e4b06fb813871cbe <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:a0f14fddd935006c4d5e1c32675da9f7 .
+_:d39fc0d2b89fc575b7c32c8cc88112fc <http://schema.org/value> "walkovers" .
+_:de22877a5d398b8d0be50696fdeb174d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:de22877a5d398b8d0be50696fdeb174d <http://schema.org/name> "taxon" .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:c73c9a67aedee742e4b06fb813871cbe .
+_:c73c9a67aedee742e4b06fb813871cbe <http://schema.org/value> "Northam Burrows" .
+_:a0f14fddd935006c4d5e1c32675da9f7 <http://schema.org/value> "Bioblitz survey" .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d39fc0d2b89fc575b7c32c8cc88112fc <http://schema.org/value> "plankton netting" .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:de22877a5d398b8d0be50696fdeb174d .
+_:d39fc0d2b89fc575b7c32c8cc88112fc <http://schema.org/name> "procedures" .
+_:c8b62626b1ea8da2f493929c2ce25f0b <http://schema.org/name> "migratory marine species" .
+_:deaf2d0728214bd1974c52ec24636810 <http://schema.org/value> "Plymouth" .
+_:f189f2fe1469987ae9ee66e7781e70c4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c8b62626b1ea8da2f493929c2ce25f0b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c8b62626b1ea8da2f493929c2ce25f0b <http://schema.org/value> "squid" .
+_:e042c0d0cf2bd800976bd1262d920104 <http://schema.org/value> "Zooplankton" .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:f189f2fe1469987ae9ee66e7781e70c4 .
+_:daf132f02d48403b109f3d1e7b66391e <http://schema.org/name> "measurements and facts" .
+_:daf132f02d48403b109f3d1e7b66391e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f189f2fe1469987ae9ee66e7781e70c4 <http://schema.org/value> "BODC" .
+_:c8b62626b1ea8da2f493929c2ce25f0b <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:daf132f02d48403b109f3d1e7b66391e .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:deaf2d0728214bd1974c52ec24636810 .
+_:deaf2d0728214bd1974c52ec24636810 <http://schema.org/name> "geospatial region" .
+_:deaf2d0728214bd1974c52ec24636810 <http://schema.org/value> "Western English Channel" .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:deaf2d0728214bd1974c52ec24636810 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e042c0d0cf2bd800976bd1262d920104 <http://schema.org/value> "squid" .
+_:e042c0d0cf2bd800976bd1262d920104 <http://schema.org/name> "marine species" .
+_:daf132f02d48403b109f3d1e7b66391e <http://schema.org/value> "core measurements" .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:e042c0d0cf2bd800976bd1262d920104 .
+_:e042c0d0cf2bd800976bd1262d920104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e042c0d0cf2bd800976bd1262d920104 <http://schema.org/value> "fish" .
+_:f189f2fe1469987ae9ee66e7781e70c4 <http://schema.org/value> "Marine Biological Association" .
+_:f189f2fe1469987ae9ee66e7781e70c4 <http://schema.org/value> "Plymouth Marine Laboratory" .
+_:f189f2fe1469987ae9ee66e7781e70c4 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:c8b62626b1ea8da2f493929c2ce25f0b .
+_:b276a6ae939fd3ad1548b9023e172564 <http://schema.org/value> "Pycnogonida" .
+_:e720cee8bd3392f7ff09300099d0c8aa <http://schema.org/value> "Scillies ATBI project" .
+<urn:gleaner.io:oih:medin:data:ace5dd9a4ac85d8acb0bbcb674afd3d6f2f37b5a> <http://schema.org/additionalProperty> _:b276a6ae939fd3ad1548b9023e172564 .
+<urn:gleaner.io:oih:medin:data:ace5dd9a4ac85d8acb0bbcb674afd3d6f2f37b5a> <http://schema.org/additionalProperty> _:e720cee8bd3392f7ff09300099d0c8aa .
+_:e720cee8bd3392f7ff09300099d0c8aa <http://schema.org/name> "projects" .
+_:b276a6ae939fd3ad1548b9023e172564 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e720cee8bd3392f7ff09300099d0c8aa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b276a6ae939fd3ad1548b9023e172564 <http://schema.org/name> "taxon" .
+<urn:gleaner.io:oih:medin:data:ace5dd9a4ac85d8acb0bbcb674afd3d6f2f37b5a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:abb8bc1ea2e3c485ca2b90303fabda7c2851e3d9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:abb8bc1ea2e3c485ca2b90303fabda7c2851e3d9> <http://schema.org/additionalProperty> _:aaef11db2552bdf31b60a6fcd408140c .
+_:aaef11db2552bdf31b60a6fcd408140c <http://schema.org/name> "organizations" .
+_:aaef11db2552bdf31b60a6fcd408140c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:aaef11db2552bdf31b60a6fcd408140c <http://schema.org/value> "Channel Coastal Observatory" .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b63dc8dee56f44fbceef257e28437d30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://schema.org/additionalProperty> _:b63dc8dee56f44fbceef257e28437d30 .
+_:d1782f480327e2b637cbe3579f3d7137 <http://schema.org/value> "RPS" .
+_:c3c6b2820bd5c8b19e439166018eb5eb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d1782f480327e2b637cbe3579f3d7137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://schema.org/additionalProperty> _:d1782f480327e2b637cbe3579f3d7137 .
+_:b63dc8dee56f44fbceef257e28437d30 <http://schema.org/value> "fish" .
+_:b63dc8dee56f44fbceef257e28437d30 <http://schema.org/name> "migratory marine species" .
+_:c3c6b2820bd5c8b19e439166018eb5eb <http://schema.org/value> "fish species" .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://schema.org/additionalProperty> _:c3c6b2820bd5c8b19e439166018eb5eb .
+_:c3c6b2820bd5c8b19e439166018eb5eb <http://schema.org/name> "marine species" .
+_:d1782f480327e2b637cbe3579f3d7137 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c100d5b58f8776172f4c6d2956b80bad <http://schema.org/name> "organizations" .
+_:c100d5b58f8776172f4c6d2956b80bad <http://schema.org/value> "Fisheries Research Services Aberdeen Marine Laboratory" .
+_:c7b5f909ac8a0d51907443282aa6a2da <http://schema.org/value> "hydrographic data profiles" .
+_:c100d5b58f8776172f4c6d2956b80bad <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:abb0bbf761aff36da42280484046b413 <http://schema.org/value> "North Sea area" .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://schema.org/additionalProperty> _:c7b5f909ac8a0d51907443282aa6a2da .
+_:c7b5f909ac8a0d51907443282aa6a2da <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:abb0bbf761aff36da42280484046b413 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://schema.org/additionalProperty> _:c100d5b58f8776172f4c6d2956b80bad .
+_:c7b5f909ac8a0d51907443282aa6a2da <http://schema.org/name> "measurements and facts" .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://schema.org/additionalProperty> _:abb0bbf761aff36da42280484046b413 .
+_:abb0bbf761aff36da42280484046b413 <http://schema.org/name> "geospatial region" .
+_:f69464185a2a82c542a78cee9222f977 <http://schema.org/name> "policies" .
+_:b5c403f4bdc30766c24748f93a5b6fc3 <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:a3793752dbaaa3b11458c05f486c183e69291356> <http://schema.org/additionalProperty> _:f69464185a2a82c542a78cee9222f977 .
+<urn:gleaner.io:oih:medin:data:a3793752dbaaa3b11458c05f486c183e69291356> <http://schema.org/additionalProperty> _:b5c403f4bdc30766c24748f93a5b6fc3 .
+_:f69464185a2a82c542a78cee9222f977 <http://schema.org/value> "CAR licence" .
+_:b5c403f4bdc30766c24748f93a5b6fc3 <http://schema.org/value> "fish" .
+_:b5c403f4bdc30766c24748f93a5b6fc3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f69464185a2a82c542a78cee9222f977 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:a3793752dbaaa3b11458c05f486c183e69291356> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:9f6ff512bda6fc17dbaca4c263ed8c03eefd9d00> <http://schema.org/additionalProperty> _:e254fd6c49d24a6c8faa0483a8480ba8 .
+_:e254fd6c49d24a6c8faa0483a8480ba8 <http://schema.org/name> "policies" .
+_:bb1214dafbed9ea69fb08eca49aba8f2 <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:9f6ff512bda6fc17dbaca4c263ed8c03eefd9d00> <http://schema.org/additionalProperty> _:bb1214dafbed9ea69fb08eca49aba8f2 .
+_:e254fd6c49d24a6c8faa0483a8480ba8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bb1214dafbed9ea69fb08eca49aba8f2 <http://schema.org/name> "migratory marine species" .
+_:bb1214dafbed9ea69fb08eca49aba8f2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e254fd6c49d24a6c8faa0483a8480ba8 <http://schema.org/value> "CAR licence" .
+<urn:gleaner.io:oih:medin:data:9f6ff512bda6fc17dbaca4c263ed8c03eefd9d00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:a1de650149b625db7186759da02c11f4 <http://schema.org/value> "Undaria pinnatifida" .
+_:d833184e878aee63cb5ef33ccf2af3c8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:d166cacd1766d60c73f50321d0a8b735 .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:a1de650149b625db7186759da02c11f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e78671ed89b2fbfc37d2036a50815974 <http://schema.org/value> "Undaria pinnatifida" .
+_:d833184e878aee63cb5ef33ccf2af3c8 <http://schema.org/value> "Defra MB0102 contract" .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:a1de650149b625db7186759da02c11f4 .
+_:d166cacd1766d60c73f50321d0a8b735 <http://schema.org/value> "Marine and Coastal Access Bill" .
+_:d166cacd1766d60c73f50321d0a8b735 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:e78671ed89b2fbfc37d2036a50815974 .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:d833184e878aee63cb5ef33ccf2af3c8 .
+_:e78671ed89b2fbfc37d2036a50815974 <http://schema.org/name> "invasive species" .
+_:e78671ed89b2fbfc37d2036a50815974 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d166cacd1766d60c73f50321d0a8b735 <http://schema.org/name> "policies" .
+_:d166cacd1766d60c73f50321d0a8b735 <http://schema.org/value> "Scottish legislation" .
+_:a1de650149b625db7186759da02c11f4 <http://schema.org/name> "taxon" .
+_:e78671ed89b2fbfc37d2036a50815974 <http://schema.org/value> "Wakame" .
+_:d833184e878aee63cb5ef33ccf2af3c8 <http://schema.org/name> "projects" .
+_:bdbb37899579c94877554f7532b0c4ba <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e4628ec1bbd23443edd477cfcb624863 <http://schema.org/name> "projects" .
+_:bdbb37899579c94877554f7532b0c4ba <http://schema.org/value> "Eastern Sea Fisheries Joint Committee" .
+_:e4628ec1bbd23443edd477cfcb624863 <http://schema.org/value> "Fisheries Mapping Project" .
+<urn:gleaner.io:oih:medin:data:8b2636478fde8d716436ccfc6103084ef5bc23da> <http://schema.org/additionalProperty> _:bdbb37899579c94877554f7532b0c4ba .
+<urn:gleaner.io:oih:medin:data:8b2636478fde8d716436ccfc6103084ef5bc23da> <http://schema.org/additionalProperty> _:e4628ec1bbd23443edd477cfcb624863 .
+_:bdbb37899579c94877554f7532b0c4ba <http://schema.org/value> "ESFJC" .
+_:bdbb37899579c94877554f7532b0c4ba <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:8b2636478fde8d716436ccfc6103084ef5bc23da> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e4628ec1bbd23443edd477cfcb624863 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f229e0cf916b6ff77ed3db5ded040c4d <http://schema.org/value> "echo-sounder traverses" .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:f229e0cf916b6ff77ed3db5ded040c4d .
+_:f229e0cf916b6ff77ed3db5ded040c4d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c25bd425036148bb69034fd936332971 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:fce3d536871c06bb2a45d27864b74e99 .
+_:c25bd425036148bb69034fd936332971 <http://schema.org/value> "Institute of Geological Sciences" .
+_:c25bd425036148bb69034fd936332971 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c25bd425036148bb69034fd936332971 <http://schema.org/value> "BGS" .
+_:fce3d536871c06bb2a45d27864b74e99 <http://schema.org/name> "measurements and facts" .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:c25bd425036148bb69034fd936332971 .
+_:c25bd425036148bb69034fd936332971 <http://schema.org/value> "British Geological Survey" .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c65259ed6d7bcc1d0e2cfba340a955b <http://schema.org/name> "geospatial region" .
+_:f229e0cf916b6ff77ed3db5ded040c4d <http://schema.org/name> "procedures" .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:c65259ed6d7bcc1d0e2cfba340a955b .
+_:fce3d536871c06bb2a45d27864b74e99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c65259ed6d7bcc1d0e2cfba340a955b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c65259ed6d7bcc1d0e2cfba340a955b <http://schema.org/value> "Mull" .
+_:fce3d536871c06bb2a45d27864b74e99 <http://schema.org/value> "magnetite content" .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/value> "fluorescence" .
+_:b4915d496c7a1bf5ff2a3455382edef5 <http://schema.org/value> "Natural Environment Research Council" .
+_:acc86ef4e6417e5f8847559ffee0d413 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:fdf4df6d5faeb15765e8d84e6417951e <http://schema.org/value> "Knowledge Transfer initiative" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:b4915d496c7a1bf5ff2a3455382edef5 .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:fc3c85725e6365d191c4cc33b33b1818 .
+_:c681bf25b7c15a37674ec8ef613d6559 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b4915d496c7a1bf5ff2a3455382edef5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:acc86ef4e6417e5f8847559ffee0d413 <http://schema.org/name> "procedures" .
+_:eb0252853d2f556e2d8c1fbbecfc0f92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b4915d496c7a1bf5ff2a3455382edef5 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/value> "salinity" .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/value> "wind speed" .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/value> "dissolved oxygen concentration" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:acc86ef4e6417e5f8847559ffee0d413 .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:eb0252853d2f556e2d8c1fbbecfc0f92 .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/value> "humidity" .
+_:eb0252853d2f556e2d8c1fbbecfc0f92 <http://schema.org/name> "person" .
+_:c681bf25b7c15a37674ec8ef613d6559 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:fdf4df6d5faeb15765e8d84e6417951e .
+_:acc86ef4e6417e5f8847559ffee0d413 <http://schema.org/value> "manual quality control" .
+_:c681bf25b7c15a37674ec8ef613d6559 <http://schema.org/value> "UK" .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/value> "air pressure" .
+_:eb0252853d2f556e2d8c1fbbecfc0f92 <http://schema.org/value> "Nick Hardman-Mountford" .
+_:acc86ef4e6417e5f8847559ffee0d413 <http://schema.org/value> "automated quality control" .
+_:b4915d496c7a1bf5ff2a3455382edef5 <http://schema.org/value> "Plymouth Marine Laboratory" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:c681bf25b7c15a37674ec8ef613d6559 .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/value> "transmittance" .
+_:fdf4df6d5faeb15765e8d84e6417951e <http://schema.org/name> "projects" .
+_:fc3c85725e6365d191c4cc33b33b1818 <http://schema.org/name> "measurements and facts" .
+_:fdf4df6d5faeb15765e8d84e6417951e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:810e6c6717636dd59b82f3809f2143ca5aa2e3f0> <http://schema.org/additionalProperty> _:b008b6d412ef4ef11b5c242cb81cf8b8 .
+<urn:gleaner.io:oih:medin:data:810e6c6717636dd59b82f3809f2143ca5aa2e3f0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b008b6d412ef4ef11b5c242cb81cf8b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b008b6d412ef4ef11b5c242cb81cf8b8 <http://schema.org/name> "organizations" .
+_:b008b6d412ef4ef11b5c242cb81cf8b8 <http://schema.org/value> "Channel Coastal Observatory" .
+_:c87fbb61dfeaedf8d2a8fe110eaee1a1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ad577174fa2dde96db54cd651cb8a470 <http://schema.org/value> "CAR licence" .
+<urn:gleaner.io:oih:medin:data:783d5fd05442fdb7a4c61b08be890f26bafa6d05> <http://schema.org/additionalProperty> _:ad577174fa2dde96db54cd651cb8a470 .
+<urn:gleaner.io:oih:medin:data:783d5fd05442fdb7a4c61b08be890f26bafa6d05> <http://schema.org/additionalProperty> _:c87fbb61dfeaedf8d2a8fe110eaee1a1 .
+_:ad577174fa2dde96db54cd651cb8a470 <http://schema.org/name> "policies" .
+<urn:gleaner.io:oih:medin:data:783d5fd05442fdb7a4c61b08be890f26bafa6d05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:ad577174fa2dde96db54cd651cb8a470 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c87fbb61dfeaedf8d2a8fe110eaee1a1 <http://schema.org/name> "migratory marine species" .
+_:c87fbb61dfeaedf8d2a8fe110eaee1a1 <http://schema.org/value> "fish" .
+_:cf552162aeac5a68510e251dd91b9b86 <http://schema.org/value> "marker genese" .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:c4cdf18c14035384f836efd3ed1bf496 .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:ef6f9e6704d63f184b4036abe7868d3f .
+_:ef6f9e6704d63f184b4036abe7868d3f <http://schema.org/name> "person" .
+_:d3b29557a60b70fe92df1fed5e4a4177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cf552162aeac5a68510e251dd91b9b86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:d3b29557a60b70fe92df1fed5e4a4177 .
+_:ef6f9e6704d63f184b4036abe7868d3f <http://schema.org/value> "Dr Ruth Airs" .
+_:c4cdf18c14035384f836efd3ed1bf496 <http://schema.org/value> "NERC Discovery Science grants" .
+_:d3b29557a60b70fe92df1fed5e4a4177 <http://schema.org/value> "particulate phase osmolytes" .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c4cdf18c14035384f836efd3ed1bf496 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ef6f9e6704d63f184b4036abe7868d3f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:cf552162aeac5a68510e251dd91b9b86 .
+_:ef6f9e6704d63f184b4036abe7868d3f <http://schema.org/value> "Dr Yin Chen" .
+_:d3b29557a60b70fe92df1fed5e4a4177 <http://schema.org/value> "microbial uptake activities" .
+_:ef6f9e6704d63f184b4036abe7868d3f <http://schema.org/value> "Dr Wei Huang" .
+_:c4cdf18c14035384f836efd3ed1bf496 <http://schema.org/name> "organizations" .
+_:d3b29557a60b70fe92df1fed5e4a4177 <http://schema.org/name> "measurements and facts" .
+_:cf552162aeac5a68510e251dd91b9b86 <http://schema.org/name> "dna sequences" .
+_:e93ea5c81ff0cbc99ae9b2e809319437 <http://schema.org/value> "Skegness" .
+_:f47ae98db11315a5739f4854358cbb74 <http://schema.org/value> "aerial surveys" .
+_:f47ae98db11315a5739f4854358cbb74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://schema.org/additionalProperty> _:e93ea5c81ff0cbc99ae9b2e809319437 .
+_:e43716848dad5460dfb836408ea99ac0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e43716848dad5460dfb836408ea99ac0 <http://schema.org/name> "marine biodiversity" .
+_:e43716848dad5460dfb836408ea99ac0 <http://schema.org/value> "waterbirds" .
+_:e93ea5c81ff0cbc99ae9b2e809319437 <http://schema.org/value> "Wells-Next-the-Sea" .
+_:e93ea5c81ff0cbc99ae9b2e809319437 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e43716848dad5460dfb836408ea99ac0 <http://schema.org/value> "seabirds" .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e93ea5c81ff0cbc99ae9b2e809319437 <http://schema.org/value> "Norfolk" .
+_:e93ea5c81ff0cbc99ae9b2e809319437 <http://schema.org/name> "geospatial region" .
+_:f47ae98db11315a5739f4854358cbb74 <http://schema.org/name> "procedures" .
+_:e93ea5c81ff0cbc99ae9b2e809319437 <http://schema.org/value> "Mablethorpe" .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://schema.org/additionalProperty> _:f47ae98db11315a5739f4854358cbb74 .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://schema.org/additionalProperty> _:e43716848dad5460dfb836408ea99ac0 .
+_:b13e8005bbc29faf10a41a83d4b4fee0 <http://schema.org/name> "organizations" .
+_:f736b4a0fd25dfb02b02229d246d2d50 <http://schema.org/value> "South East" .
+_:f736b4a0fd25dfb02b02229d246d2d50 <http://schema.org/name> "geospatial region" .
+_:b13e8005bbc29faf10a41a83d4b4fee0 <http://schema.org/value> "Channel Coastal Observatory" .
+_:f736b4a0fd25dfb02b02229d246d2d50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:626fe5bf4e1625c18763a76a5adfd3cb60c2b77a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:626fe5bf4e1625c18763a76a5adfd3cb60c2b77a> <http://schema.org/additionalProperty> _:b13e8005bbc29faf10a41a83d4b4fee0 .
+_:b13e8005bbc29faf10a41a83d4b4fee0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:626fe5bf4e1625c18763a76a5adfd3cb60c2b77a> <http://schema.org/additionalProperty> _:f736b4a0fd25dfb02b02229d246d2d50 .
+<urn:gleaner.io:oih:medin:data:5cf2b2fe6fda5260fffb8008cb2530f84d3baf83> <http://schema.org/additionalProperty> _:d660c31062dd0f010e54987fbc7806ca .
+_:d660c31062dd0f010e54987fbc7806ca <http://schema.org/value> "benthic surveys" .
+_:d660c31062dd0f010e54987fbc7806ca <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:5cf2b2fe6fda5260fffb8008cb2530f84d3baf83> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d660c31062dd0f010e54987fbc7806ca <http://schema.org/name> "procedures" .
+_:e4ba39834928d0eaa0faf3abf18748c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://schema.org/additionalProperty> _:fe65e81a1f96ec7cfb5e49a3b7979d20 .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://schema.org/additionalProperty> _:e4ba39834928d0eaa0faf3abf18748c .
+_:e4ba39834928d0eaa0faf3abf18748c <http://schema.org/value> "Thames Estuary" .
+_:fe65e81a1f96ec7cfb5e49a3b7979d20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://schema.org/additionalProperty> _:f8206cceef4e725a553392de32cc8163 .
+_:e4ba39834928d0eaa0faf3abf18748c <http://schema.org/name> "geospatial region" .
+_:fe65e81a1f96ec7cfb5e49a3b7979d20 <http://schema.org/value> "DONG\r\nEnergy" .
+_:f8206cceef4e725a553392de32cc8163 <http://schema.org/value> "MBES survey" .
+_:f8206cceef4e725a553392de32cc8163 <http://schema.org/name> "procedures" .
+_:f8206cceef4e725a553392de32cc8163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:fe65e81a1f96ec7cfb5e49a3b7979d20 <http://schema.org/name> "organizations" .
+_:c0ddb39cf4c0c6475fa0d8d8f1c855da <http://schema.org/name> "geospatial region" .
+_:e875f3d784e5813630c9363e6c1c2475 <http://schema.org/name> "measurements and facts" .
+_:c0ddb39cf4c0c6475fa0d8d8f1c855da <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c0ddb39cf4c0c6475fa0d8d8f1c855da <http://schema.org/value> "Ireland" .
+_:e875f3d784e5813630c9363e6c1c2475 <http://schema.org/value> "optical backscatter" .
+_:e875f3d784e5813630c9363e6c1c2475 <http://schema.org/value> "chlorophyll fluorescence" .
+_:e875f3d784e5813630c9363e6c1c2475 <http://schema.org/value> "irradiance" .
+_:a41e640d83e049f8ba00a4df45376e73 <http://schema.org/name> "organizations" .
+_:a41e640d83e049f8ba00a4df45376e73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e875f3d784e5813630c9363e6c1c2475 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e875f3d784e5813630c9363e6c1c2475 <http://schema.org/value> "nitrate" .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://schema.org/additionalProperty> _:a41e640d83e049f8ba00a4df45376e73 .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://schema.org/additionalProperty> _:c0ddb39cf4c0c6475fa0d8d8f1c855da .
+_:e875f3d784e5813630c9363e6c1c2475 <http://schema.org/value> "dissolved oxygen" .
+_:a41e640d83e049f8ba00a4df45376e73 <http://schema.org/value> "British Oceanographic Data Centre" .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e875f3d784e5813630c9363e6c1c2475 <http://schema.org/value> "pH" .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://schema.org/additionalProperty> _:e875f3d784e5813630c9363e6c1c2475 .
+_:c0ddb39cf4c0c6475fa0d8d8f1c855da <http://schema.org/value> "Mauritius" .
+_:c0ddb39cf4c0c6475fa0d8d8f1c855da <http://schema.org/value> "Saudi Arabia" .
+_:ac955ec149b54f631d128e24ead08713 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bfe8182764b0eb3430a603350cb869af <http://schema.org/name> "policies" .
+_:ac955ec149b54f631d128e24ead08713 <http://schema.org/name> "migratory marine species" .
+_:ac955ec149b54f631d128e24ead08713 <http://schema.org/value> "fish" .
+_:bfe8182764b0eb3430a603350cb869af <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:4c71bf1b355b60aa4f91904fe70e2eb299118d77> <http://schema.org/additionalProperty> _:bfe8182764b0eb3430a603350cb869af .
+<urn:gleaner.io:oih:medin:data:4c71bf1b355b60aa4f91904fe70e2eb299118d77> <http://schema.org/additionalProperty> _:ac955ec149b54f631d128e24ead08713 .
+_:bfe8182764b0eb3430a603350cb869af <http://schema.org/value> "CAR licence" .
+<urn:gleaner.io:oih:medin:data:4c71bf1b355b60aa4f91904fe70e2eb299118d77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:ec841302fc7fb5b1f3dca25c20fb0f99 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:49a0d599c30053b92bbc23e4dbccb3c9a39833d3> <http://schema.org/additionalProperty> _:ec841302fc7fb5b1f3dca25c20fb0f99 .
+_:fff23882472cfb107af0e4d51fc80727 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ec841302fc7fb5b1f3dca25c20fb0f99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ec841302fc7fb5b1f3dca25c20fb0f99 <http://schema.org/value> "Channel Coastal Observatory" .
+_:fff23882472cfb107af0e4d51fc80727 <http://schema.org/value> "South East" .
+_:fff23882472cfb107af0e4d51fc80727 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:49a0d599c30053b92bbc23e4dbccb3c9a39833d3> <http://schema.org/additionalProperty> _:fff23882472cfb107af0e4d51fc80727 .
+<urn:gleaner.io:oih:medin:data:49a0d599c30053b92bbc23e4dbccb3c9a39833d3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://schema.org/additionalProperty> _:c280272df8b031fb0b70fb73f1207f90 .
+_:dd9b152ebd005268fc6afdf25bfce6c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://schema.org/additionalProperty> _:b13390dcd575a5dde8543530e6c56ee8 .
+_:b13390dcd575a5dde8543530e6c56ee8 <http://schema.org/value> "scoring meetings" .
+_:b13390dcd575a5dde8543530e6c56ee8 <http://schema.org/name> "procedures" .
+_:dd9b152ebd005268fc6afdf25bfce6c7 <http://schema.org/value> "Marine and Risk Consultants Ltd" .
+_:c280272df8b031fb0b70fb73f1207f90 <http://schema.org/name> "geospatial region" .
+_:dd9b152ebd005268fc6afdf25bfce6c7 <http://schema.org/value> "Natural Power Consultants" .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://schema.org/additionalProperty> _:dd9b152ebd005268fc6afdf25bfce6c7 .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:dd9b152ebd005268fc6afdf25bfce6c7 <http://schema.org/name> "organizations" .
+_:b13390dcd575a5dde8543530e6c56ee8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:dd9b152ebd005268fc6afdf25bfce6c7 <http://schema.org/value> "National Renewable Energy Centre" .
+_:c280272df8b031fb0b70fb73f1207f90 <http://schema.org/value> "Blyth, Northumberland" .
+_:c280272df8b031fb0b70fb73f1207f90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:3552857125135adf63521602d720c7dfe9de7d0e> <http://schema.org/additionalProperty> _:fda4eb7f488bf622953eb557555f776b .
+_:aba0afa777732412d2ab293a13ee75fc <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:3552857125135adf63521602d720c7dfe9de7d0e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:fda4eb7f488bf622953eb557555f776b <http://schema.org/value> "Balanced Seas region" .
+<urn:gleaner.io:oih:medin:data:3552857125135adf63521602d720c7dfe9de7d0e> <http://schema.org/additionalProperty> _:aba0afa777732412d2ab293a13ee75fc .
+_:fda4eb7f488bf622953eb557555f776b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:fda4eb7f488bf622953eb557555f776b <http://schema.org/name> "geospatial region" .
+_:aba0afa777732412d2ab293a13ee75fc <http://schema.org/value> "Balanced Seas project team" .
+_:aba0afa777732412d2ab293a13ee75fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:fda4eb7f488bf622953eb557555f776b <http://schema.org/value> "Southeast of England region" .
+_:b58f284ac98f025d9a2ac16124666e2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b5c455e92b6bbffa36ebddf8e9fa279e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b58f284ac98f025d9a2ac16124666e2 <http://schema.org/value> "Ocean Ecology Limited" .
+_:a4e6359814689e49ded7fcb92fb462fd <http://schema.org/value> "infaunal assemblages" .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://schema.org/additionalProperty> _:b5c455e92b6bbffa36ebddf8e9fa279e .
+_:a4e6359814689e49ded7fcb92fb462fd <http://schema.org/name> "marine biodiversity" .
+_:b58f284ac98f025d9a2ac16124666e2 <http://schema.org/name> "organizations" .
+_:a4e6359814689e49ded7fcb92fb462fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://schema.org/additionalProperty> _:b58f284ac98f025d9a2ac16124666e2 .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://schema.org/additionalProperty> _:a4e6359814689e49ded7fcb92fb462fd .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b5c455e92b6bbffa36ebddf8e9fa279e <http://schema.org/value> "benthic habitats" .
+_:b5c455e92b6bbffa36ebddf8e9fa279e <http://schema.org/name> "ecosystems" .
+_:b58f284ac98f025d9a2ac16124666e2 <http://schema.org/value> "Ã?rsted" .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://schema.org/additionalProperty> _:ff85670dfd859b2908fade7ec2a8d69 .
+_:d6cdb8a293459a7731f954fdfa519f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ff85670dfd859b2908fade7ec2a8d69 <http://schema.org/name> "geospatial region" .
+_:c5d48389eace0cf67bce94718ee59725 <http://schema.org/name> "organizations" .
+_:d6cdb8a293459a7731f954fdfa519f5 <http://schema.org/value> "BB14" .
+_:c5d48389eace0cf67bce94718ee59725 <http://schema.org/value> "Offshore Marine Management" .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d6cdb8a293459a7731f954fdfa519f5 <http://schema.org/name> "taxon" .
+_:c5d48389eace0cf67bce94718ee59725 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://schema.org/additionalProperty> _:c5d48389eace0cf67bce94718ee59725 .
+_:d6cdb8a293459a7731f954fdfa519f5 <http://schema.org/value> "BB13" .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://schema.org/additionalProperty> _:d6cdb8a293459a7731f954fdfa519f5 .
+_:ff85670dfd859b2908fade7ec2a8d69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ff85670dfd859b2908fade7ec2a8d69 <http://schema.org/value> "Wallasey" .
+_:ff85670dfd859b2908fade7ec2a8d69 <http://schema.org/value> "Liverpool Bay" .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://schema.org/additionalProperty> _:c06aca79e2e24cecf2148514ad83fe9e .
+_:c06aca79e2e24cecf2148514ad83fe9e <http://schema.org/value> "trace metal contamination" .
+_:c06aca79e2e24cecf2148514ad83fe9e <http://schema.org/name> "invasive species" .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://schema.org/additionalProperty> _:f13aa65a7b20ac7f8552162ce0b39ae2 .
+_:d95de2a7ab0056688fa4e9d634c3b5e <http://schema.org/value> "North Sea" .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f13aa65a7b20ac7f8552162ce0b39ae2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f13aa65a7b20ac7f8552162ce0b39ae2 <http://schema.org/value> "modiolus" .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://schema.org/additionalProperty> _:d95de2a7ab0056688fa4e9d634c3b5e .
+_:c06aca79e2e24cecf2148514ad83fe9e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f13aa65a7b20ac7f8552162ce0b39ae2 <http://schema.org/name> "undescribed biodiversity" .
+_:d95de2a7ab0056688fa4e9d634c3b5e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d95de2a7ab0056688fa4e9d634c3b5e <http://schema.org/name> "geospatial region" .
+_:d023cf17a9f543196b993bdca30dbaa6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:d07a48ac452215898d56b0c5cf78a981 .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:d2394ffb3e92a07ff4a716dcf2671fda .
+_:d2394ffb3e92a07ff4a716dcf2671fda <http://schema.org/value> "Western Atlantic Variability Experiment" .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:b37bedd56da5f70503ad9be6406da3fc .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d2394ffb3e92a07ff4a716dcf2671fda <http://schema.org/name> "projects" .
+_:f2e867dc39c5d9c0ea43432f56ffc136 <http://schema.org/value> "surface hydrography" .
+_:f2e867dc39c5d9c0ea43432f56ffc136 <http://schema.org/name> "measurements and facts" .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:d023cf17a9f543196b993bdca30dbaa6 .
+_:f2e867dc39c5d9c0ea43432f56ffc136 <http://schema.org/value> "salinity" .
+_:f2e867dc39c5d9c0ea43432f56ffc136 <http://schema.org/value> "pressure" .
+_:b37bedd56da5f70503ad9be6406da3fc <http://schema.org/value> "Southampton" .
+_:d2394ffb3e92a07ff4a716dcf2671fda <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d07a48ac452215898d56b0c5cf78a981 <http://schema.org/value> "National Oceanography Centre" .
+_:b37bedd56da5f70503ad9be6406da3fc <http://schema.org/name> "geospatial region" .
+_:d2394ffb3e92a07ff4a716dcf2671fda <http://schema.org/value> "RAPID-WATCH" .
+_:b37bedd56da5f70503ad9be6406da3fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f2e867dc39c5d9c0ea43432f56ffc136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d023cf17a9f543196b993bdca30dbaa6 <http://schema.org/name> "person" .
+_:d07a48ac452215898d56b0c5cf78a981 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:f2e867dc39c5d9c0ea43432f56ffc136 .
+_:f2e867dc39c5d9c0ea43432f56ffc136 <http://schema.org/value> "density time series" .
+_:b37bedd56da5f70503ad9be6406da3fc <http://schema.org/value> "Atlantic" .
+_:d2394ffb3e92a07ff4a716dcf2671fda <http://schema.org/value> "WAVE" .
+_:d07a48ac452215898d56b0c5cf78a981 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d023cf17a9f543196b993bdca30dbaa6 <http://schema.org/value> "scientists" .
+_:f2e867dc39c5d9c0ea43432f56ffc136 <http://schema.org/value> "temperature" .
+_:b37bedd56da5f70503ad9be6406da3fc <http://schema.org/value> "Cape Cod" .
+_:b916107a8d583f64a59fc96b775de68d <http://schema.org/value> "prey abundance" .
+_:a9f1833b2110abaa5a5dba4b1ab41a1d <http://schema.org/value> "condition of the SPA" .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:e5b506934251228c9897ab3a7e71f10d .
+_:b916107a8d583f64a59fc96b775de68d <http://schema.org/value> "bird numbers" .
+_:e5b506934251228c9897ab3a7e71f10d <http://schema.org/name> "marine biodiversity" .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:ce8b5e3e4e6962ae7bbeac0cd26d2eb8 .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:a9f1833b2110abaa5a5dba4b1ab41a1d .
+_:b916107a8d583f64a59fc96b775de68d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:e43d68070cad3dca9f180a1b382f9443 .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:b916107a8d583f64a59fc96b775de68d .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e43d68070cad3dca9f180a1b382f9443 <http://schema.org/value> "saltmarshes" .
+_:ce8b5e3e4e6962ae7bbeac0cd26d2eb8 <http://schema.org/value> "Teesmouth" .
+_:ce8b5e3e4e6962ae7bbeac0cd26d2eb8 <http://schema.org/value> "Cleveland Coast SPA" .
+_:e5b506934251228c9897ab3a7e71f10d <http://schema.org/value> "bird populations" .
+_:b916107a8d583f64a59fc96b775de68d <http://schema.org/name> "measurements and facts" .
+_:e43d68070cad3dca9f180a1b382f9443 <http://schema.org/name> "ecosystems" .
+_:e43d68070cad3dca9f180a1b382f9443 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ce8b5e3e4e6962ae7bbeac0cd26d2eb8 <http://schema.org/name> "geospatial region" .
+_:e5b506934251228c9897ab3a7e71f10d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ce8b5e3e4e6962ae7bbeac0cd26d2eb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e43d68070cad3dca9f180a1b382f9443 <http://schema.org/value> "mudflats" .
+_:a9f1833b2110abaa5a5dba4b1ab41a1d <http://schema.org/name> "ecosystem health" .
+_:a9f1833b2110abaa5a5dba4b1ab41a1d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f5d361e33ceaeaa50446ecb1eafc3929 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a752b35cc34a6b8fad0103c833ccd094 <http://schema.org/value> "English Nature" .
+_:f5d361e33ceaeaa50446ecb1eafc3929 <http://schema.org/value> "saline lagoon sandworm" .
+_:d67b93c96c29587b7ee843cbd8a14a46 <http://schema.org/name> "person" .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:f5d361e33ceaeaa50446ecb1eafc3929 .
+_:a752b35cc34a6b8fad0103c833ccd094 <http://schema.org/value> "Maritime Team" .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f11c37b5226bf627fe65cdfdb50e1f2b <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:d67b93c96c29587b7ee843cbd8a14a46 .
+_:f11c37b5226bf627fe65cdfdb50e1f2b <http://schema.org/value> "Northminster House" .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:a752b35cc34a6b8fad0103c833ccd094 .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:f11c37b5226bf627fe65cdfdb50e1f2b .
+_:d67b93c96c29587b7ee843cbd8a14a46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f11c37b5226bf627fe65cdfdb50e1f2b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f5d361e33ceaeaa50446ecb1eafc3929 <http://schema.org/value> "Armandia cirrhosa" .
+_:f11c37b5226bf627fe65cdfdb50e1f2b <http://schema.org/value> "Portland Harbour" .
+_:a752b35cc34a6b8fad0103c833ccd094 <http://schema.org/name> "organizations" .
+_:a752b35cc34a6b8fad0103c833ccd094 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f5d361e33ceaeaa50446ecb1eafc3929 <http://schema.org/name> "marine species" .
+_:d67b93c96c29587b7ee843cbd8a14a46 <http://schema.org/value> "Dennis Seaward" .
+_:d67b93c96c29587b7ee843cbd8a14a46 <http://schema.org/value> "Dr Peter Garwood" .
+<urn:gleaner.io:oih:medin:data:0b2a9a4e3935608b77010cc4d9b184b615ca0ba3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e2992b3279325ca0a118b0cf6eb2d521 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:0b2a9a4e3935608b77010cc4d9b184b615ca0ba3> <http://schema.org/additionalProperty> _:bdb6447f7e095bbf095581d1b7c6c436 .
+_:bdb6447f7e095bbf095581d1b7c6c436 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e2992b3279325ca0a118b0cf6eb2d521 <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:0b2a9a4e3935608b77010cc4d9b184b615ca0ba3> <http://schema.org/additionalProperty> _:e2992b3279325ca0a118b0cf6eb2d521 .
+_:bdb6447f7e095bbf095581d1b7c6c436 <http://schema.org/value> "CAR licence" .
+_:e2992b3279325ca0a118b0cf6eb2d521 <http://schema.org/value> "fish" .
+_:bdb6447f7e095bbf095581d1b7c6c436 <http://schema.org/name> "policies" .

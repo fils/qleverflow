@@ -1,0 +1,24 @@
+Dataset created: 2025-09-14 08:14:56.778602
+Total files: 20
+Total records: 10,000
+Files:
+  responses_000000.parquet
+  responses_000001.parquet
+  responses_000002.parquet
+  responses_000003.parquet
+  responses_000004.parquet
+  responses_000005.parquet
+  responses_000006.parquet
+  responses_000007.parquet
+  responses_000008.parquet
+  responses_000009.parquet
+  responses_000010.parquet
+  responses_000011.parquet
+  responses_000012.parquet
+  responses_000013.parquet
+  responses_000014.parquet
+  responses_000015.parquet
+  responses_000016.parquet
+  responses_000017.parquet
+  responses_000018.parquet
+  responses_000019.parquet

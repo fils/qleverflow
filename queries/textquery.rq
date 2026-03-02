@@ -1,16 +1,13 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX gn: <https://www.geonames.org/ontology#>
-PREFIX text: <http://jena.apache.org/text#>
-PREFIX vrank: <http://purl.org/voc/vrank#>
+prefix schema: <http://schema.org/>
+prefix sschema: <https://schema.org/>
 PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
-PREFIX gn: <https://www.geonames.org/ontology#>
 
-SELECT ?uri (COUNT(?text) AS ?count) (SAMPLE(?text) AS ?example_text) ?item  WHERE {
-  ?uri rdf:type <https://schema.org/Person> .
-    ?uri <https://schema.org/name> ?item .
+SELECT distinct *
+WHERE {
+    ?subj ?o ?item .
     ?text ql:contains-entity ?item .
-    ?text ql:contains-word "ocean" .
-   FILTER (!isBLANK(?uri))
+    ?text ql:contains-word "water"
 }
-GROUP BY ?uri ?item
+LIMIT 1000
+

@@ -1,7 +1,9 @@
-from fastmcp import FastMCP
+from fastmcp import FastMCP, Context
 from SPARQLWrapper import SPARQLWrapper, JSON
 from fastmcp.prompts.prompt import Message
+from dataclasses import dataclass
 
+# TODO update client wit Elicitation like discussed in https://thenewstack.io/how-to-implement-elicitation-with-model-context-protocol/
 # TODO add a tool or resources that is all the labels and or names for all the subject of type X
 # TODO perform text search on index
 # TODO search for shared schema:identifier
@@ -17,6 +19,82 @@ sparql = SPARQLWrapper("http://ghost.lan:7007/sparql")
 
 # Create an MCP server
 mcp = FastMCP("RDF Query Server")
+
+@dataclass
+class TypeInfo:
+    type_name: str
+
+# play with elicit to ask for type to count
+@mcp.tool()
+async def get_type_count(ctx: Context) -> str:
+    """Get current count for requested type"""
+
+    result = await ctx.elicit(
+        message="Please provide the schema.org type you want to check.",
+        response_type=TypeInfo
+    )
+
+    if result.action == "decline":
+        return "Schema type not provided"
+    elif result.action == "cancel":
+        return "Operation cancelled"
+    elif result.action != "accept":
+        return "Invalid response"
+
+    type_name = result.data.type_name
+
+    print(type_name)
+
+    try:
+        # Fetch flight data
+        type_count = _fetch_type_count(type_name)
+
+        # Format response
+        return f"""
+        Count for {type_name}:  {type_count}
+        """.strip()
+
+    except Exception as e:
+        return f"Error fetching type count: {str(e)}"
+
+
+
+def _fetch_type_count(type: str) -> int:
+    """Execute a SPARQL COUNT query against the RDF triplestore and return the count value
+    for a type provided.
+
+    This tool is specifically designed for SPARQL queries that return count results using
+    aggregation functions like COUNT. It simplifies working with numerical results by
+    extracting just the count value from the SPARQL result set.
+
+    Parameters:
+        type (str):  a valid schema.org type like https://schema.org/Dataset
+
+    Returns:
+        count (int): the count of the instance of the requested type
+
+    Examples:
+        - Count total triples: "SELECT (COUNT(*) as ?count) WHERE { ?s a <https://schema.org/Dataset> }"
+
+    Note: The query must use "?count" as the variable name for the count result.
+    """
+
+    query = f"""
+    SELECT (COUNT(*) as ?count)
+    WHERE {{
+        ?s a <{type}> .
+    }}
+    """
+
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    bindings = results.get("results", {}).get("bindings", [])
+    if bindings:
+        return int(bindings[0].get("count", {}).get("value", 0))
+    return 0
+
+
 
 @mcp.tool()
 def text_search(text: str):
@@ -60,7 +138,7 @@ def text_search(text: str):
     query = f"""
         PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        
+
         SELECT ?uri (COUNT(?text) AS ?count) (SAMPLE(?text) AS ?example_text) ?item  WHERE {{
           ?uri rdf:type <https://schema.org/Dataset> .
             ?uri <https://schema.org/description> ?item .
@@ -95,34 +173,34 @@ def text_search(text: str):
 @mcp.tool()
 def generic_sparql(query):
     """Execute any SPARQL query against the RDF triplestore and return structured results.
-    
+
     This tool allows you to run custom SPARQL queries and get back all selected variables
     from the results. It dynamically extracts all variables specified in your SELECT clause
     and returns them in a structured format.
-    
+
     Parameters:
         query (str): A valid SPARQL query string to execute. For example:
                      "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10"
-    
+
     Returns:
         list: A list of dictionaries, where each dictionary represents one result row.
               Each key in the dictionary corresponds to a variable from your SELECT clause
               (without the ? prefix), and its value is the matching RDF term's value.
-              
+
     Examples:
         - To get all triples: "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10"
         - To find specific data: "SELECT ?label WHERE { <http://example.org/resource> rdfs:label ?label }"
         - To count entities: "SELECT (COUNT(?s) as ?count) WHERE { ?s a <http://schema.org/Person> }"
-    
+
     Note: The query must be syntactically valid SPARQL or an error will be returned.
     """
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    
+
     # Get the variable names from the head.vars section of the results
     variables = results["head"]["vars"]
-    
+
     resp = []
     for result in results["results"]["bindings"]:
         item = {}
@@ -131,33 +209,33 @@ def generic_sparql(query):
             if var in result:
                 item[var] = result[var]["value"]
         resp.append(item)
-    
+
     return resp
 
 
 @mcp.tool()
 def count_sparql(query):
     """Execute a SPARQL COUNT query against the RDF triplestore and return the count value.
-    
+
     This tool is specifically designed for SPARQL queries that return count results using
     aggregation functions like COUNT. It simplifies working with numerical results by
     extracting just the count value from the SPARQL result set.
-    
+
     Parameters:
-        query (str): A valid SPARQL query string that includes a COUNT aggregation. 
+        query (str): A valid SPARQL query string that includes a COUNT aggregation.
                      The query should use "COUNT" and alias the result as "?count".
                      For example: "SELECT (COUNT(?s) as ?count) WHERE { ?s ?p ?o }"
-    
+
     Returns:
-        list: A list containing the count value(s) as strings. Typically this will be 
-              a single-item list, but multiple counts could be returned if the query 
+        list: A list containing the count value(s) as strings. Typically this will be
+              a single-item list, but multiple counts could be returned if the query
               includes multiple COUNT operations with the "?count" variable name.
-    
+
     Examples:
         - Count total triples: "SELECT (COUNT(*) as ?count) WHERE { ?s ?p ?o }"
         - Count instances of a class: "SELECT (COUNT(?s) as ?count) WHERE { ?s a <http://schema.org/Person> }"
         - Count unique subjects: "SELECT (COUNT(DISTINCT ?s) as ?count) WHERE { ?s ?p ?o }"
-    
+
     Note: The query must use "?count" as the variable name for the count result.
     """
     sparql.setQuery(query)
@@ -169,25 +247,25 @@ def count_sparql(query):
 @mcp.tool()
 def get_distinct_type():
     """Retrieve all distinct RDF classes (types) defined in the triplestore.
-    
+
     This tool queries the RDF triplestore for all unique class types that have been used
     to classify entities within the dataset. It looks for all distinct objects of "rdf:type"
     or "a" predicates, providing a comprehensive overview of the data model's class hierarchy.
-    
+
     Parameters:
         None
-        
+
     Returns:
         list: A list of strings representing the URIs of all distinct RDF classes (types)
               found in the triplestore. These URIs typically follow ontology patterns like:
               - http://schema.org/Person
               - http://xmlns.com/foaf/0.1/Agent
               - http://www.w3.org/2002/07/owl#Class
-              
+
     Usage:
         Use this tool to explore the data model, understand what kinds of entities exist
         in the triplestore, or to identify specific classes for further querying.
-        
+
     Note:
         The results are returned as full URIs without prefixes, making them suitable for
         direct use in subsequent SPARQL queries.
@@ -208,28 +286,28 @@ def get_distinct_type():
 @mcp.tool()
 def get_all_predicates_for_type(type: str):
     """Retrieve all distinct predicates (properties) used with entities of a specific RDF class.
-    
+
     This tool identifies all the predicates (properties, relationships) that are associated
     with entities of a specified RDF class type in the triplestore. It helps explore the
     data model by showing what properties are available for a particular class of entities.
-    
+
     Parameters:
         type (str): The full URI of an RDF class type (e.g., "http://schema.org/Person").
                     Must be provided exactly as it appears in the triplestore, including
                     the complete namespace.
-    
+
     Returns:
         list: A list of strings representing the URIs of all distinct predicates that
               are used with entities of the specified type. These may include:
               - Standard RDF/RDFS/OWL properties (e.g., rdfs:label, owl:sameAs)
               - Domain-specific properties (e.g., foaf:name, schema:birthDate)
               - Custom properties defined in the dataset
-    
+
     Usage:
         After discovering available types with get_distinct_type(), use this tool to
         understand what properties are available for entities of a specific type.
         This helps in formulating more targeted SPARQL queries.
-    
+
     Example:
         To find all predicates used with Person entities:
         get_all_predicates_for_type("http://schema.org/Person")
@@ -251,30 +329,30 @@ def get_all_predicates_for_type(type: str):
 @mcp.tool()
 def get_all_distinct_predicates():
     """Retrieve all distinct predicates (properties and relationships) used in the RDF triplestore.
-    
+
     This tool performs a comprehensive scan of the entire triplestore to identify all
     unique predicates that connect subjects to objects in RDF triples. It provides
     a complete catalog of all properties, relationships, and attributes used across
     all entity types in the knowledge graph.
-    
+
     Parameters:
         None
-        
+
     Returns:
-        list: A list of strings representing the URIs of all distinct predicates found 
+        list: A list of strings representing the URIs of all distinct predicates found
               in the triplestore. This typically includes:
               - Core RDF/RDFS predicates (rdf:type, rdfs:label, rdfs:comment)
               - OWL predicates (owl:sameAs, owl:equivalentClass)
               - Domain-specific predicates from various ontologies
               - Custom predicates defined specifically for this dataset
-    
+
     Usage:
         This tool is valuable for:
         - Data exploration: Understanding what kinds of relationships exist in the data
         - Schema discovery: Identifying the vocabulary/ontologies used
         - Query planning: Finding available predicates to use in more complex SPARQL queries
         - Data quality assessment: Identifying unexpected or non-standard predicates
-        
+
     Note:
         Unlike get_all_predicates_for_type(), this function returns ALL predicates
         regardless of which entity types they are associated with. For large triplestores,
@@ -295,31 +373,31 @@ def get_all_distinct_predicates():
 @mcp.resource("resource://greeting")
 def get_greeting() -> str:
     """Provides a simple greeting message for MCP clients.
-    
+
     This function creates a dynamic resource that can be accessed by clients
     connecting to this MCP server. It demonstrates the basic pattern for
     exposing server-side data as a resource with a custom URI scheme.
-    
+
     Resource URI:
         resource://greeting
-        
+
     Access Pattern:
         Clients can request this resource directly using the resource:// protocol,
         which is handled by the MCP middleware. The resource can be fetched using
         standard MCP client APIs or integrated into client-side components that
         support MCP resource references.
-    
+
     Return Value:
         str: A simple greeting message string that is delivered to the client
              without any additional processing. The string is returned exactly
              as provided and can be used in client-side display contexts.
-    
+
     Usage Examples:
         - Welcome messages in client applications
         - Testing MCP resource connectivity
         - Simple demonstration of the resource protocol
         - Template for more complex dynamic string resources
-    
+
     Note:
         This resource does not require any parameters and always returns the same
         static message. For parameterized or dynamic content, consider using a
@@ -340,23 +418,23 @@ def get_config() -> dict:
 @mcp.prompt()
 def ask_about_topic(topic: str) -> str:
     """Generates a user message asking for an explanation of a topic.
-    
+
     This function creates a standardized prompt template that MCP clients can use
     to generate consistent user messages for topic explanations. The MCP framework
     automatically converts the returned string into a properly formatted UserMessage
     object that can be sent to language models or other conversational services.
-    
+
     Parameters:
         topic (str): The specific subject, concept, term, or idea that the client
                      wants explained. This should be a concise descriptor that clearly
                      identifies what needs to be explained (e.g., "quantum computing",
                      "SPARQL queries", "semantic web").
-    
+
     Returns:
         str: A formatted question string that will be converted to a UserMessage
              by the MCP framework. This string follows a consistent, polite
              question format that is optimized for clear responses from AI systems.
-    
+
     Usage in MCP Context:
         Clients can invoke this prompt function through the MCP interface, passing
         only the topic parameter. The MCP server handles the generation of the
@@ -366,14 +444,14 @@ def ask_about_topic(topic: str) -> str:
         - Ensures consistent prompt engineering practices
         - Allows server-side updates to prompt patterns without client changes
         - Supports prompt versioning and optimization
-        
+
     Example Client Usage:
         request_explanation("neural networks")
         # The MCP server generates: "Can you please explain the concept of 'neural networks'?"
-    
+
     Note:
         This prompt uses a simple template, but can be extended to include additional
-        context, formatting instructions, or system-specific parameters based on 
+        context, formatting instructions, or system-specific parameters based on
         the needs of the connected AI services.
     """
     return f"Can you please explain the concept of '{topic}'?"

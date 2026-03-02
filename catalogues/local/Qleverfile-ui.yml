@@ -12,7 +12,7 @@ config:
     dynamicSuggestions: "2"
     defaultModeTimeout: "5.0"
     mixedModeTimeout: "1.0"
-    suggestSubjects: |-
+    suggestSubjects: |
       %PREFIXES%
       # IF CURRENT_WORD_EMPTY #
 
@@ -253,7 +253,6 @@ config:
   examples:
     - name: test
       sort_key: "~"
-      query:  |- 
+      query: |-
         select * where {?s ?p ?o}
         limit 1000
-

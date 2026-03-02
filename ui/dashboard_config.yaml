@@ -1,0 +1,24 @@
+- id: entity_count
+  name: Entity Count by Predicate
+  query: "PREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>\nSELECT\
+    \ ?entity (COUNT(?predicate) AS ?count) WHERE {\n  ?entity ql:has-predicate ?predicate\n\
+    }\nGROUP BY ?entity \nORDER BY DESC(?count)\nLIMIT 10"
+  type: bar
+  x: entity
+  y: count
+- id: count_by_type
+  name: Count by Schema Type
+  names: type
+  query: "PREFIX schema: <https://schema.org/>\nSELECT ?type (COUNT(?entity) AS ?count)\
+    \ WHERE {\n  ?entity a ?type .\n  VALUES ?type {\n    schema:Dataset\n    schema:Person\n\
+    \    schema:Map\n    schema:Organization\n    schema:Project\n  }\n}\nGROUP BY\
+    \ ?type\nORDER BY DESC(?count)"
+  type: pie
+  values: count
+- id: predicate_count
+  name: Predicate Distribution (Datasets)
+  query: "PREFIX schema: <https://schema.org/>\nPREFIX ql: <http://qlever.cs.uni-freiburg.de/builtin-functions/>\n\
+    SELECT ?predicate (COUNT(?predicate) as ?count) WHERE {\n  ?x a schema:Dataset\
+    \ .\n  ?x ql:has-predicate ?predicate\n}\nGROUP BY ?predicate\nORDER BY DESC(?count)\n\
+    LIMIT 15"
+  type: table

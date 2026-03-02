@@ -12,8 +12,6 @@ SELECT ?uri  (COUNT(?text) AS ?count) (SAMPLE(?item) AS ?example_text)  WHERE {
     ?text ql:contains-entity ?item .
     ?text ql:contains-word "south*" .
     ?text ql:contains-word "pacific*" .
-     ?text ql:contains-word "reef*" .
-     ?text ql:contains-word "coral*" .
 
 }
 GROUP BY ?uri ?item ?text

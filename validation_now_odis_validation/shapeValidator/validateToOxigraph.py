@@ -1,12 +1,13 @@
 import sys
 import os
+import pyoxigraph
+from pyoxigraph import RdfFormat
+from tqdm import tqdm
+
 from defs.getGraphs import query_sparql_endpoint
 from defs.getShape import read_shapefile
 from defs.getConstruct import construct_graph
 from defs.shaclValidator import validate_with_shacl
-import pyoxigraph
-from pyoxigraph import RdfFormat
-from tqdm import tqdm
 
 def main():
     """
@@ -28,7 +29,7 @@ def main():
 
     uris = query_sparql_endpoint(url)
 
-    sf = read_shapefile("../shapes/ERDDAP.ttl")
+    sf = read_shapefile(shapefile)
 
     if uris:
         print(f"\nFound {len(uris)} unique URIs:")
@@ -44,7 +45,7 @@ def main():
     else:
         print("No URIs found or query failed.")
 
-    output = "results.nq"
+    output = "results2.nq"
     store.dump(output, RdfFormat.N_QUADS)
 
 

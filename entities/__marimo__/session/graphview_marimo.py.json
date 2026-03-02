@@ -1,0 +1,178 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.4"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "fe4e3f230dadb42e28f75fa6f5ca8369",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "741789a3009f998622fb14e0262b71ed",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&lt;Graph identifier=N01dc11e159324c8fb8dffaa7ca5bf3f0 (&lt;class &#x27;rdflib.graph.Graph&#x27;&gt;)&gt;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "cae6b46f7b3cef554c323fcf2f82a253",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "7bac7f8c20e39a75ebaece5993c78c6f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "dadeff41e52083e7ec1342071081b896",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "24637\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "PKri",
+      "code_hash": "2c4d92c8786227ad60dacb17f171b535",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "e76fef9ec44ed7ac796341dcdbfd06d2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Graph exported to 'sparql_graph.gexf' for opening in Gephi.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "e4bddfb6d32cda5429ce767865a321c1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "871eaf0c82f4df3b3119b4f63134ff0c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "0.0002445536488230455\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "ROOb",
+      "code_hash": "618ad4f183c42e9dc9cbff3419d6972b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PepA",
+      "code_hash": "def478efce5479d165d4f05ece615601",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='PepA-0' random-id='14c708f7-ff09-d1d5-dc98-0ed4d6c5fdb4'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;&#92;&quot;:&#92;&quot;geospatial region&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.1281116492344754},{&#92;&quot;&#92;&quot;:&#92;&quot;organizations&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.09214846971763971},{&#92;&quot;&#92;&quot;:&#92;&quot;procedures&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.05328556472148697},{&#92;&quot;&#92;&quot;:&#92;&quot;measurements and facts&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.03953354160420055},{&#92;&quot;&#92;&quot;:&#92;&quot;marine species&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.030194931136427933},{&#92;&quot;&#92;&quot;:&#92;&quot;person&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.02875661602695846},{&#92;&quot;&#92;&quot;:&#92;&quot;projects&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.020009820718994136},{&#92;&quot;&#92;&quot;:&#92;&quot;taxon&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.017810489905527284},{&#92;&quot;&#92;&quot;:&#92;&quot;marine biodiversity&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.007741823642878627},{&#92;&quot;&#92;&quot;:&#92;&quot;marine regions&#92;&quot;,&#92;&quot;pagerank&#92;&quot;:0.007599013574676048}]&quot;' data-total-rows='20' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;pagerank&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[[&quot;&quot;,[&quot;string&quot;,&quot;object&quot;]]]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "uTft",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

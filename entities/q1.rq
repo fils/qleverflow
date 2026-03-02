@@ -1,0 +1,9 @@
+PREFIX schema: <http://schema.org/>
+
+SELECT ?description ?apname ?apvalue
+WHERE {
+    ?s schema:description ?description .
+    ?s schema:additionalProperty ?ap .
+    ?ap schema:name ?apname .
+    ?ap schema:value ?apvalue
+}

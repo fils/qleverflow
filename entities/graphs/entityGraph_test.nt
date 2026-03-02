@@ -1,0 +1,721 @@
+_:ed5bd8f3d4c2134ce537cbcc1e83e0b4 <http://schema.org/value> "Fraserburgh" .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://schema.org/additionalProperty> _:a67581d6483b4ebcc9f2478dad9f872d .
+_:daa737924d82c2d2dd5dfa7079acb731 <http://schema.org/name> "marine species" .
+_:a67581d6483b4ebcc9f2478dad9f872d <http://schema.org/value> "Marine Scotland" .
+_:a67581d6483b4ebcc9f2478dad9f872d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:daa737924d82c2d2dd5dfa7079acb731 <http://schema.org/value> "shellfish" .
+_:ed5bd8f3d4c2134ce537cbcc1e83e0b4 <http://schema.org/value> "Grampian" .
+_:ed5bd8f3d4c2134ce537cbcc1e83e0b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://schema.org/description> "In order to better understand the nature, extent and intensity of interactions amongst coastal users, Marine Scotland asked the Local Coastal Partnerships to collect spatial data not already represented in national datasets. This map shows important areas for shellfish fishing around Grampian. It was created by the East Grampian Local Coastal Partnership, and covers the area of sea out to 12 miles. The source was from local fishermen: two skippers were interviewed, representing the very North (Fraserburgh) and the South of the Region (Gourdon). The fishermen drew on maps areas important to them, what gear they used, species caught. They were not asked intensity or season used, or social / cultural background questions. The data set is far from complete and consultation with a larger more representative sample size of fishermen is strongly advised." .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://schema.org/additionalProperty> _:ed5bd8f3d4c2134ce537cbcc1e83e0b4 .
+_:ed5bd8f3d4c2134ce537cbcc1e83e0b4 <http://schema.org/name> "geospatial region" .
+_:ed5bd8f3d4c2134ce537cbcc1e83e0b4 <http://schema.org/value> "Gourdon" .
+_:a67581d6483b4ebcc9f2478dad9f872d <http://schema.org/value> "East Grampian Local Coastal Partnership" .
+<urn:gleaner.io:oih:medin:data:f9eb4a04407d511b2a34cd0a213a3853874d8586> <http://schema.org/additionalProperty> _:daa737924d82c2d2dd5dfa7079acb731 .
+_:daa737924d82c2d2dd5dfa7079acb731 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a67581d6483b4ebcc9f2478dad9f872d <http://schema.org/name> "organizations" .
+_:c5246be993d5756c2dc24f4380a1671c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a5e76038b56a32eee3fe308cbb6c1ee8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://schema.org/description> "Data collected from stakeholders within the Southeast of England region (Balanced Seas region), by Balanced Seas project team between January 2010 and October 2010. Interview home port data was processed to create a gridded 1km by 1km map of home port frequency." .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://schema.org/additionalProperty> _:a5e76038b56a32eee3fe308cbb6c1ee8 .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://schema.org/additionalProperty> _:c5246be993d5756c2dc24f4380a1671c .
+_:f6710dad71675fb991ffc9f115b235e3 <http://schema.org/value> "home port frequency" .
+_:f6710dad71675fb991ffc9f115b235e3 <http://schema.org/name> "measurements and facts" .
+_:c5246be993d5756c2dc24f4380a1671c <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://schema.org/additionalProperty> _:f6710dad71675fb991ffc9f115b235e3 .
+<urn:gleaner.io:oih:medin:data:f9a94b2617197a1fa28aefa8f2a2d74d24ff9461> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c5246be993d5756c2dc24f4380a1671c <http://schema.org/value> "Balanced Seas region" .
+_:a5e76038b56a32eee3fe308cbb6c1ee8 <http://schema.org/value> "Balanced Seas project team" .
+_:a5e76038b56a32eee3fe308cbb6c1ee8 <http://schema.org/name> "organizations" .
+_:f6710dad71675fb991ffc9f115b235e3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c5246be993d5756c2dc24f4380a1671c <http://schema.org/value> "Southeast of England region" .
+_:f4829666adb4b3c033152a8501634738 <http://schema.org/name> "geospatial region" .
+_:f4829666adb4b3c033152a8501634738 <http://schema.org/value> "North West" .
+_:b5bfec4ed48578aac2468bb231189229 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b5bfec4ed48578aac2468bb231189229 <http://schema.org/name> "organizations" .
+_:f4829666adb4b3c033152a8501634738 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:ecfbbcda1a7a5451f255c8669244f8b0af11ffe1> <http://schema.org/additionalProperty> _:b5bfec4ed48578aac2468bb231189229 .
+<urn:gleaner.io:oih:medin:data:ecfbbcda1a7a5451f255c8669244f8b0af11ffe1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:ecfbbcda1a7a5451f255c8669244f8b0af11ffe1> <http://schema.org/additionalProperty> _:f4829666adb4b3c033152a8501634738 .
+<urn:gleaner.io:oih:medin:data:ecfbbcda1a7a5451f255c8669244f8b0af11ffe1> <http://schema.org/description> "2009 North West topographic dataset from the Channel Coastal Observatory Catalogue (number of records: 138" .
+_:b5bfec4ed48578aac2468bb231189229 <http://schema.org/value> "Channel Coastal Observatory" .
+_:dee08dd1fbffa168c2dbc031b9c8840f <http://schema.org/name> "geospatial region" .
+_:ec91affec819de899c080dfad5f83c <http://schema.org/value> "National Oceanography Centre" .
+_:ec91affec819de899c080dfad5f83c <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://schema.org/additionalProperty> _:dee08dd1fbffa168c2dbc031b9c8840f .
+_:ec91affec819de899c080dfad5f83c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:dee08dd1fbffa168c2dbc031b9c8840f <http://schema.org/value> "North Atlantic region" .
+_:dee08dd1fbffa168c2dbc031b9c8840f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cda4831d91ba85376c721ddf5c8ce0f8 <http://schema.org/value> "Argo float measurements" .
+_:cda4831d91ba85376c721ddf5c8ce0f8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cda4831d91ba85376c721ddf5c8ce0f8 <http://schema.org/name> "measurements and facts" .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://schema.org/description> "A novel temperature dataset for northern high latitude Seas (ATLAS) is a dataset of three-dimensional temperature derived from combining quality controlled Argo float measurements with marine mammal mounted Satellite Relay Data Loggers (SRDLs) profiles. Using data values gathered from across the North Atlantic region, a 1×1 degree gridded temperature dataset of the average monthly values from January 2004 to December 2008, with 15 vertical layers between 0–700 m was produced. Built as complementary to existing ship-based fields, the ATLAS dataset is a community resource to help determine the impacts of climate change on the Labrador and Nordic Seas regions. The data were collated by the National Oceanography Centre (NOC) and are made available from the British Oceanographic Data Centre (BODC)." .
+_:ec91affec819de899c080dfad5f83c <http://schema.org/value> "British Oceanographic Data Centre" .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://schema.org/additionalProperty> _:cda4831d91ba85376c721ddf5c8ce0f8 .
+<urn:gleaner.io:oih:medin:data:e59f5961a846fa9cc5eb9b1bbf53237d40955c6d> <http://schema.org/additionalProperty> _:ec91affec819de899c080dfad5f83c .
+_:b4a76fb68e4c5eddb5b9070d55d18e6b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:e411c2adc9b29a66d1063c3d811b2431e13932a2> <http://schema.org/description> "Shore based monitoring at the Brough Head Wave Farm Limited Agreement for Lease (AfL) area. The data collected will allow the numbers and distribution of seabirds and cetaceans using the waters surrounding the proposed deployment site to be characterised, along with their behaviour. This information will be used to inform an Environment Impact Assessment" .
+_:b4a76fb68e4c5eddb5b9070d55d18e6b <http://schema.org/value> "cetaceans" .
+<urn:gleaner.io:oih:medin:data:e411c2adc9b29a66d1063c3d811b2431e13932a2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b4a76fb68e4c5eddb5b9070d55d18e6b <http://schema.org/name> "marine biodiversity" .
+<urn:gleaner.io:oih:medin:data:e411c2adc9b29a66d1063c3d811b2431e13932a2> <http://schema.org/additionalProperty> _:b4a76fb68e4c5eddb5b9070d55d18e6b .
+_:b4a76fb68e4c5eddb5b9070d55d18e6b <http://schema.org/value> "seabirds" .
+<urn:gleaner.io:oih:medin:data:dd7e2fb341011cd0d0b9f0190c57016fb3276a44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:af15396d742ce2524cb26057fa266200 <http://schema.org/name> "organizations" .
+_:cf93227be96b7b9651cb6e8b255f6ca6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:dd7e2fb341011cd0d0b9f0190c57016fb3276a44> <http://schema.org/description> "2022 South East topographic dataset from the Channel Coastal Observatory Catalogue (number of records: 749" .
+<urn:gleaner.io:oih:medin:data:dd7e2fb341011cd0d0b9f0190c57016fb3276a44> <http://schema.org/additionalProperty> _:af15396d742ce2524cb26057fa266200 .
+<urn:gleaner.io:oih:medin:data:dd7e2fb341011cd0d0b9f0190c57016fb3276a44> <http://schema.org/additionalProperty> _:cf93227be96b7b9651cb6e8b255f6ca6 .
+_:af15396d742ce2524cb26057fa266200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cf93227be96b7b9651cb6e8b255f6ca6 <http://schema.org/value> "South East" .
+_:cf93227be96b7b9651cb6e8b255f6ca6 <http://schema.org/name> "geospatial region" .
+_:af15396d742ce2524cb26057fa266200 <http://schema.org/value> "Channel Coastal Observatory" .
+_:a960167de6be10d0914972c1e20376c0 <http://schema.org/value> "Irish Sea" .
+_:a960167de6be10d0914972c1e20376c0 <http://schema.org/name> "geospatial region" .
+_:e663c2c4cf51ade0988abf26e1df57dd <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:dc3d6d976adcd154e97254f0d7ed2eb0fd9b8ddf> <http://schema.org/description> "Dataset Description: Geological appraisal of swath bathymetry and seismo-stratigraphic data;\r\n Centrica Project: Round 3 Irish Sea - Zone 9 Offshore Wind Farm Development;\r\n Project Phase: Consenting;\r\n\r\n Work Carried Out By: Liverpool University;\r\n \r\n Corresponding Centrica Document Title: Geological appraisal of swath bathymetry and seismo-stratigraphic data collected by Centrica.\r\n Corresponding Centrica Document No: R3-D-EN-078-0000-000000-007.\r\n Available Datasets and supporting documentation:\r\n 1.\tArcGIS files (MXDs, shapefiles, layers, rasters)" .
+<urn:gleaner.io:oih:medin:data:dc3d6d976adcd154e97254f0d7ed2eb0fd9b8ddf> <http://schema.org/additionalProperty> _:a960167de6be10d0914972c1e20376c0 .
+_:a960167de6be10d0914972c1e20376c0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e663c2c4cf51ade0988abf26e1df57dd <http://schema.org/value> "Liverpool University" .
+<urn:gleaner.io:oih:medin:data:dc3d6d976adcd154e97254f0d7ed2eb0fd9b8ddf> <http://schema.org/additionalProperty> _:e663c2c4cf51ade0988abf26e1df57dd .
+<urn:gleaner.io:oih:medin:data:dc3d6d976adcd154e97254f0d7ed2eb0fd9b8ddf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e663c2c4cf51ade0988abf26e1df57dd <http://schema.org/value> "Centrica" .
+_:e663c2c4cf51ade0988abf26e1df57dd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f68e7f449ea0aadb53949520e6ff6d54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:db847352d4401abfda923b2a3ca9959005951236> <http://schema.org/additionalProperty> _:e774ef5d2fab51d25918bed0d0d5f4f5 .
+_:f68e7f449ea0aadb53949520e6ff6d54 <http://schema.org/value> "CAR licence" .
+_:e774ef5d2fab51d25918bed0d0d5f4f5 <http://schema.org/value> "fish" .
+_:e774ef5d2fab51d25918bed0d0d5f4f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f68e7f449ea0aadb53949520e6ff6d54 <http://schema.org/name> "policies" .
+<urn:gleaner.io:oih:medin:data:db847352d4401abfda923b2a3ca9959005951236> <http://schema.org/additionalProperty> _:f68e7f449ea0aadb53949520e6ff6d54 .
+_:e774ef5d2fab51d25918bed0d0d5f4f5 <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:db847352d4401abfda923b2a3ca9959005951236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:db847352d4401abfda923b2a3ca9959005951236> <http://schema.org/description> "Benthic monitoring of the sea bed adjacent to the fish farm as a requirement of the CAR licence for the site. Grab samples collected in proximity to the farm and at two reference locations. Samples analysed for: benthos, psa, carbon and sea louse medicine residues." .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c962e1c302caabd1699255c30c3e939e <http://schema.org/value> "Handfast Point" .
+_:c962e1c302caabd1699255c30c3e939e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:eda3455c9bbb26106bd7257bd9c3beaa .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/description> "Survey run by Southampton Oceanography Centre. All these records relate to \"Rowe, Sheader, Jensen (1990) The infauna of the Handfast Point maerl bed\" A copy of the report is held at English Nature (Dorset Team). \r\n This report concentrates solely on the benthic infauna of an area of live maerl in Poole Bay. The maerl bed is concentrated off Handfast Point at the southern end of Studland Bay. A line of 9 sites leading from the maerl bed was used to determine the relationship between the amount of maerl and the composition of the animal communities sampled. A single benthic sample was taken from each of these sites using a Day grab. N.B. No station 26. In addition, ten grab samples were taken from a single site (G3) in the maerl bed in an attempt to collect a greater number of the rarer species.The Day grab sampled an area of 0.1m2. All samples were washed on a 0.5mm sieve and the species retained on the sieve were identified in the lab. Live maerl separated from the samples was dried in an oven at 70oC, then weighed to the nearest 0.1g. Measurements of dead maerl present in individual samples were approximated by sieving through a 1.0mm mesh and removing the remaining small stones before drying as above. This report was originally produced by G.A. Rowe as a dissertation. Through a NCC contribution, the species list was expanded and confirmed and the report up-dated with the assistance of the other authors. The datum of the Lat/longs was not stated in the report, so has been assigned as OSGB in this database." .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:c962e1c302caabd1699255c30c3e939e .
+_:d35dd5b3c33b29fdb5be3b3962b7cc7f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:cd993676153ec432eee741fba06a101b .
+_:c962e1c302caabd1699255c30c3e939e <http://schema.org/value> "Studland Bay" .
+_:e37444767213248150ce75024d43dff1 <http://schema.org/value> "Day grab" .
+_:eda3455c9bbb26106bd7257bd9c3beaa <http://schema.org/value> "Rowe" .
+_:eda3455c9bbb26106bd7257bd9c3beaa <http://schema.org/name> "person" .
+_:e37444767213248150ce75024d43dff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c962e1c302caabd1699255c30c3e939e <http://schema.org/value> "Poole Bay" .
+_:eda3455c9bbb26106bd7257bd9c3beaa <http://schema.org/value> "G.A. Rowe" .
+_:c962e1c302caabd1699255c30c3e939e <http://schema.org/name> "geospatial region" .
+_:cd993676153ec432eee741fba06a101b <http://schema.org/value> "maerl" .
+_:d35dd5b3c33b29fdb5be3b3962b7cc7f <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:d35dd5b3c33b29fdb5be3b3962b7cc7f .
+<urn:gleaner.io:oih:medin:data:d623466a9c2a20d8556055490dacbb46629e15ab> <http://schema.org/additionalProperty> _:e37444767213248150ce75024d43dff1 .
+_:cd993676153ec432eee741fba06a101b <http://schema.org/name> "marine species" .
+_:e37444767213248150ce75024d43dff1 <http://schema.org/name> "procedures" .
+_:d35dd5b3c33b29fdb5be3b3962b7cc7f <http://schema.org/value> "NCC" .
+_:eda3455c9bbb26106bd7257bd9c3beaa <http://schema.org/value> "Sheader" .
+_:eda3455c9bbb26106bd7257bd9c3beaa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d35dd5b3c33b29fdb5be3b3962b7cc7f <http://schema.org/value> "Southampton Oceanography Centre" .
+_:cd993676153ec432eee741fba06a101b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d35dd5b3c33b29fdb5be3b3962b7cc7f <http://schema.org/value> "English Nature" .
+_:eda3455c9bbb26106bd7257bd9c3beaa <http://schema.org/value> "Jensen" .
+<urn:gleaner.io:oih:medin:data:cd719f005926c024536e358893ab3244f0938315> <http://schema.org/description> "This data set consists of a bathymetric grid derived from multibeam bathymetry data from cruise JC071. The bathymetric grid was created by gridding the cleaned raw multibeam data from JC071 at 1/64 arc-minute intervals using a nearneighbour gridding algorithm from the Generic Mapping Tools (GMT) software system. The data set covers an approximate one degree square with the minimum and maximum longitude and latitude co-ordinates: 17.016667W-16.216667W; 48.78333N-49.28333N. This is located in the Northeast Atlantic Ocean area. The data were collected from 7th-8th May 2012 using an EM120 Multibeam Echo-sounder. The cruise was part of the Porcupine Abyssal Plain (PAP): sustained ocean observation project. The bathymetry data were collected on an opportunistic basis during the cruise. The cruise was operated by the National Oceanography Centre (NOC), equipment operated by National Marine Facilities Sea Systems. The bathymetric grid was created by BODC for contributing to the EMODnet High Resolution Seafloor Mapping (HRSM) Project." .
+_:e26251777266ab2414b300f1f546ca0a <http://schema.org/value> "BODC" .
+_:e26251777266ab2414b300f1f546ca0a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e26251777266ab2414b300f1f546ca0a <http://schema.org/name> "organizations" .
+_:e26251777266ab2414b300f1f546ca0a <http://schema.org/value> "National Marine Facilities Sea Systems" .
+<urn:gleaner.io:oih:medin:data:cd719f005926c024536e358893ab3244f0938315> <http://schema.org/additionalProperty> _:e26251777266ab2414b300f1f546ca0a .
+_:e26251777266ab2414b300f1f546ca0a <http://schema.org/value> "National Oceanography Centre" .
+<urn:gleaner.io:oih:medin:data:cd719f005926c024536e358893ab3244f0938315> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f38133bbeeb5ce5e56d72474aa44a3c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:fb3a9b28de554052b2c7b3787b20f093 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:a2e3f815d14949194cc574e3b0a57cf3 .
+_:f38133bbeeb5ce5e56d72474aa44a3c9 <http://schema.org/name> "marine species" .
+_:fb3a9b28de554052b2c7b3787b20f093 <http://schema.org/value> "Norfolk coast" .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:fb3a9b28de554052b2c7b3787b20f093 .
+_:a2e3f815d14949194cc574e3b0a57cf3 <http://schema.org/name> "person" .
+_:a2e3f815d14949194cc574e3b0a57cf3 <http://schema.org/value> "O’Brien" .
+_:fb3a9b28de554052b2c7b3787b20f093 <http://schema.org/value> "Britain" .
+_:fb3a9b28de554052b2c7b3787b20f093 <http://schema.org/value> "UK" .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:bab4b5628826039b9dd82eb2415f59fd .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/additionalProperty> _:f38133bbeeb5ce5e56d72474aa44a3c9 .
+_:a2e3f815d14949194cc574e3b0a57cf3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:bab4b5628826039b9dd82eb2415f59fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f38133bbeeb5ce5e56d72474aa44a3c9 <http://schema.org/value> "Red-throated Divers" .
+_:bab4b5628826039b9dd82eb2415f59fd <http://schema.org/name> "marine biodiversity" .
+_:fb3a9b28de554052b2c7b3787b20f093 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:c757e335dc3f80c7d931924436d0f42361cc0e0e> <http://schema.org/description> "Data on the numbers and distribution of waterbirds are required for the Strategic Environmental Assessments of Offshore Wind Farms (OWF). From February to April 2009, aerial surveys of waterbirds and seabirds were conducted off the Norfolk coast, UK, within the proposed boundary for Zone 5 of the Round 3 Development areas (Crown Estate 2008).\r\nThe Zone 5 area was divided into seven roughly equal-sized survey blocks to allow maximum coverage within each survey day. Where possible adjacent blocks were surveyed synchronously, minimizing the likelihood of double-counting due to local movements of birds between survey days.\r\nSurveys used a standard methodology that allows collection of data suitable for distance analysis, as well as accurate plotting of locations of individual observations.\r\nThe report in this series identifies that the area covered by the seven survey blocks supports a diverse range of waterbirds, including high numbers of Red-throated Divers. The combined area was shown to support over 3% of Britain’s wintering Red-throated Diver population (see O’Brien et al. 2008), and within this a relatively small area corresponding to two survey blocks to the east of Lowestoft, Norfolk, supports over 2%." .
+_:fb3a9b28de554052b2c7b3787b20f093 <http://schema.org/value> "Lowestoft" .
+_:bab4b5628826039b9dd82eb2415f59fd <http://schema.org/value> "waterbirds" .
+_:cb60bd1618e21224a9d8d24541e77f4d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:c42941303503a9f8563ecbf39929b93fbad6a93b> <http://schema.org/additionalProperty> _:d644e1cecc7b0fd95567bd0a66ee6436 .
+_:d644e1cecc7b0fd95567bd0a66ee6436 <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:c42941303503a9f8563ecbf39929b93fbad6a93b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d644e1cecc7b0fd95567bd0a66ee6436 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cb60bd1618e21224a9d8d24541e77f4d <http://schema.org/name> "policies" .
+_:cb60bd1618e21224a9d8d24541e77f4d <http://schema.org/value> "CAR licence" .
+_:d644e1cecc7b0fd95567bd0a66ee6436 <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:c42941303503a9f8563ecbf39929b93fbad6a93b> <http://schema.org/description> "Benthic monitoring of the sea bed adjacent to the fish farm as a requirement of the CAR licence for the site. Grab samples collected in proximity to the farm and at two reference locations. Samples analysed for: benthos, redox, psa, carbon." .
+<urn:gleaner.io:oih:medin:data:c42941303503a9f8563ecbf39929b93fbad6a93b> <http://schema.org/additionalProperty> _:cb60bd1618e21224a9d8d24541e77f4d .
+_:d4e38dbf1084c1f230ae17093dfc4d30 <http://schema.org/name> "species occurrence" .
+_:a982c741f135b4018a308a1656dce200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/description> "A record of an U. pinnatifida sporophyte from the Essex Wildlife Trust." .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:a982c741f135b4018a308a1656dce200 .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:d4e38dbf1084c1f230ae17093dfc4d30 .
+_:e4c3825aec8cb562f25cea7c6c0cb897 <http://schema.org/name> "taxon" .
+_:e4c3825aec8cb562f25cea7c6c0cb897 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a982c741f135b4018a308a1656dce200 <http://schema.org/value> "Essex Wildlife Trust" .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:c75e6c9f950989cef1577817c9bb7b8a .
+_:e4c3825aec8cb562f25cea7c6c0cb897 <http://schema.org/value> "U. pinnatifida" .
+_:a982c741f135b4018a308a1656dce200 <http://schema.org/name> "organizations" .
+_:c75e6c9f950989cef1577817c9bb7b8a <http://schema.org/name> "undescribed biodiversity" .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://schema.org/additionalProperty> _:e4c3825aec8cb562f25cea7c6c0cb897 .
+_:d4e38dbf1084c1f230ae17093dfc4d30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d4e38dbf1084c1f230ae17093dfc4d30 <http://schema.org/value> "U. pinnatifida sporophyte" .
+<urn:gleaner.io:oih:medin:data:ba73c592236e6adf10b110c6179ef5c847ac5fa0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c75e6c9f950989cef1577817c9bb7b8a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c75e6c9f950989cef1577817c9bb7b8a <http://schema.org/value> "U. pinnatifida sporophyte" .
+_:a213515b49ed75f65f6adfa7caee19f9 <http://schema.org/name> "geospatial region" .
+_:a320d486a96ba7dabbf2ed11dc5b3253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://schema.org/additionalProperty> _:a3f57dd19d25d81ffb7bb54e0a43b6e8 .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://schema.org/additionalProperty> _:a320d486a96ba7dabbf2ed11dc5b3253 .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://schema.org/additionalProperty> _:a213515b49ed75f65f6adfa7caee19f9 .
+_:a320d486a96ba7dabbf2ed11dc5b3253 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:a213515b49ed75f65f6adfa7caee19f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a3f57dd19d25d81ffb7bb54e0a43b6e8 <http://schema.org/value> "species" .
+<urn:gleaner.io:oih:medin:data:b8818f198ab503a472511a640bc24944faed95ad> <http://schema.org/description> "The primary aim of this benthic survey in Loch Alsh, run by SNH and Marine Scotland Science (MSS) for SNH from the 4th - 6th October 2016, was to improve knowledge of the occurrence and distribution of the species and habitats within the Lochs Duich, Long and Alsh Marine Protected Area (MPA). Dropdown video drifts at 16 stations where used to achieve this, using MSS vessel MRV Alba na Mara. This survey also contributed to a monitoring programme (of management effectiveness) of refining the distribution of Habitats Directive Annex 1 features adjacent to the partially overlapping Special Area of Conservation (SAC) and to a study of the distribution of protected features within the MPA. Through the analysis of seabed video, the images were used to describe the nature of the seabed in terms of the physical structure and the species assemblages. Runs and run segments were assessed for the presence of protected features and other PMFs, as well as for the presence of species and habitats of recognised conservation importance." .
+_:a213515b49ed75f65f6adfa7caee19f9 <http://schema.org/value> "Loch Alsh" .
+_:a3f57dd19d25d81ffb7bb54e0a43b6e8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a320d486a96ba7dabbf2ed11dc5b3253 <http://schema.org/value> "SNH" .
+_:a3f57dd19d25d81ffb7bb54e0a43b6e8 <http://schema.org/name> "taxon" .
+_:a320d486a96ba7dabbf2ed11dc5b3253 <http://schema.org/value> "Marine Scotland Science" .
+_:b24b205e78377b64c52efbff77be8cfb <http://schema.org/value> "Phymatolithon calcareum" .
+_:d77ed8f10b3d5b7741221e7a4ef94ab7 <http://schema.org/value> "Falmouth Docks and Engineering Co. Ltd." .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:f2e3925a41546b817bb994589b966af1 .
+_:f2e3925a41546b817bb994589b966af1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/description> "This survey was conducted for Royal Haskoning Ltd. on behalf of the Falmouth Harbour commission to assess the environmental impact of the proposed expansion of the docks with particular focus on the effect of major dredging of the channel on the benthic habitat and sensitive species.\r\n During August and September 2007 SeaStar Survey carried out a Marine Ecological Survey in Falmouth Harbour for Royal Haskoning on behalf of Falmouth Harbour Commissioners and Falmouth Docks and Engineering Co. Ltd.\r\n The survey consisted of diver video transects, in situ habitat observations and diver sediment coring. The purpose of the survey was to inform the EIA associated with the development of the Northern Wharf and Queens Wharf areas of Falmouth Docks and proposed capital dredging. Within the project were three main aims:-\r\n - To assess the environmental impact of the proposed expansion of the docks with particular focus on the effect of major dredging of the channel on the benthic habitat and sensitive species. The site lies within the Fal and Helford Special Area of Conservation (SAC) with one of the primary features of importance being the reef forming calcareous algae (Phymatolithon calcareum and Lithothamnion corallioides) that form maerl beds.\r\n - To assess an area identified as a possible site for the placement of the dredged material. Criteria for this site are:-\r\n 1. An area with habitats not deemed to be of conservation value.\r\n 2. An area with habitats that could benefit from the introduced material with particular regard to the promotion of new maerl bed formation.\r\n - To revisit a number of previously sampled stations in areas historically subjected to commercial dredging in order to inform the EIA on recovery rates of maerl communities" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:c7705bb0af0d8e51e4f275a5f7777f2e .
+_:e92e2b45043973a941bc62abdee3891c <http://schema.org/value> "Falmouth Harbour" .
+_:b24b205e78377b64c52efbff77be8cfb <http://schema.org/value> "Lithothamnion corallioides" .
+_:c7705bb0af0d8e51e4f275a5f7777f2e <http://schema.org/value> "diver sediment coring" .
+_:bb44b360a32c863130bdd7866a2ae51a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d77ed8f10b3d5b7741221e7a4ef94ab7 <http://schema.org/value> "Royal Haskoning Ltd." .
+_:bb44b360a32c863130bdd7866a2ae51a <http://schema.org/name> "taxon" .
+_:b24b205e78377b64c52efbff77be8cfb <http://schema.org/name> "marine species" .
+_:f2e3925a41546b817bb994589b966af1 <http://schema.org/value> "maerl beds" .
+_:c7705bb0af0d8e51e4f275a5f7777f2e <http://schema.org/value> "in situ habitat observations" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b24b205e78377b64c52efbff77be8cfb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d77ed8f10b3d5b7741221e7a4ef94ab7 <http://schema.org/name> "organizations" .
+_:d77ed8f10b3d5b7741221e7a4ef94ab7 <http://schema.org/value> "Falmouth Harbour commission" .
+_:bb44b360a32c863130bdd7866a2ae51a <http://schema.org/value> "Phymatolithon calcareum" .
+_:e92e2b45043973a941bc62abdee3891c <http://schema.org/name> "geospatial region" .
+_:e92e2b45043973a941bc62abdee3891c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:b24b205e78377b64c52efbff77be8cfb .
+_:f2e3925a41546b817bb994589b966af1 <http://schema.org/name> "ecosystems" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:d77ed8f10b3d5b7741221e7a4ef94ab7 .
+_:c7705bb0af0d8e51e4f275a5f7777f2e <http://schema.org/name> "procedures" .
+_:d77ed8f10b3d5b7741221e7a4ef94ab7 <http://schema.org/value> "Falmouth Harbour Commissioners" .
+_:c7705bb0af0d8e51e4f275a5f7777f2e <http://schema.org/value> "diver video transects" .
+_:d77ed8f10b3d5b7741221e7a4ef94ab7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c7705bb0af0d8e51e4f275a5f7777f2e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:bb44b360a32c863130bdd7866a2ae51a .
+_:bb44b360a32c863130bdd7866a2ae51a <http://schema.org/value> "Lithothamnion corallioides" .
+<urn:gleaner.io:oih:medin:data:b843f794d6cf91ec1a04d4671a492d3e2da9572e> <http://schema.org/additionalProperty> _:e92e2b45043973a941bc62abdee3891c .
+_:e92e2b45043973a941bc62abdee3891c <http://schema.org/value> "Queens Wharf" .
+<urn:gleaner.io:oih:medin:data:b2e626fd5258a0ecf2c4cb063e0f850fb887a3c2> <http://schema.org/additionalProperty> _:f9f42ead49af0d079e107d7f07eaba0b .
+_:d08a42379c2ec9262ec8861dd3dfa8b4 <http://schema.org/value> "UK" .
+<urn:gleaner.io:oih:medin:data:b2e626fd5258a0ecf2c4cb063e0f850fb887a3c2> <http://schema.org/description> "The purpose of this report is to give an overview of the characteristics of the coastal environment in areas where\r\nmarine aggregate dredging takes place, or is likely to occur in the future. We then highlight how the results of\r\nmajor investment in research carried out in the UK over the past decade, particularly through the Aggregate Levy\r\nSustainability Fund (ALSF), have assisted in our understanding of the nature and scale of impacts of dredging on\r\nthe marine environment, and how this information has been used to improve the sustainable management of\r\nthis key resource for the UK economy." .
+<urn:gleaner.io:oih:medin:data:b2e626fd5258a0ecf2c4cb063e0f850fb887a3c2> <http://schema.org/additionalProperty> _:d08a42379c2ec9262ec8861dd3dfa8b4 .
+<urn:gleaner.io:oih:medin:data:b2e626fd5258a0ecf2c4cb063e0f850fb887a3c2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f9f42ead49af0d079e107d7f07eaba0b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f9f42ead49af0d079e107d7f07eaba0b <http://schema.org/name> "organizations" .
+_:f9f42ead49af0d079e107d7f07eaba0b <http://schema.org/value> "Aggregate Levy\r\nSustainability Fund (ALSF)" .
+_:d08a42379c2ec9262ec8861dd3dfa8b4 <http://schema.org/name> "geospatial region" .
+_:d08a42379c2ec9262ec8861dd3dfa8b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:a6d09e8b8dcda9b3eed53d2b2b618412 .
+_:f8771e6ebba19dc658eb09312ddd8ce3 <http://schema.org/value> "walkovers" .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:ff343d6dee5e952053fa3da551e47ebb .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/description> "Bioblitz survey which took place in Northam Burrows. This survey's aim was to record as many species as possible as being present within a set survey area over 8-hours. A variety of different methods were employed, including plankton netting and walkovers although most records were ad-hoc sightings made during the 8 hour survey." .
+_:a6d09e8b8dcda9b3eed53d2b2b618412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f8771e6ebba19dc658eb09312ddd8ce3 <http://schema.org/name> "procedures" .
+_:ff343d6dee5e952053fa3da551e47ebb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f8771e6ebba19dc658eb09312ddd8ce3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:c6b99b4e35da55565acfd64d072bdfb9 .
+_:a6d09e8b8dcda9b3eed53d2b2b618412 <http://schema.org/value> "species" .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:b2bc309963c36cd124795e8a798fcce821aeea55> <http://schema.org/additionalProperty> _:f8771e6ebba19dc658eb09312ddd8ce3 .
+_:ff343d6dee5e952053fa3da551e47ebb <http://schema.org/value> "Northam Burrows" .
+_:c6b99b4e35da55565acfd64d072bdfb9 <http://schema.org/name> "projects" .
+_:a6d09e8b8dcda9b3eed53d2b2b618412 <http://schema.org/name> "taxon" .
+_:ff343d6dee5e952053fa3da551e47ebb <http://schema.org/name> "geospatial region" .
+_:c6b99b4e35da55565acfd64d072bdfb9 <http://schema.org/value> "Bioblitz survey" .
+_:c6b99b4e35da55565acfd64d072bdfb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f8771e6ebba19dc658eb09312ddd8ce3 <http://schema.org/value> "plankton netting" .
+_:a672a6d1822083f393db2f95b9c721b1 <http://schema.org/value> "squid" .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:a672a6d1822083f393db2f95b9c721b1 .
+_:a672a6d1822083f393db2f95b9c721b1 <http://schema.org/name> "marine species" .
+_:c688aea2dcbaa5aac88d2d2772d50930 <http://schema.org/value> "squid" .
+_:f5d5de5affb0ebb5e93e52138be9ea72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:c688aea2dcbaa5aac88d2d2772d50930 .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:d322125f36b62ff83316ebf8307b81f0 .
+_:a672a6d1822083f393db2f95b9c721b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f5d5de5affb0ebb5e93e52138be9ea72 <http://schema.org/name> "geospatial region" .
+_:c688aea2dcbaa5aac88d2d2772d50930 <http://schema.org/name> "migratory marine species" .
+_:fccb676c4b01461de51e2b1273824ea1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:fccb676c4b01461de51e2b1273824ea1 .
+_:d322125f36b62ff83316ebf8307b81f0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/additionalProperty> _:f5d5de5affb0ebb5e93e52138be9ea72 .
+_:d322125f36b62ff83316ebf8307b81f0 <http://schema.org/value> "core measurements" .
+_:a672a6d1822083f393db2f95b9c721b1 <http://schema.org/value> "fish" .
+_:c688aea2dcbaa5aac88d2d2772d50930 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:fccb676c4b01461de51e2b1273824ea1 <http://schema.org/value> "Marine Biological Association" .
+_:f5d5de5affb0ebb5e93e52138be9ea72 <http://schema.org/value> "Plymouth" .
+_:c688aea2dcbaa5aac88d2d2772d50930 <http://schema.org/value> "fish" .
+_:fccb676c4b01461de51e2b1273824ea1 <http://schema.org/value> "Plymouth Marine Laboratory" .
+_:fccb676c4b01461de51e2b1273824ea1 <http://schema.org/value> "BODC" .
+_:a672a6d1822083f393db2f95b9c721b1 <http://schema.org/value> "Zooplankton" .
+_:d322125f36b62ff83316ebf8307b81f0 <http://schema.org/name> "measurements and facts" .
+<urn:gleaner.io:oih:medin:data:aea38275ec2c10ac5ae02b1a4f0a46a69901422b> <http://schema.org/description> "The data set comprises measurement of physical and biological oceanographic parameters from the Western English Channel, initially collected as part of the Plankton Monitoring Programme at Station L4 from 1988 onwards. L4 is one of a series of hydrographic stations in the Western English Channel which have also been the basis of a series of hydrographic surveys carried out during the 20th Century by scientists at the Marine Biological Association in Plymouth. In May 2002 sampling expanded to include Station E1, approximately 25 nautical miles south-west of Plymouth. Plankton Monitoring began through the work of the Plymouth Marine Laboratory (PML) Zooplankton Group. Other stations include Rame head, Jennycliff, Plmouth Deep and Cawsand. A long-term time-series of weekly observations has been established by exploiting the activities of small boats (Sepia, Squilla and Plymouth Quest) in an opportunistic way as by-product of their other sampling activities, for example the collection of live plankton, sea-water, trawling for fish and squid. Initially no formal research programme or long-term funding for the Plankton Monitoring existed but the series was included in NERC Oceans 2025 funding as a Sustained Observatory and continues to be funded under NERC National Capability. Funding has been provided over different time periods under various names but the programme is commonly referred to as the Western Channel Observatory (WCO), with additional funding allowing additional data collection to take place, taking advantage of the core measurements. Although every attempt has been made to standardise methodology and achieve data consistency it is important to recognize that the varied personnel and research objectives that have contributed to this dataset may impact on the nature of the data set. The core datasets are made available through the westernchannelobservatory.org website. Data are also submitted to BODC where it is archived and published with a DOI at finer granules. At BODC further meta(data) checks take place and metadata are enriched and served through BODC systems with PML originators informed of any changes to data." .
+_:f5d5de5affb0ebb5e93e52138be9ea72 <http://schema.org/value> "Western English Channel" .
+_:fccb676c4b01461de51e2b1273824ea1 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:ace5dd9a4ac85d8acb0bbcb674afd3d6f2f37b5a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:ace5dd9a4ac85d8acb0bbcb674afd3d6f2f37b5a> <http://schema.org/additionalProperty> _:e190a6c991db3101638999d182661b43 .
+_:e190a6c991db3101638999d182661b43 <http://schema.org/name> "projects" .
+<urn:gleaner.io:oih:medin:data:ace5dd9a4ac85d8acb0bbcb674afd3d6f2f37b5a> <http://schema.org/description> "Pycnogonida count data collated as part of the Scillies ATBI project" .
+_:e190a6c991db3101638999d182661b43 <http://schema.org/value> "Scillies ATBI project" .
+_:e4322880a7b41c9dafe11bbd78df435d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e190a6c991db3101638999d182661b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e4322880a7b41c9dafe11bbd78df435d <http://schema.org/value> "Pycnogonida" .
+_:e4322880a7b41c9dafe11bbd78df435d <http://schema.org/name> "taxon" .
+<urn:gleaner.io:oih:medin:data:ace5dd9a4ac85d8acb0bbcb674afd3d6f2f37b5a> <http://schema.org/additionalProperty> _:e4322880a7b41c9dafe11bbd78df435d .
+<urn:gleaner.io:oih:medin:data:abb8bc1ea2e3c485ca2b90303fabda7c2851e3d9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:dbaec8776c3256dc0fa0e500e98fd59 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:abb8bc1ea2e3c485ca2b90303fabda7c2851e3d9> <http://schema.org/additionalProperty> _:dbaec8776c3256dc0fa0e500e98fd59 .
+_:dbaec8776c3256dc0fa0e500e98fd59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:dbaec8776c3256dc0fa0e500e98fd59 <http://schema.org/value> "Channel Coastal Observatory" .
+<urn:gleaner.io:oih:medin:data:abb8bc1ea2e3c485ca2b90303fabda7c2851e3d9> <http://schema.org/description> "2011 North East waves dataset from the Channel Coastal Observatory Catalogue (number of records: 1" .
+_:f561a1f44c6548a0badf1f8d41441e99 <http://schema.org/value> "fish species" .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://schema.org/additionalProperty> _:c978e5cfbdcde110ddbb06bbdecc7dc2 .
+_:c978e5cfbdcde110ddbb06bbdecc7dc2 <http://schema.org/name> "organizations" .
+_:e574f90fbff510bf03f5bf313d512aea <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://schema.org/additionalProperty> _:f561a1f44c6548a0badf1f8d41441e99 .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://schema.org/description> "Gunfleet Sands Ltd commissioned RPS to undertake seasonal fisheries surveys within the vicinity of the proposed Gunfleet Sands wind farm. The aim of the seasonal fisheries surveys conducted within the Gunfleet Sands area was to gather fisheries data on and around Gunfleet Sands with which to establish a baseline of the seasonal assemblages of fish species within the area prior to the development of Gunfleet Sands wind farm (GS1 and extension GS2). This allows a description of baseline conditions to be made against which potential environmental effects on fish distribution in the vicinity of the windfarm sites may be measured. This report presents the findings of the third seasonal otter trawl survey, which was undertaken on the 2nd and 3rd April 2008." .
+_:f561a1f44c6548a0badf1f8d41441e99 <http://schema.org/name> "marine species" .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f561a1f44c6548a0badf1f8d41441e99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c978e5cfbdcde110ddbb06bbdecc7dc2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e574f90fbff510bf03f5bf313d512aea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:aa48dcc9935415b5489f747d5234fcbbe47dcfda> <http://schema.org/additionalProperty> _:e574f90fbff510bf03f5bf313d512aea .
+_:c978e5cfbdcde110ddbb06bbdecc7dc2 <http://schema.org/value> "RPS" .
+_:e574f90fbff510bf03f5bf313d512aea <http://schema.org/name> "migratory marine species" .
+_:b6d3adee5216042980db2d74f18e5604 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://schema.org/additionalProperty> _:b6d3adee5216042980db2d74f18e5604 .
+_:b6d3adee5216042980db2d74f18e5604 <http://schema.org/value> "Fisheries Research Services Aberdeen Marine Laboratory" .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://schema.org/description> "The dataset comprises 87 hydrographic data profiles, collected by a conductivity-temperature-depth (CTD) sensor package, from all across the North Sea area during July and August 2005. A complete list of all data parameters are described by the SeaDataNet Parameter Discovery Vocabulary (PDV) keywords assigned in this metadata record. The data were collected by the Fisheries Research Services Aberdeen Marine Laboratory." .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://schema.org/additionalProperty> _:b6229483f49b45c7912f40bbe875a3fd .
+_:b6d3adee5216042980db2d74f18e5604 <http://schema.org/name> "organizations" .
+_:f03a53258b603693ab6af1bd440dd40b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b6229483f49b45c7912f40bbe875a3fd <http://schema.org/value> "North Sea area" .
+_:f03a53258b603693ab6af1bd440dd40b <http://schema.org/value> "hydrographic data profiles" .
+_:b6229483f49b45c7912f40bbe875a3fd <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://schema.org/additionalProperty> _:f03a53258b603693ab6af1bd440dd40b .
+<urn:gleaner.io:oih:medin:data:a608d4eba132cc6f48652d9fd5458d580d0811db> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f03a53258b603693ab6af1bd440dd40b <http://schema.org/name> "measurements and facts" .
+_:b6229483f49b45c7912f40bbe875a3fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:a3793752dbaaa3b11458c05f486c183e69291356> <http://schema.org/additionalProperty> _:d25eb066ded809f755d30b7f47decfc8 .
+_:f23f802f95c5f6ad2c3c74c6f0642912 <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:a3793752dbaaa3b11458c05f486c183e69291356> <http://schema.org/additionalProperty> _:f23f802f95c5f6ad2c3c74c6f0642912 .
+<urn:gleaner.io:oih:medin:data:a3793752dbaaa3b11458c05f486c183e69291356> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:d25eb066ded809f755d30b7f47decfc8 <http://schema.org/value> "CAR licence" .
+_:d25eb066ded809f755d30b7f47decfc8 <http://schema.org/name> "policies" .
+_:f23f802f95c5f6ad2c3c74c6f0642912 <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:a3793752dbaaa3b11458c05f486c183e69291356> <http://schema.org/description> "Benthic monitoring of the sea bed adjacent to the fish farm as a requirement of the CAR licence for the site. Grab samples collected in proximity to the farm and at two reference locations. Samples analysed for: benthos, redox, psa, carbon and sea lice medicine residues." .
+_:f23f802f95c5f6ad2c3c74c6f0642912 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d25eb066ded809f755d30b7f47decfc8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:9f6ff512bda6fc17dbaca4c263ed8c03eefd9d00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:9f6ff512bda6fc17dbaca4c263ed8c03eefd9d00> <http://schema.org/additionalProperty> _:cbb8ac78b8e3f17f65b1788d010ac375 .
+<urn:gleaner.io:oih:medin:data:9f6ff512bda6fc17dbaca4c263ed8c03eefd9d00> <http://schema.org/additionalProperty> _:c53faf0940da7d1e9b1eeb2f8c700123 .
+_:cbb8ac78b8e3f17f65b1788d010ac375 <http://schema.org/value> "CAR licence" .
+_:c53faf0940da7d1e9b1eeb2f8c700123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cbb8ac78b8e3f17f65b1788d010ac375 <http://schema.org/name> "policies" .
+_:c53faf0940da7d1e9b1eeb2f8c700123 <http://schema.org/name> "migratory marine species" .
+_:c53faf0940da7d1e9b1eeb2f8c700123 <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:9f6ff512bda6fc17dbaca4c263ed8c03eefd9d00> <http://schema.org/description> "Benthic monitoring of the sea bed adjacent to the fish farm as a requirement of the CAR licence for the site. Grab samples collected in proximity to the farm and at two reference locations. Samples analysed for: benthos, psa, carbon." .
+_:cbb8ac78b8e3f17f65b1788d010ac375 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e06c71876960ec469930b1ffc2d2c98f <http://schema.org/name> "projects" .
+_:c63a8e4545b2d53f5a71637242ef6c8b <http://schema.org/value> "Wakame" .
+_:a526e0e2b8ec3f5431643b6b386504eb <http://schema.org/name> "policies" .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:c63a8e4545b2d53f5a71637242ef6c8b .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:e06c71876960ec469930b1ffc2d2c98f .
+_:c63a8e4545b2d53f5a71637242ef6c8b <http://schema.org/name> "invasive species" .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/description> "This layer shows the distribution of Wakame, Undaria pinnatifida, a non-native species. This layer forms one of a set of data layers created for the Defra MB0102 contract. This work will support the delivery of a network of Marine Protected Areas as required to meet existing international and national obligations and commitments, including Marine Conservation Zones (MCZs), a new measure to be delivered as part of the Marine and Coastal Access Bill, and equivalent measures under Scottish legislation. The availability of these data layers will also be of importance in underpinning Marine Planning (e.g. licensing) in our marine area." .
+_:e06c71876960ec469930b1ffc2d2c98f <http://schema.org/value> "Defra MB0102 contract" .
+_:e06c71876960ec469930b1ffc2d2c98f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a526e0e2b8ec3f5431643b6b386504eb <http://schema.org/value> "Scottish legislation" .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:c6d416840c9fc1e6c87986d6ca5f938 .
+_:a526e0e2b8ec3f5431643b6b386504eb <http://schema.org/value> "Marine and Coastal Access Bill" .
+_:c6d416840c9fc1e6c87986d6ca5f938 <http://schema.org/value> "Undaria pinnatifida" .
+_:c63a8e4545b2d53f5a71637242ef6c8b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c6d416840c9fc1e6c87986d6ca5f938 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:9e6dc8c04aa663ce3b830224c32ecd695897d6bb> <http://schema.org/additionalProperty> _:a526e0e2b8ec3f5431643b6b386504eb .
+_:a526e0e2b8ec3f5431643b6b386504eb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c6d416840c9fc1e6c87986d6ca5f938 <http://schema.org/name> "taxon" .
+_:c63a8e4545b2d53f5a71637242ef6c8b <http://schema.org/value> "Undaria pinnatifida" .
+<urn:gleaner.io:oih:medin:data:8b2636478fde8d716436ccfc6103084ef5bc23da> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:8b2636478fde8d716436ccfc6103084ef5bc23da> <http://schema.org/additionalProperty> _:c233d9dbb627387c52b7482676338899 .
+_:ad4899fa6f3caedf9c126d3c6ef55bc2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ad4899fa6f3caedf9c126d3c6ef55bc2 <http://schema.org/value> "Fisheries Mapping Project" .
+_:ad4899fa6f3caedf9c126d3c6ef55bc2 <http://schema.org/name> "projects" .
+_:c233d9dbb627387c52b7482676338899 <http://schema.org/value> "Eastern Sea Fisheries Joint Committee" .
+_:c233d9dbb627387c52b7482676338899 <http://schema.org/name> "organizations" .
+_:c233d9dbb627387c52b7482676338899 <http://schema.org/value> "ESFJC" .
+_:c233d9dbb627387c52b7482676338899 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:8b2636478fde8d716436ccfc6103084ef5bc23da> <http://schema.org/description> "This layer is the output of the Eastern Sea Fisheries Joint Committee's Fisheries Mapping Project, which aimed to describe-using best available data and fishermens knowledge-the extent of the main fisheries within the ESFJC District.\r\n \r\n They are not, however, exhaustive-please use with discretion. Use of this data should never replace full, proper consultation within the fishing industry, but rather be seen as illustrative of the types of activity within the District and, where information is available, an indication of seasonality. \r\n \r\n A report on the Fisheries Mapping Project will be available in Spring 2012, and will contain information about how the data was collected and compiled, and the process of consultation which was undertaken. Please refer to the ESFJC website: www.eastern-ifca.gov.uk\r\n \r\n For further details on the project, its output, or guidance on how to interpret the data, please contact the project manager: jwoo@esfjc.co.uk.\r\n \r\n To register for updates to these layers (including forthcoming addition of metadata), please register your interest at jwoo@esfjc.co.uk. \r\n \r\n (Please acknowledge use of Fisheries Mapping Project data. It can be cited as: ESFJC, 2010- ESFJC District Fisheries Mapping Project)." .
+<urn:gleaner.io:oih:medin:data:8b2636478fde8d716436ccfc6103084ef5bc23da> <http://schema.org/additionalProperty> _:ad4899fa6f3caedf9c126d3c6ef55bc2 .
+_:a403ba95d8f051327cc74bb733128cd3 <http://schema.org/value> "British Geological Survey" .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:a1c340767eda55c4be6cedd2dda1c2b8 .
+_:c6db1d76ba5ffc203075fb54a1cfca32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a1c340767eda55c4be6cedd2dda1c2b8 <http://schema.org/value> "Mull" .
+_:a403ba95d8f051327cc74bb733128cd3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/description> "This sampling survey has been carried out by British Geological Survey (BGS) formerly Institute of Geological Sciences for BGS, the survey took place from September to October 1971 south west of Mull, on board an inflatable zodiac. The purpose was to collect data to investigate the magnetite content of modern sands and silts around the Mull plutonic centre. Sample data were collected by divers, jar sample and a 0.5m core. Sites were controlled by echo-sounder traverses and positions were fixed by sextant from shore. These data are archived by BGS. Technical details of the survey are contained in IGS report 73/14." .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:ebb4f4556ee10097d671c707736a32c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a1c340767eda55c4be6cedd2dda1c2b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a403ba95d8f051327cc74bb733128cd3 <http://schema.org/name> "organizations" .
+_:c6db1d76ba5ffc203075fb54a1cfca32 <http://schema.org/value> "magnetite content" .
+_:a403ba95d8f051327cc74bb733128cd3 <http://schema.org/value> "BGS" .
+_:c6db1d76ba5ffc203075fb54a1cfca32 <http://schema.org/name> "measurements and facts" .
+_:a403ba95d8f051327cc74bb733128cd3 <http://schema.org/value> "Institute of Geological Sciences" .
+_:ebb4f4556ee10097d671c707736a32c7 <http://schema.org/value> "echo-sounder traverses" .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:c6db1d76ba5ffc203075fb54a1cfca32 .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:ebb4f4556ee10097d671c707736a32c7 .
+<urn:gleaner.io:oih:medin:data:880c962083f3436d3035e533718234bdbdfff15c> <http://schema.org/additionalProperty> _:a403ba95d8f051327cc74bb733128cd3 .
+_:ebb4f4556ee10097d671c707736a32c7 <http://schema.org/name> "procedures" .
+_:a1c340767eda55c4be6cedd2dda1c2b8 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:c1f798b8995e707d8d1f1fff2015ca73 .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:f5173629751043cb98d3a24c2107f164 .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/name> "measurements and facts" .
+_:ecacaede462512c6fae0d170bde071f5 <http://schema.org/value> "manual quality control" .
+_:ecacaede462512c6fae0d170bde071f5 <http://schema.org/name> "procedures" .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/value> "transmittance" .
+_:c1f798b8995e707d8d1f1fff2015ca73 <http://schema.org/value> "Natural Environment Research Council" .
+_:ecacaede462512c6fae0d170bde071f5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:ecacaede462512c6fae0d170bde071f5 .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/value> "wind speed" .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/value> "salinity" .
+_:f452392cf593c41be1e978c38ac257a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f5173629751043cb98d3a24c2107f164 <http://schema.org/value> "UK" .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/value> "air pressure" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c1f798b8995e707d8d1f1fff2015ca73 <http://schema.org/value> "Plymouth Marine Laboratory" .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/value> "dissolved oxygen concentration" .
+_:c1f798b8995e707d8d1f1fff2015ca73 <http://schema.org/name> "organizations" .
+_:f452392cf593c41be1e978c38ac257a6 <http://schema.org/name> "person" .
+_:ecacaede462512c6fae0d170bde071f5 <http://schema.org/value> "automated quality control" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/description> "The CARBON-OPS data set comprises partial pressure of carbon dioxide (pCO2) and ancilliary parameters, measured aboard selected UK research vessels between 2007 and 2008. The parameter suite includes geographical position; partial pressure and fugacity of CO2; sea surface temperature, salinity, and dissolved oxygen concentration; air pressure, temperature and humidity; occasionally the parameter suite also includes fluorescence, transmittance, wind speed and direction. CARBON-OPS, led by Nick Hardman-Mountford at Plymouth Marine Laboratory, was funded by the Natural Environment Research Council under the Knowledge Transfer initiative (2007-2009). The aim of the project was to develop an automated supply chain of ocean surface and atmospheric carbon dioxide measurements from research ships to operational end-users. The data were first provided in near real-time following an initial level of automated quality control and processing. Following a secondary level of manual quality control and processing (delayed mode) the data are integrated into the BODC National Oceanographic Database. Measurements were taken aboard five UK research vessels: RRS Discovery, RRS James Clark Ross; RRS James Cook; RV Plymouth Quest; and RV Prince Madog." .
+_:a4b2918f5cd3a786e4097ce4297225b2 <http://schema.org/name> "projects" .
+_:b3a5f18975bc7effa04788fee225837d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a4b2918f5cd3a786e4097ce4297225b2 <http://schema.org/value> "Knowledge Transfer initiative" .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/value> "fluorescence" .
+_:f452392cf593c41be1e978c38ac257a6 <http://schema.org/value> "Nick Hardman-Mountford" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:b3a5f18975bc7effa04788fee225837d .
+_:c1f798b8995e707d8d1f1fff2015ca73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a4b2918f5cd3a786e4097ce4297225b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:f452392cf593c41be1e978c38ac257a6 .
+_:b3a5f18975bc7effa04788fee225837d <http://schema.org/value> "humidity" .
+_:f5173629751043cb98d3a24c2107f164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f5173629751043cb98d3a24c2107f164 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:87c08e82616a0311b9c08cd9ad68b99e6885eaa7> <http://schema.org/additionalProperty> _:a4b2918f5cd3a786e4097ce4297225b2 .
+_:f4d43fabced6eaec3abfc9d50cb2aee <http://schema.org/value> "Channel Coastal Observatory" .
+<urn:gleaner.io:oih:medin:data:810e6c6717636dd59b82f3809f2143ca5aa2e3f0> <http://schema.org/additionalProperty> _:f4d43fabced6eaec3abfc9d50cb2aee .
+_:f4d43fabced6eaec3abfc9d50cb2aee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:810e6c6717636dd59b82f3809f2143ca5aa2e3f0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f4d43fabced6eaec3abfc9d50cb2aee <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:810e6c6717636dd59b82f3809f2143ca5aa2e3f0> <http://schema.org/description> "2011 East Riding waves dataset from the Channel Coastal Observatory Catalogue (number of records: 4" .
+<urn:gleaner.io:oih:medin:data:783d5fd05442fdb7a4c61b08be890f26bafa6d05> <http://schema.org/additionalProperty> _:f7eadf43307ef088fcc47149892f05d3 .
+_:ec4c4b229d3927e48ea45f331476c9c0 <http://schema.org/name> "policies" .
+<urn:gleaner.io:oih:medin:data:783d5fd05442fdb7a4c61b08be890f26bafa6d05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:783d5fd05442fdb7a4c61b08be890f26bafa6d05> <http://schema.org/additionalProperty> _:ec4c4b229d3927e48ea45f331476c9c0 .
+_:ec4c4b229d3927e48ea45f331476c9c0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f7eadf43307ef088fcc47149892f05d3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ec4c4b229d3927e48ea45f331476c9c0 <http://schema.org/value> "CAR licence" .
+_:f7eadf43307ef088fcc47149892f05d3 <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:783d5fd05442fdb7a4c61b08be890f26bafa6d05> <http://schema.org/description> "Benthic monitoring of the sea bed adjacent to the fish farm as a requirement of the CAR licence for the site. Grab samples collected in proximity to the farm and at two reference locations. Samples analysed for: benthos, redox, psa, carbon." .
+_:f7eadf43307ef088fcc47149892f05d3 <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:d6f7064c3f20d182134a8562677f8d2b .
+_:f8347ba77e399ca286530e56d51e1cd8 <http://schema.org/value> "Dr Wei Huang" .
+_:a87c3134b24ac90f384ae556a7ad5826 <http://schema.org/value> "particulate phase osmolytes" .
+_:a87c3134b24ac90f384ae556a7ad5826 <http://schema.org/value> "microbial uptake activities" .
+_:d6f7064c3f20d182134a8562677f8d2b <http://schema.org/value> "marker genese" .
+_:a87c3134b24ac90f384ae556a7ad5826 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f8347ba77e399ca286530e56d51e1cd8 <http://schema.org/value> "Dr Ruth Airs" .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:a87c3134b24ac90f384ae556a7ad5826 .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:f8347ba77e399ca286530e56d51e1cd8 .
+_:d6f7064c3f20d182134a8562677f8d2b <http://schema.org/name> "dna sequences" .
+_:b0eaf72311243cfe9c3c7c35555f3aa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d6f7064c3f20d182134a8562677f8d2b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f8347ba77e399ca286530e56d51e1cd8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f8347ba77e399ca286530e56d51e1cd8 <http://schema.org/value> "Dr Yin Chen" .
+_:a87c3134b24ac90f384ae556a7ad5826 <http://schema.org/name> "measurements and facts" .
+_:b0eaf72311243cfe9c3c7c35555f3aa2 <http://schema.org/value> "NERC Discovery Science grants" .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/additionalProperty> _:b0eaf72311243cfe9c3c7c35555f3aa2 .
+_:b0eaf72311243cfe9c3c7c35555f3aa2 <http://schema.org/name> "organizations" .
+_:f8347ba77e399ca286530e56d51e1cd8 <http://schema.org/name> "person" .
+<urn:gleaner.io:oih:medin:data:7225d214b8a2aeca6c18f3ec01e392d328506f5c> <http://schema.org/description> "This dataset comprises measurements of microbial uptake activities of betaine and choline, particulate phase osmolytes, amplicon sequencing of marker genese involved in Nitrogenous-osmolyte catabolism, and single cell genome data. Water samples were collected from at the L4 station of the Western Channel Observatory between April 27, 2015 to April 24, 2017 using Niskin bottles attached to a rosette sampler deployed from the RV Plymouth Quest. Nitrogenous osmolytes (glycine betaine, choline and trimethylamine N-oxide are essential components for most organisms in the marine environment. They enable cells to exist in a salty environment, but also have several other proposed uses. The aim of the project is to understand the seasonal cycle of glycine betaine, trimethylamine N-oxide and choline at Station L4. The water samples were analysed for the microbial assimilation and dissimilation activities using 14C labelled betaine and choline, respectively. The data will be incorporated to the European Regional Seas Ecosystem Model (ERSEM) coupled with the hydrodynamic model General Ocean Turbulent Model (GOTM) to simulate the N-osmolyte cycling at the L4 station. The data were collected under the project Biogeochemical cycling of N-osmolytes in the surface ocean funded by NERC Discovery Science grants NE/M002233/1 (parent), NE/M003361/1 (child), NE/M002934/1 (child). The grants were led by Dr Yin Chen, Dr Ruth Airs, and Dr Wei Huang respectively." .
+_:f4fee0639775dc2d9a006a1e6d5755c0 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://schema.org/additionalProperty> _:aaa95aa758e48da5f4eca95242bbe993 .
+_:f4fee0639775dc2d9a006a1e6d5755c0 <http://schema.org/value> "Wells-Next-the-Sea" .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://schema.org/description> "The objective of this project was to undertake two aerial surveys of waterbirds and seabirds in inshore waters in an area of the Outer Wash approximately bounded to the west by Skegness, to the north by Mablethorpe, to the east by Wells-Next-the-Sea and to the south by the Norfolk coastline. This area was included in an aerial survey flying block identified as ‘GW4’. Both surveys were undertaken in late winter. The first one was to take place in February 2010 and the second one in March 2010." .
+_:aaa95aa758e48da5f4eca95242bbe993 <http://schema.org/name> "marine biodiversity" .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:aaa95aa758e48da5f4eca95242bbe993 <http://schema.org/value> "seabirds" .
+_:aaa95aa758e48da5f4eca95242bbe993 <http://schema.org/value> "waterbirds" .
+_:aaa95aa758e48da5f4eca95242bbe993 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:badca932a8041845d5d31a4480f79fc4 <http://schema.org/name> "procedures" .
+_:f4fee0639775dc2d9a006a1e6d5755c0 <http://schema.org/value> "Mablethorpe" .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://schema.org/additionalProperty> _:badca932a8041845d5d31a4480f79fc4 .
+_:badca932a8041845d5d31a4480f79fc4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f4fee0639775dc2d9a006a1e6d5755c0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:badca932a8041845d5d31a4480f79fc4 <http://schema.org/value> "aerial surveys" .
+_:f4fee0639775dc2d9a006a1e6d5755c0 <http://schema.org/value> "Skegness" .
+_:f4fee0639775dc2d9a006a1e6d5755c0 <http://schema.org/value> "Norfolk" .
+<urn:gleaner.io:oih:medin:data:652c29e00896393f933cf2062917f65a3ae8a138> <http://schema.org/additionalProperty> _:f4fee0639775dc2d9a006a1e6d5755c0 .
+_:b2293661c64b9c21c4dead76424d5d91 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:626fe5bf4e1625c18763a76a5adfd3cb60c2b77a> <http://schema.org/additionalProperty> _:b2293661c64b9c21c4dead76424d5d91 .
+<urn:gleaner.io:oih:medin:data:626fe5bf4e1625c18763a76a5adfd3cb60c2b77a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b2293661c64b9c21c4dead76424d5d91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a23a479786049bc2a7324e8afd20ec91 <http://schema.org/value> "Channel Coastal Observatory" .
+_:b2293661c64b9c21c4dead76424d5d91 <http://schema.org/value> "South East" .
+<urn:gleaner.io:oih:medin:data:626fe5bf4e1625c18763a76a5adfd3cb60c2b77a> <http://schema.org/description> "2020 South East document dataset from the Channel Coastal Observatory Catalogue (number of records: 17" .
+<urn:gleaner.io:oih:medin:data:626fe5bf4e1625c18763a76a5adfd3cb60c2b77a> <http://schema.org/additionalProperty> _:a23a479786049bc2a7324e8afd20ec91 .
+_:a23a479786049bc2a7324e8afd20ec91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a23a479786049bc2a7324e8afd20ec91 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:5cf2b2fe6fda5260fffb8008cb2530f84d3baf83> <http://schema.org/additionalProperty> _:fbc6dba00a9bfbe30bd349bfa3af2ba9 .
+_:fbc6dba00a9bfbe30bd349bfa3af2ba9 <http://schema.org/name> "procedures" .
+<urn:gleaner.io:oih:medin:data:5cf2b2fe6fda5260fffb8008cb2530f84d3baf83> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:fbc6dba00a9bfbe30bd349bfa3af2ba9 <http://schema.org/value> "benthic surveys" .
+_:fbc6dba00a9bfbe30bd349bfa3af2ba9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:5cf2b2fe6fda5260fffb8008cb2530f84d3baf83> <http://schema.org/description> "These guidelines for the conduct of benthic surveys at commercial aggregate extraction sites were produced in response to the rapid increase in survey work for Environmental Statements to accompany dredging applications, and to impending legislation which will bring extraction activity under statutory control (see Introduction). The guidelines were designed to promote a comprehensive and consistent approach to the assessment of the seabed environment (i.e. sediments and the associated benthic fauna) as part of the planning process and, on granting of a permission to dredge, in response to any monitoring requirements." .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:c0c505ef43f66d11d41ccd0eae71fb89 <http://schema.org/name> "geospatial region" .
+_:c0c505ef43f66d11d41ccd0eae71fb89 <http://schema.org/value> "Thames Estuary" .
+_:c762e2ad93a053a2f9297b6b1b54c2bb <http://schema.org/value> "MBES survey" .
+_:a40b9fd41f89ffa5512baf394c23776 <http://schema.org/value> "DONG\r\nEnergy" .
+_:a40b9fd41f89ffa5512baf394c23776 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://schema.org/additionalProperty> _:c0c505ef43f66d11d41ccd0eae71fb89 .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://schema.org/description> "The Port of London Authority (PLA) Hydrographic Service was commissioned by DONG\r\nEnergy to undertake a survey of the installed HDD exit point, including the as-laid\r\nprotective mattresses, at the Gunfleet Sands 3 Windfarm in the Thames Estuary.\r\n\r\nThe scope of work, for the April 2013 survey was for a MBES survey of an area of the\r\nseabed centred on the location of HDD exit point and installed protective mattresses.\r\n\r\nThis series covers survey elements which were undertaken on the 26th April 2013." .
+_:c762e2ad93a053a2f9297b6b1b54c2bb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c0c505ef43f66d11d41ccd0eae71fb89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://schema.org/additionalProperty> _:c762e2ad93a053a2f9297b6b1b54c2bb .
+<urn:gleaner.io:oih:medin:data:53ada0f49a2ef4bf8a8f816242857624eded2251> <http://schema.org/additionalProperty> _:a40b9fd41f89ffa5512baf394c23776 .
+_:c762e2ad93a053a2f9297b6b1b54c2bb <http://schema.org/name> "procedures" .
+_:a40b9fd41f89ffa5512baf394c23776 <http://schema.org/name> "organizations" .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://schema.org/value> "nitrate" .
+_:fca28c716a4b121729df186fe88ac8b0 <http://schema.org/value> "Ireland" .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://schema.org/value> "pH" .
+_:d1cb6b666f2c78a3c43981756d28ba3e <http://schema.org/name> "organizations" .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://schema.org/value> "optical backscatter" .
+_:d1cb6b666f2c78a3c43981756d28ba3e <http://schema.org/value> "British Oceanographic Data Centre" .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://schema.org/additionalProperty> _:e1a81277c0ed3ca3d436fa5c96f4592 .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://schema.org/additionalProperty> _:d1cb6b666f2c78a3c43981756d28ba3e .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://schema.org/value> "dissolved oxygen" .
+_:fca28c716a4b121729df186fe88ac8b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d1cb6b666f2c78a3c43981756d28ba3e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:fca28c716a4b121729df186fe88ac8b0 <http://schema.org/value> "Saudi Arabia" .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://schema.org/name> "measurements and facts" .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://schema.org/description> "The UK Argo program is an active contributor to the international Argo program, offering a comprehensive data set vital for supporting global oceanographic research. The data set includes a mixture of near-real-time and delayed-mode data collected by profiling floats, quality controlled to operational ocean forecasting standards and to climate research standards respectively. Real-time data are available within 24 hours of the float surfacing, while delayed-mode data become available within 12 months of the profile date. UK Argo floats data are typically managed by the British Oceanographic Data Centre. Argo floats operate in profiling ‘cycles’, normally repeated every 10 days throughout their lifetime. As part of a cycle, floats drift at their parking depth of approximately 1000m for 5 or 10 days, then sink to 2000m before starting their ascent to the surface, taking temperature and conductivity measurements at regular intervals. Since 2012, biogeochemical sensors have gradually been rolled out across a portion of the UK Argo fleet, reflecting the broadening research focus of the international Argo program. The UK Argo data set now includes measurements of dissolved oxygen, chlorophyll fluorescence, optical backscatter, pH, nitrate and irradiance. Moreover, an array of Deep Argo floats have recently been adding observations as deep as 6000m, and deployments have ventured to higher latitudes. The UK Argo data set has a variety of uses, including assimilation into operational weather forecasts in near-real-time to climate and ocean biogeochemistry research with the delayed mode data. In addition to its national efforts, the British Oceanographic Data Centre manages floats deployed by partner nations including Mauritius, Saudi Arabia, Ireland, and Portugal. This collaboration underscores the cross-border cooperative nature of the program, which is fundamental to its world-wide success." .
+_:fca28c716a4b121729df186fe88ac8b0 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:506d7405cc156a5d75203d88c23c16171a8db29a> <http://schema.org/additionalProperty> _:fca28c716a4b121729df186fe88ac8b0 .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://schema.org/value> "irradiance" .
+_:fca28c716a4b121729df186fe88ac8b0 <http://schema.org/value> "Mauritius" .
+_:e1a81277c0ed3ca3d436fa5c96f4592 <http://schema.org/value> "chlorophyll fluorescence" .
+<urn:gleaner.io:oih:medin:data:4c71bf1b355b60aa4f91904fe70e2eb299118d77> <http://schema.org/description> "Benthic monitoring of the sea bed adjacent to the fish farm as a requirement of the CAR licence for the site. Grab samples collected in proximity to the farm and at two reference locations. Samples analysed for: benthos, redox, psa, carbon and sea lice medicine residues." .
+_:cbb1f829add4e215931477e5656e13f4 <http://schema.org/name> "policies" .
+_:cbb1f829add4e215931477e5656e13f4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:c34500b0ce6ab08bfa32cb0d0cf08279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cbb1f829add4e215931477e5656e13f4 <http://schema.org/value> "CAR licence" .
+_:c34500b0ce6ab08bfa32cb0d0cf08279 <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:4c71bf1b355b60aa4f91904fe70e2eb299118d77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:4c71bf1b355b60aa4f91904fe70e2eb299118d77> <http://schema.org/additionalProperty> _:c34500b0ce6ab08bfa32cb0d0cf08279 .
+_:c34500b0ce6ab08bfa32cb0d0cf08279 <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:4c71bf1b355b60aa4f91904fe70e2eb299118d77> <http://schema.org/additionalProperty> _:cbb1f829add4e215931477e5656e13f4 .
+_:a40fb94aed0091ea81a1c4f395b3d863 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:49a0d599c30053b92bbc23e4dbccb3c9a39833d3> <http://schema.org/additionalProperty> _:a40fb94aed0091ea81a1c4f395b3d863 .
+_:a40fb94aed0091ea81a1c4f395b3d863 <http://schema.org/value> "South East" .
+_:ce647ea9a42deacb2cdad7b2e5022ded <http://schema.org/name> "organizations" .
+_:a40fb94aed0091ea81a1c4f395b3d863 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:49a0d599c30053b92bbc23e4dbccb3c9a39833d3> <http://schema.org/additionalProperty> _:ce647ea9a42deacb2cdad7b2e5022ded .
+_:ce647ea9a42deacb2cdad7b2e5022ded <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ce647ea9a42deacb2cdad7b2e5022ded <http://schema.org/value> "Channel Coastal Observatory" .
+<urn:gleaner.io:oih:medin:data:49a0d599c30053b92bbc23e4dbccb3c9a39833d3> <http://schema.org/description> "2015 South East waves dataset from the Channel Coastal Observatory Catalogue (number of records: 27" .
+<urn:gleaner.io:oih:medin:data:49a0d599c30053b92bbc23e4dbccb3c9a39833d3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://schema.org/additionalProperty> _:e6f36f7ffb38f4f65058bbe3cd24b1b2 .
+_:e6f36f7ffb38f4f65058bbe3cd24b1b2 <http://schema.org/value> "Blyth, Northumberland" .
+_:cea94775eecec8bb6ba0a417170006bb <http://schema.org/name> "organizations" .
+_:cea94775eecec8bb6ba0a417170006bb <http://schema.org/value> "Marine and Risk Consultants Ltd" .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://schema.org/description> "Marine and Risk Consultants Ltd (Marico Marine) was commissioned by National Renewable Energy Centre (client) and Natural Power Consultants (consultant) to conduct a Navigation Assessment and Navigational Risk Assessment for the proposed development of a series of offshore demonstration turbine arrays near Blyth, Northumberland. To include consideration of potential impacts and hazards of the demonstration project on navigation. he key objectives of this study are to assess the navigational impacts of the demonstration project in the vicinity of Blyth, Northumberland after undertaking consultation, hazard identification and scoring meetings, with additional analysis in order to present the maximum amount of information relative to the future installation." .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://schema.org/additionalProperty> _:e9eaa9561fb3058a2720ce2b96fbcc53 .
+_:e9eaa9561fb3058a2720ce2b96fbcc53 <http://schema.org/name> "procedures" .
+_:e6f36f7ffb38f4f65058bbe3cd24b1b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e9eaa9561fb3058a2720ce2b96fbcc53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e9eaa9561fb3058a2720ce2b96fbcc53 <http://schema.org/value> "scoring meetings" .
+<urn:gleaner.io:oih:medin:data:43a03c7c5c7963e7df0ce74be227f64ce02ebf47> <http://schema.org/additionalProperty> _:cea94775eecec8bb6ba0a417170006bb .
+_:cea94775eecec8bb6ba0a417170006bb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cea94775eecec8bb6ba0a417170006bb <http://schema.org/value> "National Renewable Energy Centre" .
+_:cea94775eecec8bb6ba0a417170006bb <http://schema.org/value> "Natural Power Consultants" .
+_:e6f36f7ffb38f4f65058bbe3cd24b1b2 <http://schema.org/name> "geospatial region" .
+_:cd19a549743aeab076dc53b6c444c15 <http://schema.org/name> "geospatial region" .
+_:cd19a549743aeab076dc53b6c444c15 <http://schema.org/value> "Balanced Seas region" .
+_:cd19a549743aeab076dc53b6c444c15 <http://schema.org/value> "Southeast of England region" .
+_:cd19a549743aeab076dc53b6c444c15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:3552857125135adf63521602d720c7dfe9de7d0e> <http://schema.org/additionalProperty> _:cd19a549743aeab076dc53b6c444c15 .
+<urn:gleaner.io:oih:medin:data:3552857125135adf63521602d720c7dfe9de7d0e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e90972e6ab42efbf8c4da6aba3e9adc9 <http://schema.org/value> "Balanced Seas project team" .
+_:e90972e6ab42efbf8c4da6aba3e9adc9 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:3552857125135adf63521602d720c7dfe9de7d0e> <http://schema.org/additionalProperty> _:e90972e6ab42efbf8c4da6aba3e9adc9 .
+_:e90972e6ab42efbf8c4da6aba3e9adc9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:3552857125135adf63521602d720c7dfe9de7d0e> <http://schema.org/description> "Data collected from stakeholders within the Southeast of England region (Balanced Seas region), by Balanced Seas project team between January 2010 and October 2010. Interview data was processed to create a gridded 1km x 1km layer of relative effort for the specific recreational activity (according to the number of interviews undertaken across the Balanced Seas region). First output was published July 2010, although updates were made after this date due to more interview data." .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://schema.org/description> "This report presents the findings of the second Burbo Bank Extension (BBW02) post-construction benthic survey undertaken by Ocean Ecology Limited (OEL) on behalf of Ã?rsted. The benthic survey was undertaken between 8th and 9th September 2019 aboard the vessel Seren Las. During this survey, a total of 30 macrobenthic and 54 Particle Size Distribution (PSD) samples were collected within the wind farm array, near-field and adjacent reference areas. In addition, 102 seabed images combined with associated video were collected at eight drop-down video sampling stations and along four camera transects within the Export Cable Route (ECR) corridor. A full description of survey operations is provided in the benthic survey report (Appendix 1). \r\n This report aims to provide an assessment of the benthic habitats and associated infaunal assemblages within and adjacent to the areas of potential impact resulting from the construction and operation of the BBW02 offshore wind farm. It also provides a comparison with previous data collected during the 2015 pre-construction and 2017 post-construction surveys to determine the magnitude of impacts predicted in the Environmental Statement (ES)." .
+_:d409c8a93f7dcaf735f6ec56cb33eb1c <http://schema.org/value> "Ocean Ecology Limited" .
+_:d409c8a93f7dcaf735f6ec56cb33eb1c <http://schema.org/name> "organizations" .
+_:e13ac01573978f9d44983c1b7bae0404 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d409c8a93f7dcaf735f6ec56cb33eb1c <http://schema.org/value> "Ã?rsted" .
+_:c5c9f6ee1f088ea8a9c11c6b7393768a <http://schema.org/value> "benthic habitats" .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://schema.org/additionalProperty> _:e13ac01573978f9d44983c1b7bae0404 .
+_:e13ac01573978f9d44983c1b7bae0404 <http://schema.org/value> "infaunal assemblages" .
+_:c5c9f6ee1f088ea8a9c11c6b7393768a <http://schema.org/name> "ecosystems" .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://schema.org/additionalProperty> _:c5c9f6ee1f088ea8a9c11c6b7393768a .
+_:c5c9f6ee1f088ea8a9c11c6b7393768a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d409c8a93f7dcaf735f6ec56cb33eb1c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://schema.org/additionalProperty> _:d409c8a93f7dcaf735f6ec56cb33eb1c .
+<urn:gleaner.io:oih:medin:data:2af132b62f98de808209e5d88b64c9dfb503a4e3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:e13ac01573978f9d44983c1b7bae0404 <http://schema.org/name> "marine biodiversity" .
+_:a6a1a529572d2086673b1e226d3e7e80 <http://schema.org/value> "Wallasey" .
+_:db30676a3a4e67b7cd0f1dd7390a6e07 <http://schema.org/name> "organizations" .
+_:a6a1a529572d2086673b1e226d3e7e80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://schema.org/additionalProperty> _:db30676a3a4e67b7cd0f1dd7390a6e07 .
+_:a6a1a529572d2086673b1e226d3e7e80 <http://schema.org/value> "Liverpool Bay" .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:bae3e007687352dde0185ba6c706d9c2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:db30676a3a4e67b7cd0f1dd7390a6e07 <http://schema.org/value> "Offshore Marine Management" .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://schema.org/additionalProperty> _:bae3e007687352dde0185ba6c706d9c2 .
+_:a6a1a529572d2086673b1e226d3e7e80 <http://schema.org/name> "geospatial region" .
+_:bae3e007687352dde0185ba6c706d9c2 <http://schema.org/value> "BB13" .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://schema.org/additionalProperty> _:a6a1a529572d2086673b1e226d3e7e80 .
+_:bae3e007687352dde0185ba6c706d9c2 <http://schema.org/name> "taxon" .
+_:db30676a3a4e67b7cd0f1dd7390a6e07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:2a7964f7211f7a2d64d8c56f3f00491350717bc4> <http://schema.org/description> "DONG Energy awarded Offshore Marine Management (OMM) a contract to perform an\r\ninspection survey of the offshore export connecting the Burbo Offshore Wind Farm located\r\nto the shore in Liverpool Bay. This included the BB13 to BB14 inter array power cable.\r\nBurbo Offshore Windfarm is located approximately 8 Kilometres offshore and the shore\r\nlanding is located approximately 1 Kilometre northwest of Wallasey, near Liverpool. The\r\ntotal length of the export and inert array power cables is approximately 26 Kilometres. The report in this series describes the survey operations conducted upon the export and inter array\r\npower cables. The objectives of the operations were:\r\n&gt; Mobilisation of work vessel with all the required navigation, positioning and survey\r\nequipment.\r\n&gt; Cable Survey/Inspection – Entire 3 x Export Cable lengths, A2, B2 and C1 to shore (approx.\r\n8.5 Km each).\r\nInspection Survey of the export cables with shallow water survey system\r\n'ROC.si' (Crawler) operated off the support vessel (Multicat), MCS Ailsa\r\n&gt; Cable Survey/Inspection – BB13 to BB14 Inter-Array Cable (approx. 560m)\r\n&gt; Inspection Survey of the inter array cable with shallow water survey system\r\n'ROC.si' (Crawler) operated off the support vessel (Multicat), MCS Ailsa. A 24-hour working day was adopted for all survey operations." .
+_:bae3e007687352dde0185ba6c706d9c2 <http://schema.org/value> "BB14" .
+_:b6a9d03ad07e6bf4a6ac483b9b6b4bac <http://schema.org/value> "modiolus" .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://schema.org/additionalProperty> _:d8e3d0f566937f27dd984398f413983a .
+_:cc3c79bdc3a245827884f5cf349c7995 <http://schema.org/name> "geospatial region" .
+_:b6a9d03ad07e6bf4a6ac483b9b6b4bac <http://schema.org/name> "undescribed biodiversity" .
+_:cc3c79bdc3a245827884f5cf349c7995 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d8e3d0f566937f27dd984398f413983a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:cc3c79bdc3a245827884f5cf349c7995 <http://schema.org/value> "North Sea" .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://schema.org/description> "Modiolus modiolus presence records from a survey of the history of trace metal contamination in two North Sea populations. The paper provided a chart from which the coordinates of the sampling locations were estimated." .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b6a9d03ad07e6bf4a6ac483b9b6b4bac <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://schema.org/additionalProperty> _:b6a9d03ad07e6bf4a6ac483b9b6b4bac .
+_:d8e3d0f566937f27dd984398f413983a <http://schema.org/name> "invasive species" .
+_:d8e3d0f566937f27dd984398f413983a <http://schema.org/value> "trace metal contamination" .
+<urn:gleaner.io:oih:medin:data:29cea7cf5a084c56ecea923cf6b1f82634c5e78f> <http://schema.org/additionalProperty> _:cc3c79bdc3a245827884f5cf349c7995 .
+_:cc4f6015ca3e206e01b2273c1800146d <http://schema.org/name> "person" .
+_:f7df22a6eb6d14bb221e7f5df1bd3b38 <http://schema.org/value> "RAPID-WATCH" .
+_:d8d5d5604b9c0b36e5e0ea158bae7285 <http://schema.org/name> "organizations" .
+_:cc4f6015ca3e206e01b2273c1800146d <http://schema.org/value> "scientists" .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:ecd06d00489aa606a67cf19706ada209 .
+_:d8d5d5604b9c0b36e5e0ea158bae7285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e915191b5b0ebc2aca8855b02724f266 <http://schema.org/value> "pressure" .
+_:f7df22a6eb6d14bb221e7f5df1bd3b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:cc4f6015ca3e206e01b2273c1800146d .
+_:ecd06d00489aa606a67cf19706ada209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/description> "The RAPID-WATCH (Rapid Climate Change - Will the Atlantic Thermohaline Circulation Halt?) data set consists of pressure, current velocities, temperature, salinity and density time series. Measurements are collected by moored instruments deployed in arrays across the Atlantic at approximately 26.5N for the Monitoring the Atlantic Meridional Overturning Circulation at 26.5N (MOC) project and at each of three sections across the US and Canadian continental slope between Cape Cod and the Grand Banks for the Western Atlantic Variability Experiment (WAVE) project. The data set also consists of conductivity- temperature-depth (CTD) profiles, and ships' underway monitoring system meteorology and surface hydrography collected during the mooring deployment and servicing cruises. The RAPID-WATCH data set follows on from the original Rapid Climate Change (RAPID) Programme oceanographic dataset (2004-2008). It spans from 2008 until 2015. The RAPID-AMOC data set is expected to extend the RAPID_WATCH dataset to 2020. The main aims of the RAPID-WATCH Programme are to provide oceanographic measurements that allow a decade-long time series of the Atlantic Meridional Overturning Circulation to be derived for use in climate change research. The MOC project is led by scientists at the National Oceanography Centre in Southampton, whilst work on the WAVE element is led by the Liverpool site of the National Oceanography Centre." .
+_:e915191b5b0ebc2aca8855b02724f266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e915191b5b0ebc2aca8855b02724f266 <http://schema.org/value> "surface hydrography" .
+_:ecd06d00489aa606a67cf19706ada209 <http://schema.org/value> "Atlantic" .
+_:ecd06d00489aa606a67cf19706ada209 <http://schema.org/value> "Cape Cod" .
+_:ecd06d00489aa606a67cf19706ada209 <http://schema.org/value> "Southampton" .
+_:d8d5d5604b9c0b36e5e0ea158bae7285 <http://schema.org/value> "National Oceanography Centre" .
+_:e915191b5b0ebc2aca8855b02724f266 <http://schema.org/value> "temperature" .
+_:f7df22a6eb6d14bb221e7f5df1bd3b38 <http://schema.org/name> "projects" .
+_:f7df22a6eb6d14bb221e7f5df1bd3b38 <http://schema.org/value> "Western Atlantic Variability Experiment" .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:e915191b5b0ebc2aca8855b02724f266 .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:d8d5d5604b9c0b36e5e0ea158bae7285 .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://schema.org/additionalProperty> _:f7df22a6eb6d14bb221e7f5df1bd3b38 .
+_:f7df22a6eb6d14bb221e7f5df1bd3b38 <http://schema.org/value> "WAVE" .
+_:e915191b5b0ebc2aca8855b02724f266 <http://schema.org/name> "measurements and facts" .
+_:e915191b5b0ebc2aca8855b02724f266 <http://schema.org/value> "density time series" .
+_:e915191b5b0ebc2aca8855b02724f266 <http://schema.org/value> "salinity" .
+_:ecd06d00489aa606a67cf19706ada209 <http://schema.org/name> "geospatial region" .
+<urn:gleaner.io:oih:medin:data:24528e4eb4f00a078a7b9c3c1893586a428c34d0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:cc4f6015ca3e206e01b2273c1800146d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:f3f17468a1c19c8e7aae5b9f1fd3092a .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:f3f17468a1c19c8e7aae5b9f1fd3092a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/description> "DESKTOP STUDY: This report establishes the range and extent of existing baseline data regarding food availability for bird populations utilising the mudflats and saltmarshes of the Teesmouth and Cleveland Coast SPA, through identification of sources of raw data for prey abundance and bird numbers. Summaries and examples of the currently available data are presented along with discussion of the historic and current situation in terms of the condition of the SPA. The report identifies gaps in the available information that need to be addressed by further work and the steps to be taken in the formulation of a baseline for the SPA." .
+_:a90cf75648309cec3737ec8efc41b7b1 <http://schema.org/name> "ecosystem health" .
+_:ef483e2896b93780f9363c1d7e188ecf <http://schema.org/value> "Cleveland Coast SPA" .
+_:ef483e2896b93780f9363c1d7e188ecf <http://schema.org/value> "Teesmouth" .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:a90cf75648309cec3737ec8efc41b7b1 .
+_:ecfeab2fa0d877ec88bd9f9859e7b90b <http://schema.org/value> "mudflats" .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:b7597460cb3db8ee075e13b2405f4496 .
+_:b7597460cb3db8ee075e13b2405f4496 <http://schema.org/value> "bird numbers" .
+_:ecfeab2fa0d877ec88bd9f9859e7b90b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:ecfeab2fa0d877ec88bd9f9859e7b90b .
+_:b7597460cb3db8ee075e13b2405f4496 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:ecfeab2fa0d877ec88bd9f9859e7b90b <http://schema.org/name> "ecosystems" .
+_:ef483e2896b93780f9363c1d7e188ecf <http://schema.org/name> "geospatial region" .
+_:ef483e2896b93780f9363c1d7e188ecf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:a90cf75648309cec3737ec8efc41b7b1 <http://schema.org/value> "condition of the SPA" .
+_:b7597460cb3db8ee075e13b2405f4496 <http://schema.org/value> "prey abundance" .
+_:a90cf75648309cec3737ec8efc41b7b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:f3f17468a1c19c8e7aae5b9f1fd3092a <http://schema.org/value> "bird populations" .
+_:f3f17468a1c19c8e7aae5b9f1fd3092a <http://schema.org/name> "marine biodiversity" .
+<urn:gleaner.io:oih:medin:data:20087b2fd3a41ac2efa7cef98e93e1a72386189d> <http://schema.org/additionalProperty> _:ef483e2896b93780f9363c1d7e188ecf .
+_:b7597460cb3db8ee075e13b2405f4496 <http://schema.org/name> "measurements and facts" .
+_:ecfeab2fa0d877ec88bd9f9859e7b90b <http://schema.org/value> "saltmarshes" .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:d6af966baf93b43e556568b17fd2f118 .
+_:a1904506b7c0c0db985b3a771863cbc6 <http://schema.org/name> "geospatial region" .
+_:a1904506b7c0c0db985b3a771863cbc6 <http://schema.org/value> "Portland Harbour" .
+_:e160a03c3c360699835e8692aa634561 <http://schema.org/value> "saline lagoon sandworm" .
+_:d6af966baf93b43e556568b17fd2f118 <http://schema.org/value> "Dennis Seaward" .
+_:a1904506b7c0c0db985b3a771863cbc6 <http://schema.org/value> "Northminster House" .
+_:b8c73298cfd34611a84e7083fb895079 <http://schema.org/value> "Maritime Team" .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:b8c73298cfd34611a84e7083fb895079 .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/description> "These records all relate to \"Downie (1996) The lagoon sandworm Armandia cirrhosa (EN Research Report No. 202)\" A copy of the report is held at English Nature (Dorset Team).\r\n The main aim of this survey was to look for the presence of the saline lagoon sandworm (Armandia cirrhosa) at the two known sites where it had previously been found in 1995. In addition a third site in Portland Harbour was also sampled. Infaunal species were sampled, from each separate habitat by taking four 0.01m2 core samples to a depth of 20cm at each of the three survey sites. Material retained on a 0.5mm sieve for each site was combined as a sample, per habitat, and subsequently identified by Dr Peter Garwood. Specimens collected during the survey were identified in the lab by Dennis Seaward. Positional information was gathered using a hand-held GPS and converted into OS grid references, as stated in the report. Some slides were taken from this survey and are held in the Maritime Team's slide collection at Northminster House." .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:e160a03c3c360699835e8692aa634561 .
+_:a1904506b7c0c0db985b3a771863cbc6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d6af966baf93b43e556568b17fd2f118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:d6af966baf93b43e556568b17fd2f118 <http://schema.org/name> "person" .
+_:d6af966baf93b43e556568b17fd2f118 <http://schema.org/value> "Dr Peter Garwood" .
+_:e160a03c3c360699835e8692aa634561 <http://schema.org/value> "Armandia cirrhosa" .
+_:e160a03c3c360699835e8692aa634561 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:b8c73298cfd34611a84e7083fb895079 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e160a03c3c360699835e8692aa634561 <http://schema.org/name> "marine species" .
+_:b8c73298cfd34611a84e7083fb895079 <http://schema.org/name> "organizations" .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://schema.org/additionalProperty> _:a1904506b7c0c0db985b3a771863cbc6 .
+<urn:gleaner.io:oih:medin:data:1ebf05c2e4fa83508b3b089efbd21608a98b524b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+_:b8c73298cfd34611a84e7083fb895079 <http://schema.org/value> "English Nature" .
+_:e5f36b976c25bde703cd13b75beadc6f <http://schema.org/value> "CAR licence" .
+_:e5f36b976c25bde703cd13b75beadc6f <http://schema.org/name> "policies" .
+_:a441b9ee156230bb4f4424357d7051ee <http://schema.org/value> "fish" .
+<urn:gleaner.io:oih:medin:data:0b2a9a4e3935608b77010cc4d9b184b615ca0ba3> <http://schema.org/additionalProperty> _:a441b9ee156230bb4f4424357d7051ee .
+_:a441b9ee156230bb4f4424357d7051ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+_:e5f36b976c25bde703cd13b75beadc6f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PropertyValue> .
+<urn:gleaner.io:oih:medin:data:0b2a9a4e3935608b77010cc4d9b184b615ca0ba3> <http://schema.org/additionalProperty> _:e5f36b976c25bde703cd13b75beadc6f .
+_:a441b9ee156230bb4f4424357d7051ee <http://schema.org/name> "migratory marine species" .
+<urn:gleaner.io:oih:medin:data:0b2a9a4e3935608b77010cc4d9b184b615ca0ba3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Dataset> .
+<urn:gleaner.io:oih:medin:data:0b2a9a4e3935608b77010cc4d9b184b615ca0ba3> <http://schema.org/description> "Benthic monitoring of the sea bed adjacent to the fish farm as a requirement of the CAR licence for the site. Grab samples collected in proximity to the farm and at two reference locations. Samples analysed for: benthos, redox, psa, carbon." .
