@@ -2,18 +2,13 @@
 
 This directory contains Python scripts for entity extraction and RDF processing related to marine biodiversity datasets. It uses tools like SPARQL, GLiNER2, pyoxigraph, and langextract to query endpoints, extract entities from descriptions, and generate RDF graphs.
 
-Entity Resolution: Merging structured datasets using the Senzing SDK.
+The `main_er.py` script serves as a comprehensive data processing pipeline designed to enhance marine biodiversity datasets by extracting structured entities from their textual descriptions and converting them into RDF triples for semantic enrichment. It begins by accepting a single command-line argument: the URL of a SPARQL endpoint (such as a QLever server hosting RDF data). Using this URL, the script queries the endpoint to retrieve a list of unique graph URIs that contain instances of `schema:Dataset`. For each identified graph URI, it then fetches the descriptions associated with the datasets within that graph, grouping them by dataset subject.
 
-Semantic Layer: Building a domain taxonomy and ontology.
+For every dataset and its collected descriptions, the script employs the GLiNER2 named entity recognition (NER) model—pretrained on a large model ("fastino/gliner2-large-v1") and configured with custom prompts tailored to marine biodiversity categories (such as "marine species," "geospatial region," "organizations," "policies," and others)—to extract relevant entities from each description text. Only datasets where all descriptions yield non-empty entity extractions proceed further, ensuring quality and relevance.
 
-Content Processing: Crawling and parsing unstructured text (e.g., news articles) to extract entities.
+Extracted entities are then transformed into a JSON-LD structure adhering to Schema.org standards, where each entity category becomes a `PropertyValue` under the dataset's `additionalProperty` field, preserving the original description. This JSON-LD is parsed into RDF triples using RDFLib, serialized as N-Triples, and loaded into an in-memory PyOxigraph store for efficient handling of large graphs.
 
-Human-in-the-Loop (HITL): (Planned) A step for human curation of extracted entities.
-
-
-Looking at this step in the workflow, in essence we’re “building up” from a ground floor of structured data and unstructured content in the form of resource descriptons., leveraging domain context and computable semantics as much as possible to make definitions clearer. This diagram illustrates the process of “building up” in layers.
-
-
+Finally, the script exports the accumulated RDF data to a single output file named `entityGraph.nt`, formatted as N-Quads to include graph context. This file encapsulates enriched metadata about the datasets, linking them to structured entities like species, regions, and organizations, enabling downstream applications such as knowledge graph construction, semantic querying, or visualization in tools like NetworkX or graph databases. The process incorporates progress tracking via a progress bar and handles errors gracefully, such as skipping datasets without entities or logging issues during RDF parsing. Overall, it automates the conversion of unstructured textual metadata into machine-readable, interoperable RDF, facilitating advanced analysis and integration of marine biodiversity data.
 
 ## Scripts
 
